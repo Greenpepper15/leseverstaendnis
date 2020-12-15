@@ -1,10 +1,21 @@
 <html>
 <head> </head>
 <body> 
+  <textarea id="myText">
+    Lorem ipsum...
+</textarea>
  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfLFI9haPtXYjfeDncf6GopAzIoBvLl3eRbmS1xfe2X7xltFA/viewform?embedded=true" width="640" height="802" frameborder="0" marginheight="0" marginwidth="0">Wird geladen…</iframe>
-   <script>
-var myVar = setInterval(myTimer, 1000);  // jede sekunde
-
+<button onclick="sendMail(); return false">Send</button> 
+ <script>
+//var myVar = setInterval(myTimer, 60000);  // jede sekunde
+function sendMail() {
+    var link = "mailto:gmohren@hotmail.de"
+             + "&subject=" + encodeURIComponent("This is my subject")
+             + "&body=" + encodeURIComponent(document.getElementById('myText').value)
+    ;
+    
+    window.location.href = link;
+}
 function myTimer() {
  var cool =  document.getElementsByClassName("freebirdFormviewerViewFormContentWrapper");
  console.log(cool);
