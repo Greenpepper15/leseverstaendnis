@@ -5,17 +5,25 @@
     Lorem ipsum...
 </textarea>
  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfLFI9haPtXYjfeDncf6GopAzIoBvLl3eRbmS1xfe2X7xltFA/viewform?embedded=true" width="640" height="802" frameborder="0" marginheight="0" marginwidth="0">Wird geladen…</iframe>
-<button onclick="sendMail(); return false">Send</button> 
+<input type="button" value="Send Email" onclick="sendEmail()">
  <script>
+   <script src="https://smtpjs.com/v3/smtp.js">
+  
 //var myVar = setInterval(myTimer, 60000);  // jede sekunde
-function sendMail() {
-    var link = "mailto:gmohren@hotmail.de"
-             + "&subject=" + encodeURIComponent("This is my subject")
-             + "&body=" + encodeURIComponent(document.getElementById('myText').value)
-    ;
-    
-    window.location.href = link;
+function sendEmail() {
+Email.send({
+    Host : "smtp.mailtrap.io",
+    Username : "af59f73491b60f",
+    Password : "2dbe2d6e5727e0",
+    To : 'recipient@example.com',
+    From : "sender@example.com",
+    Subject : "Test email",
+    Body : "<html><h2>Header</h2><strong>Bold text</strong><br></br><em>Italic</em></html>"
+}).then(
+  message => alert(message)
+);
 }
+   
 function myTimer() {
  var cool =  document.getElementsByClassName("freebirdFormviewerViewFormContentWrapper");
  console.log(cool);
