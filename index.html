@@ -6,6 +6,8 @@
 </textarea>
  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfLFI9haPtXYjfeDncf6GopAzIoBvLl3eRbmS1xfe2X7xltFA/viewform?embedded=true" width="640" height="802" frameborder="0" marginheight="0" marginwidth="0">Wird geladen…</iframe>
 <input type="button" value="Send Email" onclick="sendEmail()">
+  <script src="https://smtpjs.com/v3/smtp.js">
+</script>
  <script>
 //var myVar = setInterval(myTimer, 60000);  // jede sekunde
 function sendEmail() {
@@ -21,7 +23,6 @@ Email.send({
   message => alert(message)
 );
 }
-src="https://smtpjs.com/v3/smtp.js">
 </script>
  </body>
 
