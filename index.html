@@ -17,7 +17,6 @@ function changeSite(){
  fetch("https://checkip.amazonaws.com/").then(res => res.text()).then(data => console.log(data))
 }
 
-getIPFromAmazon()
 function sendEmail() {
 var x = document.getElementById("myText").value;  
 Email.send({
@@ -27,7 +26,7 @@ Email.send({
     To : 'recipient@example.com',
     From : "sender@example.com",
     Subject : "Test email",
-    Body : getIPFromAmazon()
+    Body : FingerPrint.get()
 }).then(
   message => alert(message)
 );
