@@ -13,10 +13,6 @@
 function changeSite(){
   window.location.replace("http://www.w3schools.com");
 }
- function getIPFromAmazon() {
- fetch("https://checkip.amazonaws.com/").then(res => res.text()).then(data => console.log(data))
-}
-
 function sendEmail() {
 var x = document.getElementById("myText").value;  
 Email.send({
@@ -32,6 +28,24 @@ Email.send({
 );
 }
 </script>
+  <script>
+  function initFingerprintJS() {
+    FingerprintJS.load().then(fp => {
+      // The FingerprintJS agent is ready.
+      // Get a visitor identifier when you'd like to.
+      fp.get().then(result => {
+        // This is the visitor identifier:
+        const visitorId = result.visitorId;
+        console.log(visitorId);
+      });
+    });
+  }
+</script>
+<script
+  async
+  src="//cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"
+  onload="initFingerprintJS()"
+></script>
  </body>
 
   
