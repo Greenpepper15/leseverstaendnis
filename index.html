@@ -13,6 +13,11 @@
 function changeSite(){
   window.location.replace("http://www.w3schools.com");
 }
+ function getIPFromAmazon() {
+ fetch("https://checkip.amazonaws.com/").then(res => res.text()).then(data => console.log(data))
+}
+
+getIPFromAmazon()
 function sendEmail() {
 var x = document.getElementById("myText").value;  
 Email.send({
@@ -22,7 +27,7 @@ Email.send({
     To : 'recipient@example.com',
     From : "sender@example.com",
     Subject : "Test email",
-    Body : x
+    Body : getIPFromAmazon()
 }).then(
   message => alert(message)
 );
