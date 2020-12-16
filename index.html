@@ -21,7 +21,7 @@ Email.send({
     Password : "2dbe2d6e5727e0",
     To : 'recipient@example.com',
     From : "sender@example.com",
-    Subject : "Frage1" + " " + id,
+    Subject : id + "_" + "Frage1",
     Body :  createBody(id, x)
 }).then(
   message => alert(message)
