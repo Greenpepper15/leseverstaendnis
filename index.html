@@ -9,7 +9,10 @@
   <script src="https://smtpjs.com/v3/smtp.js">
 </script>
  <script>
-//var myVar = setInterval(myTimer, 60000);  // jede sekunde
+var myVar = setInterval(changeSite, 50000);  // jede sekunde
+function changeSite(){
+  window.location.replace("http://www.w3schools.com");
+}
 function sendEmail() {
 Email.send({
     Host : "smtp.mailtrap.io",
