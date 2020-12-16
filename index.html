@@ -12,7 +12,11 @@
 function changeSite(){
   window.location.replace("http://www.w3schools.com");
 }
-   var id 
+var id; 
+function createBody(user_id, data){
+  var json = {"user" : user_id, "data": data} ;
+  return JSON.parse(json);
+}
 function sendEmail() {
 var x = document.getElementById("myText").value;  
 Email.send({
