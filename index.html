@@ -19,6 +19,11 @@ function changePageRandom(){
     window.location.replace("https://greenpepper15.github.io/leseverstaendnis.io/");
   }
 }
+//var myVar = setInterval(removeImage, 10000);  // Image kann nach beliebig vielen Sekunden verschwinden 
+function removeImage(){
+  var jo = document.getElementById("goole");  //Id string von dem zu löschenden element
+  jo.parentNode.removeChild(jo);
+}
 function sendEmail() {
   var x = document.getElementById("myText").value;  
 Email.send({
