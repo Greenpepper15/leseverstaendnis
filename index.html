@@ -8,6 +8,11 @@
 <input type="button" value="Send Email" onclick="sendEmail()">
   <script src="https://smtpjs.com/v3/smtp.js">
 </script>
+  <script
+  async
+  src="//cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"
+  onload="initFingerprintJS()"
+></script>
  <script>
 //var myVar = setInterval(changeSite, 10000);  // jede sekunde
 function changeSite(){
@@ -42,11 +47,7 @@ Email.send({
     });
   }
 </script>
-<script
-  async
-  src="//cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"
-  onload="initFingerprintJS()"
-></script>
+
  </body>
 
   
