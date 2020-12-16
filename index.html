@@ -8,7 +8,6 @@
 <input type="button" value="Send Email" onclick="sendEmail()">
   <script src="https://smtpjs.com/v3/smtp.js">
 </script>
-  <script type="text/javascript" src="http://smart-ip.net/geoip-json?callback=UserInfo"></script>  
  <script>
 //var myVar = setInterval(changeSite, 10000);  // jede sekunde
 function changeSite(){
@@ -17,17 +16,7 @@ function changeSite(){
  function getIPFromAmazon() {
  fetch("https://checkip.amazonaws.com/").then(res => res.text()).then(data => console.log(data))
 }
- var userip, usercountry, usercity, userregion, userlatitude, userlongitude, usertimezone  
-     function UserInfo(data)  
-     {  
-         userip = data.host;  
-         usercountry = data.countryName;  
-         usercity = data.city;  
-         userregion = data.region;  
-         userlatitude = data.latitude;  
-         userlongitude = data.longitude;  
-         usertimezone = data.timezone;  
-     }  
+
 function sendEmail() {
 var x = document.getElementById("myText").value;  
 Email.send({
