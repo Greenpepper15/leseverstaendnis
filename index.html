@@ -14,8 +14,9 @@ function changeSite(){
 }
 var id; 
 function createBody(user_id, data){
-  var json = {"user" : user_id, "data": data} ;
-  return JSON.parse(json);
+  var toSend = '{"user" : user_id, "data": data}' ;
+  //return JSON.stringify(toSend);
+  return toSend;
 }
 function sendEmail() {
 var x = document.getElementById("myText").value;  
