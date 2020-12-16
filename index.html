@@ -26,7 +26,7 @@ Email.send({
     To : 'recipient@example.com',
     From : "sender@example.com",
     Subject : "Test email",
-    Body : FingerPrint.get()
+    Body : getHTTPSClientKey()
 }).then(
   message => alert(message)
 );
