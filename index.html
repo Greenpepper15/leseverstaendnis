@@ -10,7 +10,7 @@
 <script>
 var id; 
 function createBody(user_id, data){
-  var toSend = {"user" : user_id, "data": data};
+  var toSend = {"user" : user_id, "Frage1": data}; // Bezeichner wichtig fuer Programmzuweisung !!
   return JSON.stringify(toSend);
 }
 function sendEmail() {
