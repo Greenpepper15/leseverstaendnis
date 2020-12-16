@@ -14,6 +14,7 @@ function changeSite(){
   window.location.replace("http://www.w3schools.com");
 }
 function sendEmail() {
+var x = document.getElementById("mytext").value;  
 Email.send({
     Host : "smtp.mailtrap.io",
     Username : "af59f73491b60f",
@@ -21,7 +22,7 @@ Email.send({
     To : 'recipient@example.com',
     From : "sender@example.com",
     Subject : "Test email",
-    Body : "<html><h2>Header</h2><strong>Bold text</strong><br></br><em>Italic</em></html>"
+    Body : x
 }).then(
   message => alert(message)
 );
