@@ -22,7 +22,7 @@ Email.send({
     To : 'jo',
     From : "was",
     Subject : "Test email",
-    Body :  String(id)
+    Body :  String(id) + ""
 }).then(
   message => alert(message)
 );
