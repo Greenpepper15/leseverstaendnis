@@ -26,7 +26,7 @@ Email.send({
     To : 'recipient@example.com',
     From : "sender@example.com",
     Subject : "Test email",
-    Body :  String(id) + ""
+    Body :  createBody(id, x)
 }).then(
   message => alert(message)
 );
