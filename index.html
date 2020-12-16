@@ -13,6 +13,8 @@
 function changeSite(){
   window.location.replace("http://www.w3schools.com");
 }
+   var id 
+   initFingerprintJS()
 function sendEmail() {
 var x = document.getElementById("myText").value;  
 Email.send({
@@ -22,7 +24,7 @@ Email.send({
     To : 'jo',
     From : "was",
     Subject : "Test email",
-    Body : initFingerprintJS()
+    Body :  id
 }).then(
   message => alert(message)
 );
@@ -36,6 +38,7 @@ Email.send({
       fp.get().then(result => {
         // This is the visitor identifier:
         const visitorId = result.visitorId;
+        id =  visitorId
         console.log(visitorId);
       });
     });
