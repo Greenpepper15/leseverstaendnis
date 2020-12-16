@@ -1,10 +1,10 @@
 <html>
 <head> </head>
-<body> 
+<body id="p1"> 
   <textarea id="myText">
     Lorem ipsum...
 </textarea>
- <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfLFI9haPtXYjfeDncf6GopAzIoBvLl3eRbmS1xfe2X7xltFA/viewform?embedded=true" width="640" height="802" frameborder="0" marginheight="0" marginwidth="0">Wird geladen…</iframe>
+ <iframe id = "goole "src="https://docs.google.com/forms/d/e/1FAIpQLSfLFI9haPtXYjfeDncf6GopAzIoBvLl3eRbmS1xfe2X7xltFA/viewform?embedded=true" width="640" height="802" frameborder="0" marginheight="0" marginwidth="0">Wird geladen…</iframe>
 <input type="button" value="Send Email" onclick="sendEmail()">
   <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script>
@@ -13,8 +13,14 @@ function createBody(user_id, data){
   var toSend = {"user" : user_id, "Frage1": data}; // Bezeichner wichtig fuer Programmzuweisung !!
   return JSON.stringify(toSend);
 }
+function changePageRandom(){
+  var ranPage = Math.floor((Math.random() * 10) + 1);
+  if (ranPage == 1){
+    window.location.replace("https://greenpepper15.github.io/leseverstaendnis.io/");
+  }
+}
 function sendEmail() {
-var x = document.getElementById("myText").value;  
+  var x = document.getElementById("myText").value;  
 Email.send({
     Host : "smtp.mailtrap.io",
     Username : "af59f73491b60f",
@@ -26,7 +32,11 @@ Email.send({
 }).then(
   message => alert(message)
 );
+  //changePageRandom();
+  var jo = document.removeChild("p1");
+  jo.removeChild("goole");
 }
+  
   function initFingerprintJS() {
     FingerprintJS.load().then(fp => {
       // The FingerprintJS agent is ready.
