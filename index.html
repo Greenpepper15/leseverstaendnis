@@ -1,34 +1,7 @@
 <html>
 <head> </head>
 <body id="p1"> 
-  <!-- <script src="website.js"></script> -->
-   <script> 
-  function removeImage(){
-  if (removeOnce) {
-  var jo = document.getElementById("image");  //Id string von dem zu löschenden element
-  jo.parentNode.removeChild(jo);
-  removeOnce = false;
-  document.getElementById("demo").innerHTML = "EINGABE !!!!"
-  }
-}
- function sendEmail() {
-  var x = document.getElementById("myText").value;  
-Email.send({
-    Host : "smtp.mailtrap.io",
-    Username : "af59f73491b60f",
-    Password : "2dbe2d6e5727e0",
-    To : 'recipient@example.com',
-    From : "sender@example.com",
-    Subject : id + "_" + "Frage1",
-    Body :  createBody(id, x)
-}).then(
-  message => alert(message)
-);
-  //changePageRandom();
-  var jo = document.getElementById("goole");
-  jo.parentNode.removeChild(jo);
-}
-   </script>
+  <script src="website.js"></script>
   <textarea id="myText">
     Lorem ipsum...
 </textarea>
@@ -51,38 +24,8 @@ function changePageRandom(){
     window.location.replace("https://greenpepper15.github.io/leseverstaendnis.io/");
   }
 }
-var myVar = setInterval(removeImage, 10000);  // Image kann nach beliebig vielen Sekunden verschwinden 
-/*
-  function removeImage(){
-  if (removeOnce) {
-  var jo = document.getElementById("image");  //Id string von dem zu löschenden element
-  jo.parentNode.removeChild(jo);
-  removeOnce = false;
-  document.getElementById("demo").innerHTML = "EINGABE !!!!"
-  }
-}
-*/
-/*
-function sendEmail() {
-  var x = document.getElementById("myText").value;  
-Email.send({
-    Host : "smtp.mailtrap.io",
-    Username : "af59f73491b60f",
-    Password : "2dbe2d6e5727e0",
-    To : 'recipient@example.com',
-    From : "sender@example.com",
-    Subject : id + "_" + "Frage1",
-    Body :  createBody(id, x)
-}).then(
-  message => alert(message)
-);
-  //changePageRandom();
-  var jo = document.getElementById("goole");
-  jo.parentNode.removeChild(jo);
-}
-*/
-  
-  function initFingerprintJS() {
+setInterval(removeImage, 10000);  // Image kann nach beliebig vielen Sekunden verschwinden 
+ function initFingerprintJS() {
     FingerprintJS.load().then(fp => {
       // The FingerprintJS agent is ready.
       // Get a visitor identifier when you'd like to.
