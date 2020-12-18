@@ -10,6 +10,9 @@
  <iframe id = "goole" src="https://docs.google.com/forms/d/e/1FAIpQLSfLFI9haPtXYjfeDncf6GopAzIoBvLl3eRbmS1xfe2X7xltFA/viewform?embedded=true" width="640" height="802" frameborder="0" marginheight="0" marginwidth="0">Wird geladen…</iframe>
 <input type="button" value="Send Email" onclick="sendEmail()">
   <script src="https://smtpjs.com/v3/smtp.js"></script>
+  $(window).on('load', function() {
+   $("goole").hide();
+});
 <script>
 var id; 
 var removeOnce = true;
@@ -23,10 +26,6 @@ function changePageRandom(){
     window.location.replace("https://greenpepper15.github.io/leseverstaendnis.io/");
   }
 }
-  var jo = $(window).on('load', function() {
-   $("goole").hide();
-});
-console.log(jo)
 var myVar = setInterval(removeImage, 10000);  // Image kann nach beliebig vielen Sekunden verschwinden 
 function removeImage(){
   if (removeOnce) {
