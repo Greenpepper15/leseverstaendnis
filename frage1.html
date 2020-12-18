@@ -1,0 +1,108 @@
+<html>
+<head> <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen"> </head>
+  <input type="button" value="Abrufen" onclick="work()">
+  <input type="button" value="Daten Speichern" onclick="download(date, 'daten.txt', 'text/plain')">
+  <input type="button" value="Deleteick"  onclick="worken()">
+  <p id="demo"></p>
+  <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+ <body>
+  
+  <form action="https://send.pageclip.co/aQlCB42llkM5b7S4ZBcufO2vszmXLq6E/warum" class="pageclip-form" method="post">
+  <!-- Replace these inputs with your own. Make sure they have a "name" attribute! -->
+  <input type="text" name="name" value="Roscoe Jones" />
+  <input type="email" name="email" value="roscoe@example.com" />
+
+  <!-- This button will have a loading spinner. Keep the inner span for best results. -->
+  <button type="submit" class="pageclip-form__submit">
+    <span>Send</span>
+  </button>
+</form>
+   
+  </body>
+<script>
+  var wie = {
+  name: 'Billy Jean',
+  email: 'billy@example.com'
+}
+Pageclip.send('aQlCB42llkM5b7S4ZBcufO2vszmXLq6E', 'warum', wie, function (error, response) {
+  console.log('saved?', !!error, '; response:', error || response)
+})
+//var myVar = setInterval(changeSite, 10000);  // jede 10 sekunden
+function changeSite(){
+  window.location.replace("https://greenpepper15.github.io/leseverstaendnis.io/");
+}
+ 
+var request = new XMLHttpRequest();
+var Daten_list = [];
+var links = [];
+var nutz_daten = [];
+var date = "";
+var id;
+request.open('GET', 'https://private-anon-7e9072369b-mailtrap.apiary-proxy.com/api/v1/inboxes/1159365/messages');
+
+request.setRequestHeader("Api-Token", "c5adcdc80c98836801586d944e617d14"); 
+
+request.onreadystatechange = function () {
+  if (this.readyState === 4) {
+    Daten_list = JSON.parse(this.responseText);
+  }
+  console.log(Daten_list);
+};
+
+request.send();
+var fragen = ["Frage1","Frage2"];
+var pfad = [];
+function work() {
+  initFingerprintJS();
+  for (i = 0; i < Daten_list.length; i++ ) {
+    for (j = 0; j < Daten_list.length; j++){
+      if (Daten_list[i]["subject"] == (id + "_" + fragen[j])) { //Daten_list die neueren haben niedrigere Indices !!
+        pfad.push(fragen[j]); //jetzt weiß ich welche frage der Befragte vorher gemacht hat 
+        break;
+    }
+    cnosole.log(pfad);
+    }
+  }
+  nextQuestion()
+}
+
+function nextQuestion(){
+  for (i = 0; i < pfad.length; i++){
+    if (pfad[i] = )
+  window.location.replace("https://greenpepper15.github.io/frage1/");
+  }
+}
+
+function download(data, filename, type) {
+  console.log(data);
+    var file = new Blob([data], {type: type});
+    if (window.navigator.msSaveOrOpenBlob) // IE10+
+        window.navigator.msSaveOrOpenBlob(file, filename);
+    else { // Others
+        var a = document.createElement("a"),
+                url = URL.createObjectURL(file);
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(function() {
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);  
+        }, 0); 
+    }
+}
+ function initFingerprintJS() {
+    FingerprintJS.load().then(fp => {
+      // The FingerprintJS agent is ready.
+      // Get a visitor identifier when you'd like to.
+      fp.get().then(result => {
+        // This is the visitor identifier:
+        const visitorId = result.visitorId;
+        id =  visitorId
+        console.log(visitorId);
+      });
+    });
+
+  </script>
+   <script async src="//cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"onload="initFingerprintJS()"></script>
+</html>
