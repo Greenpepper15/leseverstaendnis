@@ -18,10 +18,8 @@ Email.send({
 }
 
   function removeImage(){
-  if (removeOnce) {
   var jo = document.getElementById("image");  //Id string von dem zu löschenden element
   jo.parentNode.removeChild(jo);
   removeOnce = false;
   document.getElementById("demo").innerHTML = "EINGABE !!!!"
-  }
 }
