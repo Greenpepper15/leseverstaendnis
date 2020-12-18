@@ -14,7 +14,7 @@
 <script>
 var id; 
 var timer_id = setInterval(() => {removeVisability("image","jetz_arbeiten");
-                                 clearInterval(timer_id);}, 1000);
+                                 clearInterval(timer_id);}, 10000);
 
 function changePageRandom(){
   var ranPage = Math.floor((Math.random() * 10) + 1);
@@ -22,7 +22,6 @@ function changePageRandom(){
     window.location.replace("https://greenpepper15.github.io/leseverstaendnis.io/");
   }
 }
-setInterval(removeImage, 10000);  // Image kann nach beliebig vielen Sekunden verschwinden 
  function initFingerprintJS() {
     FingerprintJS.load().then(fp => {
       // The FingerprintJS agent is ready.
