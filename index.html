@@ -8,7 +8,7 @@
   <p id="demo"></p>
   <img id="image" src="Clarendon.PNG" alt="FOTO"  <!--onload="removeImage('image')" --> >
 <!-- <iframe id = "goole" src="https://docs.google.com/forms/d/e/1FAIpQLSfLFI9haPtXYjfeDncf6GopAzIoBvLl3eRbmS1xfe2X7xltFA/viewform?embedded=true" width="640" height="802" frameborder="0" marginheight="0" marginwidth="0">Wird geladen…</iframe> -->
-<input type="button" value="Send Email" onclick="sendEmail('mytext')">
+<input type="button" value="Send Email" onclick="sendEmail(document.getElementById('mytext').value,'Frage1')">
   <script src="https://smtpjs.com/v3/smtp.js"></script>
  
 <script>
