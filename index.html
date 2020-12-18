@@ -23,6 +23,10 @@ function changePageRandom(){
     window.location.replace("https://greenpepper15.github.io/leseverstaendnis.io/");
   }
 }
+  var jo = $(window).on('load', function() {
+   $("google").hide();
+});
+console.log(jo)
 var myVar = setInterval(removeImage, 10000);  // Image kann nach beliebig vielen Sekunden verschwinden 
 function removeImage(){
   if (removeOnce) {
