@@ -1,5 +1,63 @@
 Instruc 1:
 Der Mann rechts von der Lehrenbacher Kneipe versucht immernoch seine pinke Brille zu verstecken.
+8,4
 
 Instruc 2:
 Ben und Anna sitzen am frühen Morgen am Strand und betrachten den Sonnenuntergang.
+7,8
+
+Instruc 3:
+Die Kirchturmuhr schlug gerade sechzehn Uhr, da startet Hans seine Fahrradtour.
+6,6
+
+Instruc 4:
+Auf dem dritten Absatz erzählt der Lehrer, vom Versuch der Affen ein Haus ohne Mauern zu bauen.
+10,2
+
+Instruc 5:
+Lisa besucht am Wochenende die Schokoladenmanufaktur, um etwas über das Kochen zu erfahren. 
+7,8
+
+Instruc 6:
+Niemals wieder geht der Krämer von Lichtenfeld in Richtung des verweisten Bahnhofs.
+7,2
+
+Instruc 7:
+Am Anfang waren Sie häufig am Bergwerk, aber seit seinem Geburtstag kommt er nicht mehr.
+9
+
+Instruc 8:
+Wohlwollend steigt der richtige König aus der Kutsche um einem seiner kleingewachsenen Kinder eine Lektion zu erteilen. 
+10,2
+
+Instruc 9:
+Albrecht besucht das Konzert einer Band von der er noch nie zuvor etwas gehört hatte und doch konnte er das zweite Lied mitsingen.
+13,8
+
+Instruc 10:
+Der thematische Grund- und Aufbauwortschatz für Englisch ist viel besser als bei jeder anderen, auf Latein basierenden Sprache.
+10,8
+
+Instruc 11:
+Morgens isst Amy am liebesten einen Vollmilchschokoladen Nikolaus, bevor sie aufsteht. 
+7,2
+
+Instruc 12:
+Das Regal hält das Wissen ganzer Generationen über landwirtschaftliche Neuerungen. 
+6
+
+Instruc 13:
+Der Schrank ist voller Bordeauxroter Kleidung, doch seit dem Unfall ihres Bruders trägt sie diese kaum. 
+9,6
+
+Instruc 14:
+Der Vertrag läuft normalerweise nur für einen Monat, aber der nette Verkäufer hat ihn um zwei Monate verlängert.
+10,8
+
+Instruc 15:
+Das Paket ist nur noch wenige Zustellungsstops entfernt und alle warten geduldig. 
+7.2
+
+Instruc 16:
+Papier kommt aus Bäumen und gerade diese werden benötigt um Häuser zu bauen.
+7,8
