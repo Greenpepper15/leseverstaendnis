@@ -4,6 +4,7 @@
   <textarea id="myText">
     Lorem ipsum...
 </textarea>
+  <p id="demo"></p>
   <img id="image" src="Clarendon.PNG" alt="FOTO">
  <iframe id = "goole" src="https://docs.google.com/forms/d/e/1FAIpQLSfLFI9haPtXYjfeDncf6GopAzIoBvLl3eRbmS1xfe2X7xltFA/viewform?embedded=true" width="640" height="802" frameborder="0" marginheight="0" marginwidth="0">Wird geladen…</iframe>
 <input type="button" value="Send Email" onclick="sendEmail()">
@@ -27,7 +28,7 @@ function removeImage(){
   var jo = document.getElementById("image");  //Id string von dem zu löschenden element
   jo.parentNode.removeChild(jo);
   removeOnce = false;
-  alert("Jetzt können Sie ihre Eingabe taetigen");
+  document.getElementById("demo").innerHTML = "EINGABE !!!!"
   }
 }
 function sendEmail() {
