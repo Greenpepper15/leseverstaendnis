@@ -9,9 +9,6 @@
 <!-- <iframe id = "goole" src="https://docs.google.com/forms/d/e/1FAIpQLSfLFI9haPtXYjfeDncf6GopAzIoBvLl3eRbmS1xfe2X7xltFA/viewform?embedded=true" width="640" height="802" frameborder="0" marginheight="0" marginwidth="0">Wird geladen…</iframe> -->
 <input type="button" value="Send Email" onclick="sendEmail()">
   <script src="https://smtpjs.com/v3/smtp.js"></script>
-  $(window).on('load', function() {
-   $("goole").hide();
-});
 <script>
 var id; 
 var removeOnce = true;
@@ -26,7 +23,8 @@ function changePageRandom(){
   }
 }
 var myVar = setInterval(removeImage, 10000);  // Image kann nach beliebig vielen Sekunden verschwinden 
-function removeImage(){
+/*
+  function removeImage(){
   if (removeOnce) {
   var jo = document.getElementById("image");  //Id string von dem zu löschenden element
   jo.parentNode.removeChild(jo);
@@ -34,6 +32,8 @@ function removeImage(){
   document.getElementById("demo").innerHTML = "EINGABE !!!!"
   }
 }
+*/
+/*
 function sendEmail() {
   var x = document.getElementById("myText").value;  
 Email.send({
@@ -51,6 +51,7 @@ Email.send({
   var jo = document.getElementById("goole");
   jo.parentNode.removeChild(jo);
 }
+*/
   
   function initFingerprintJS() {
     FingerprintJS.load().then(fp => {
@@ -65,6 +66,7 @@ Email.send({
     });
   }
 </script>
+  <script src="myScript1.js"></script>
  <script async src="//cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"onload="initFingerprintJS()"></script>
   <a href="./frage1.html"> Weiter </a>
  </body>
