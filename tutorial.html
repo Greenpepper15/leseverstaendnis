@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+    <header>
+        <h1>Willkommen zur Umfrage</h1>
+        <p>von David Mohren und Lea von Freeden im Rahmen des Projektseminars Visual Computing and Games im WS 20/21 <br> 
+            Die Umfrage benoetigt circa 10 Minuten. Bitte fuelle zunaechst die Felder zur Selbstauskunft aus.</p>
+
+    </header>
+<body>
+    <title>Influences of textual Parameters </title>
+    <h3>Danke, dass du dir die Zeit nimmst teilzunehmen!</h3>
+
+    <div class ="formstyle">
+    <form>
+        <legend><span class="number">1</span> Selbstauskunft</legend>
+        <label for="age">Alter:</label>
+        <input type="text" id="age" name="age"><br>
+    <div class="custom-sel" style="width: 200px;">
+        <label for="gender">Geschlecht:</label>
+        <select id = "gender" name="gender">
+            <option value="female">weiblich</option>
+            <option value="male">maennlich</option>
+            <option value="divers">divers</option>
+        </select>
+    </div>
+        <label for="mouthertongue">Ist Deutsch deine Muttersprache?</label>
+        <input type="checkbox" class="checkbox" id="german" name="mouthertongue" value="deutsch"> Ja
+        <input type="checkbox" class="checkbox" id="other" name="mouthertongue" value="andere"> Nein
+   
+        <label for="colourvision">Kannst du ungeingeschraenkt Farben sehen?</label>
+        <input type="checkbox" class="checkbox" id="unlim" name="vision" value="unlim"> Ja
+        <input type="checkbox" class="checkbox" id="lim" name="vision" value="lim"> Nein 
+    
+        <legend><span class="number">2</span> Einverstaendniserklaerung</legend>
+        <label for="agreement">Stimmst du zu, dass wir deine Angaben anonymisiert auswerten?</label>
+        <input type="checkbox" class="checkbox" id="agree" name="agreement" value="agree"> Ja
+        <input type="checkbox" class="checkbox" id="disagree" name="agreement" value="disagree"> Nein
+
+        <button type="button" href="frage1.html">Start</button>
+
+    </form>
+    </div>
+    
+
+<footer>
+    <p>  H-BRS, Wintersemester 20/21, Visual Computing and Games</p>
+</footer>
+
+
+
+</body>
+</html>
