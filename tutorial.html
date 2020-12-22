@@ -56,7 +56,7 @@
 
 <script async src="//cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"onload="initFingerprintJS()"></script>
 <script>
-    var id
+    var id;
     function changeSite(){
      window.location.replace("https://greenpepper15.github.io/leseverstaendnis/frage1");
    }
@@ -69,7 +69,7 @@ function initFingerprintJS() {
       fp.get().then(result => {
         // This is the visitor identifier:
         const visitorId = result.visitorId;
-        id =  visitorId
+        id =  visitorId;
         console.log(visitorId);
       });
     });
