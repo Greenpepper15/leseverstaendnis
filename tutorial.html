@@ -40,7 +40,7 @@
         <input type="checkbox" class="checkbox" id="agree" name="agreement" value="agree"> Ja
         <input type="checkbox" class="checkbox" id="disagree" name="agreement" value="disagree"> Nein
 
-        <button type="button" href="./frage1.html">Start</button>
+        <button type="button" onclick="changeSite()">Start</button>
         
         <form method="get" type="button" action="./frage1.html">
             <button type="submit">Start</button>
@@ -56,6 +56,11 @@
     <p>  H-BRS, Wintersemester 20/21, Visual Computing and Games</p>
 </footer>
 
+<script>
+ function changeSite(){
+  window.location.replace("https://greenpepper15.github.io/leseverstaendnis/frage1");
+}
+ </script>
 
 
 </body>
