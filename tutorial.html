@@ -41,7 +41,7 @@
         <input type="checkbox" class="checkbox" id="disagree" name="agreement" value="disagree"> Nein
         <input type="hidden" id="custId" name="custId"  <<!--onload="retId('custId')" --> >
         
-        <input type="submit" value="Send">
+        <input type="submit" onclick ="retId('custId')" value="Send">
         
         <button type="button">Start</button>
         
@@ -74,11 +74,6 @@ function initFingerprintJS() {
       });
     });
   } 
-  var inputF = document.getElementById("custId");
-  initFingerprintJS();
-  console.log(typeof id);
-  inputF.value = String(id);
-  console.log(inputF.value);
  function retId(node_id){
     initFingerprintJS();
      var inputF = document.getElementById(node_id);
