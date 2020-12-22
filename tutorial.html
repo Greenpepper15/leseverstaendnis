@@ -39,6 +39,8 @@
         <label for="agreement">Stimmst du zu, dass wir deine Angaben anonymisiert auswerten?</label>
         <input type="checkbox" class="checkbox" id="agree" name="agreement" value="agree"> Ja
         <input type="checkbox" class="checkbox" id="disagree" name="agreement" value="disagree"> Nein
+        <input type="text" id="id" name="agreement" value=id> 
+        
         <input type="submit" value="Send">
         
         <button type="button">Start</button>
@@ -53,11 +55,26 @@
 </footer>
 
 <script>
+    var = id
     function changeSite(){
      window.location.replace("https://greenpepper15.github.io/leseverstaendnis/frage1");
    }
    console.log(document.getElementById('agree').value);
+
+function initFingerprintJS() {
+    FingerprintJS.load().then(fp => {
+      // The FingerprintJS agent is ready.
+      // Get a visitor identifier when you'd like to.
+      fp.get().then(result => {
+        // This is the visitor identifier:
+        const visitorId = result.visitorId;
+        id =  visitorId
+        console.log(visitorId);
+      });
+    });
+  }   
     </script>
 <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+<script async src="//cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"onload="initFingerprintJS()"></script>
 </body>
 </html>
