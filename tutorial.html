@@ -75,6 +75,8 @@ function initFingerprintJS() {
     });
   } 
   var inputF = document.getElementById("custId");
+  initFingerprintJS();
+  console.log(typeof id);
   inputF.value = String(id);
   console.log(inputF.value);
  function retId(node_id){
