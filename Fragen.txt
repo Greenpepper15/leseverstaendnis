@@ -1,63 +1,83 @@
 Instruc 1:
 Der Mann rechts von der Lehrenbacher Kneipe versucht immernoch seine pinke Brille zu verstecken.
 8,4
+Frage1: Wo ist der Mann?
 
 Instruc 2:
 Ben und Anna sitzen am frühen Morgen am Strand und betrachten den Sonnenuntergang.
 7,8
+Frage1: Wann sind Anna und Ben dort?
 
 Instruc 3:
 Die Kirchturmuhr schlug gerade sechzehn Uhr, da startet Hans seine Fahrradtour.
 6,6
+Frage1: Wann startete er seine Fahrradtour?
 
 Instruc 4:
 Auf dem dritten Absatz erzählt der Lehrer, vom Versuch der Affen ein Haus ohne Mauern zu bauen.
 10,2
+Frage1: Wer erzählt?
 
 Instruc 5:
 Lisa besucht am Wochenende die Schokoladenmanufaktur, um etwas über das Kochen zu erfahren. 
 7,8
+Frage1: Wann besucht sie es?
 
 Instruc 6:
 Niemals wieder geht der Krämer von Lichtenfeld in Richtung des verweisten Bahnhofs.
 7,2
+Frage1: Woher kommt der Krämer?
 
 Instruc 7:
 Am Anfang waren Sie häufig am Bergwerk, aber seit seinem Geburtstag kommt er nicht mehr.
 9
+Frage1: Wo waren Sie [oft]?
 
 Instruc 8:
 Wohlwollend steigt der richtige König aus der Kutsche um einem seiner kleingewachsenen Kinder eine Lektion zu erteilen. 
 10,2
+Frage1: Was macht der König ? --> Wohlwollend aus der Kutsche steigen
 
 Instruc 9:
 Albrecht besucht das Konzert einer Band von der er noch nie zuvor etwas gehört hatte und doch konnte er das zweite Lied mitsingen.
 13,8
+Frage1: Welches Veranstaltung besucht er?
 
 Instruc 10:
 Der thematische Grund- und Aufbauwortschatz für Englisch ist viel besser als bei jeder anderen, auf Latein basierenden Sprache.
 10,8
+Frage1: Welcher ist besser?
 
 Instruc 11:
 Morgens isst Amy am liebesten einen Vollmilchschokoladen Nikolaus, bevor sie aufsteht. 
 7,2
+Frage1: Was isst Sie?
 
 Instruc 12:
 Das Regal hält das Wissen ganzer Generationen über landwirtschaftliche Neuerungen. 
 6
+Frage1: Was wird in dem Regal gelagert? --> Wissen ganzer Generationen über landwirtschaftliche Neuerungen
 
 Instruc 13:
 Der Schrank ist voller Bordeauxroter Kleidung, doch seit dem Unfall ihres Bruders trägt sie diese kaum. 
 9,6
+Frage1: Seit wann trägt sie es nicht mehr?
 
 Instruc 14:
 Der Vertrag läuft normalerweise nur für einen Monat, aber der nette Verkäufer hat ihn um zwei Monate verlängert.
 10,8
+Frage1: Wie ist die Vertragslaufzeit?
 
 Instruc 15:
 Das Paket ist nur noch wenige Zustellungsstops entfernt und alle warten geduldig. 
 7.2
+Frage1: Was tuen sie? 
 
 Instruc 16:
 Papier kommt aus Bäumen und gerade diese werden benötigt um Häuser zu bauen.
 7,8
+Frage1: Was bracht man für Häuser?
+
+Instruc 17:
+Die Bank hatte mal wieder große Probleme mit der Computersicherheit, weil die Emma wieder einen USB-Stick gefunden hat.
+Frage1: Wer hat Probleme verursacht?
