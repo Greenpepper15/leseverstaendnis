@@ -5,7 +5,9 @@ h1 {
 }
 
 p{
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: anisette-std, sans-serif;
+	font-weight: 400;
+	font-style: normal;
 }
 footer{
     position: absolute;
