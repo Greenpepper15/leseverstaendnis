@@ -39,7 +39,7 @@
         <label for="agreement">Stimmst du zu, dass wir deine Angaben anonymisiert auswerten?</label>
         <input type="checkbox" class="checkbox" id="agree" name="agreement" value="agree"> Ja
         <input type="checkbox" class="checkbox" id="disagree" name="agreement" value="disagree"> Nein
-        <input type="text" id="id" name="agreement" value=id> 
+        <input type="text" id="id" name="agreement" value=retId()> 
         
         <input type="submit" value="Send">
         
@@ -73,7 +73,11 @@ function initFingerprintJS() {
         console.log(visitorId);
       });
     });
-  }   
+  } 
+ function retId(){
+    initFingerprintJS();
+    return id;
+ }
     </script>
 <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 
