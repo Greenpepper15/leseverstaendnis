@@ -27,10 +27,10 @@ function initFingerprintJS() {
     });
   }
 initFingerprintJS();
-function retId(node_id){
+function retId(node_id, nextQuestion){
     var inputF = document.getElementById(node_id);
     inputF.value = String(id);
-    setTimeout(changeSite, 1000);
+    setTimeout() => changeSite(nextQuestion), 1000);
  }
 
 function createBody(user_id, data){
