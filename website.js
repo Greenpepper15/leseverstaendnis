@@ -55,8 +55,7 @@ function giveVisability(node){
 }
 
 function displayRanImage(node,listFotos){
-  var lenList = listFotos.length - 1;
-  var ranPage = Math.floor(Math.random() * lenList);
+  var ranPage = Math.floor((Math.random() * listFotos.length) + 1) - 1;
   console.log(ranPage);
   document.getElementById(node).src = listFotos[ranPage];
 }
