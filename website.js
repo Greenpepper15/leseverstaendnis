@@ -20,7 +20,7 @@ function createBody(user_id, data){
 }
 
   function removeVisability(node){
-  document.getElementById(node).style.visibility = "hidden";
+  setTimeout((node) => document.getElementById(node).style.visibility = "hidden", 3000);
 }
 
 function removeNode(){
