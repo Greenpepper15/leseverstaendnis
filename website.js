@@ -54,18 +54,9 @@ function giveVisability(node){
     document.getElementById(node).style.visibility = "visible";
 }
 
-function displayRanImage(node){
-  var ranPage = Math.floor((Math.random() * 3) + 1);
+function displayRanImage(node,listFotos){
+  var lenList = listFotos.length - 1;
+  var ranPage = Math.floor(Math.random() * lenList);
   console.log(ranPage);
-  if (ranPage == 1){
-    document.getElementById(node).src = "Clarendon.PNG";
-  }
-  if (ranPage == 2){
-    document.getElementById(node).src = "farben1.png";
-  }
-   if (ranPage == 3){
-    document.getElementById(node).src = "MinionPro1.png";
-  }
-  //setTimeout(() => removeVisability(node),3000);
+  document.getElementById(node).src = listFotos[ranPage];
 }
-displayRanImage("text");
