@@ -9,10 +9,10 @@
         <h3>Umfage zum Thema Influences on textual parameters, Farbe 1/5</h3>
     </header>
     <div class="center">
-        <img src = "farben1.png" alt ="Farben" id="text" onload="setTimeout(() => removeVisability('text'),3000)"><br>
+        <img src = "farben1.png" alt ="Farben" id="text" onload="setTimeout(() => removeVisability('text','formColour'),3000)"><br>
         <p class = "question" id="frage"> Wähle die zuvor gezeigten Wörter: </p>
         <div class="color">
-            <form action="https://send.pageclip.co/aQlCB42llkM5b7S4ZBcufO2vszmXLq6E/warum" class="pageclip-form" method="post"  visibility="hidden">
+            <form id="formColour" action="https://send.pageclip.co/aQlCB42llkM5b7S4ZBcufO2vszmXLq6E/warum" class="pageclip-form" method="post">
             <!-- <label for="question">Platzhalter frage:</label><br> -->
                 <input type="checkbox" id="color1" name="red" value="red"> 
                 <label for="color1"> <div class="box red" ></div></label>
@@ -49,6 +49,7 @@
 <script>
     // Liste enthaelt datei Namen fuer die verschiendenen fonts
  displayRanImage("text",["Clarendon.PNG","farben1.png","MinionPro1.png"]);
+ removeFormVisability("formColour");
  </script>
  
 </body>
