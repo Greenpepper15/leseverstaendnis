@@ -3,90 +3,133 @@ h1 {
     color: #1bb6dd; 
     font-family: Georgia, "Times New Roman", Times, serif;
 }
+h3 {
+	color: #1bb6dd; 
+}
 
 p{
-    font-family: anisette-std, sans-serif;
-	font-weight: 400;
-	font-style: normal;
+    font-family: Georgia, "Times New Roman", Times, serif;
 }
 footer{
-    position: absolute;
+	position: sticky;
+	position: -webkit-sticky;
     bottom: 0;
     width: 100%;
     background-color: rgb(189, 189, 189);
 }
-
-.formstyle{
-	max-width: auto;
-	padding: 10px 20px;
-	background: #f4f7f8;
-	margin: 10px auto;
-	padding: 20px;
-	background: #f4f7f8;
-	border-radius: 8px;
-	font-family: Georgia, "Times New Roman", Times, serif;
-}
-.formstyle fieldset{
-	border: none;
-}
-.formstyle legend {
-	font-size: 1.4em;
-	margin-bottom: 10px;
-}
-.formstyle label {
-	display: block;
-	margin-bottom: 8px;
-}
-
-.formstyle input[type="text"],
-.formstyle textarea,
-.formstyle select {
-	font-family: Georgia, "Times New Roman", Times, serif;
-	background: rgba(255,255,255,.1);
-	border: none;
-	border-radius: 4px;
-	font-size: 15px;
-	margin: 0;
-	outline: 0;
-	padding: 10px;
-	width: 100%;
-	box-sizing: border-box; 
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box; 
-	background-color: #e8eeef;
-	color:#8a97a0;
-	-webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
-	box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
-	margin-bottom: 30px;
-}
-
-.formstyle select{
-	-webkit-appearance: button;
-	height:35px;
-}
-.formstyle .number {
-	background: #1bb6dd;
-	color: #fff;
-	height: 30px;
-	width: 30px;
-	display: inline-block;
-	font-size: 0.8em;
-	margin-right: 4px;
-	line-height: 30px;
-	text-align: center;
-	text-shadow: 0 1px 0 rgba(255,255,255,0.2);
-	border-radius: 15px 15px 15px 0px;
-}
-button {
-    background:  #1bb6dd;
-    color: #fff;
-    height: 30px;
-    width: 100%;
-    border-radius: 4px;
-    transition-duration: 0.4s;
-
-}
-.checkbox{
-margin: 10px 0px 20px 10px;
-}
+	.formstyle{
+		max-width: auto;
+		padding: 10px 20px;
+		background: #f4f7f8;
+		margin: 10px auto;
+		padding: 20px;
+		background: #f4f7f8;
+		border-radius: 8px;
+		font-family: Georgia, "Times New Roman", Times, serif;
+	}
+	.formstyle fieldset{
+		border: none;
+	}
+	.formstyle legend {
+		font-size: 1.4em;
+		margin-bottom: 10px;
+	}
+	.formstyle label {
+		display: block;
+		margin-bottom: 8px;
+	}
+	.formstyle input[type="text"],
+	.formstyle textarea,
+	.formstyle select {
+		font-family: Georgia, "Times New Roman", Times, serif;
+		background: rgba(255,255,255,.1);
+		border: none;
+		border-radius: 4px;
+		font-size: 15px;
+		margin: 0;
+		outline: 0;
+		padding: 10px;
+		width: 100%;
+		box-sizing: border-box; 
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box; 
+		background-color: #e8eeef;
+		color:#8a97a0;
+		-webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+		box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+		margin-bottom: 30px;
+	}
+	.formstyle select{
+		-webkit-appearance: button;
+		height:35px;
+	}
+	.formstyle .number {
+		background: #1bb6dd;
+		color: #fff;
+		height: 30px;
+		width: 30px;
+		display: inline-block;
+		font-size: 0.8em;
+		margin-right: 4px;
+		line-height: 30px;
+		text-align: center;
+		text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+		border-radius: 15px 15px 15px 0px;
+	}
+	.formstyle input[type="submit"] {
+		background:  #1bb6dd;
+    	color: #fff;
+    	height: 30px;
+    	width: 100%;
+    	border-radius: 4px;
+    	transition-duration: 0.4s;
+	}
+	.button {
+    	background:  #1bb6dd;
+    	color: #fff;
+    	height: 30px;
+    	width: 100%;
+    	border-radius: 4px;
+    	transition-duration: 0.4s;
+	}
+	.button2 {
+    	background:  #1bb6dd;
+    	color: #fff;
+    	height: 30px;
+		width: 30%;
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+    	border-radius: 4px;
+    	transition-duration: 0.4s;
+	}
+	.checkbox{
+		margin: 10px 0px 10px 0px;
+	}
+	
+	.center{
+		position: absolute;
+  		top: 50%;
+  		width: 100%;
+  		text-align: center;
+  		font-size: 18px;
+	}
+	.center input{
+		width: 80%;
+		position: relative;
+		top: 5px;
+		padding: 10px;
+	}
+	.box{ 
+		width:50px; 
+		height:50px; 
+	} 
+	 
+	.red{background: red;} 
+	.orange{background: orange;}
+	.yellow{background: yellow;}
+	.green{background: green;} 
+	.blue{background: blue;} 
+	.purple{background: purple;}
+	.pink{background: rgb(255, 96, 149);}
 
