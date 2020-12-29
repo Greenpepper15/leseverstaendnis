@@ -35,8 +35,12 @@ var id;
       });
     });
   }
+  function retId(node_id){
+    var inputF = document.getElementById(node_id);
+    inputF.value = String(id);
+    setTimeout(changeSite, 1000);
+ }
 </script>    
-<script src="website.js"></script>
 <script async src="//cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"onload="initFingerprintJS()"></script>
 </body>
 </html>
