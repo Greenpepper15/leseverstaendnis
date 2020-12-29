@@ -68,5 +68,4 @@ function displayRanImage(node){
   }
   setTimeout(() => removeVisability(node),3000);
 }
-//displayRanImage("text")
-console.log('5')
+displayRanImage("text")
