@@ -4,83 +4,85 @@
 <head>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
+
+<body>
     <header>
         <h1>Willkommen zur Umfrage</h1>
         <p>von David Mohren und Lea von Freeden im Rahmen des Projektseminars Visual Computing and Games im WS 20/21 <br> 
-            Die Umfrage benoetigt circa 10 Minuten. Bitte fuelle zunaechst die Felder zur Selbstauskunft aus.</p>
-
+                Die Umfrage benoetigt circa 15 Minuten. Bitte fuelle zunaechst die Felder zur Selbstauskunft aus.</p>
+    
     </header>
-<body>
     <title>Influences of textual Parameters </title>
     <h3>Danke, dass du dir die Zeit nimmst teilzunehmen!</h3>
 
     <div class ="formstyle">
-    <form action="https://send.pageclip.co/aQlCB42llkM5b7S4ZBcufO2vszmXLq6E/warum" class="pageclip-form" method="post">
-        <legend><span class="number">1</span> Selbstauskunft</legend>
-        <label for="age">Alter:</label>
-        <input type="text" id="age" name="age"><br>
-    <div class="custom-sel" style="width: 200px;">
-        <label for="gender">Geschlecht:</label>
-        <select id = "gender" name="gender">
-            <option value="female">weiblich</option>
-            <option value="male">maennlich</option>
-            <option value="divers">divers</option>
-        </select>
-    </div>
-        <label for="mouthertongue">Ist Deutsch deine Muttersprache?</label>
-        <input type="checkbox" class="checkbox" id="german" name="mouthertongue" value="deutsch"> Ja
-        <input type="checkbox" class="checkbox" id="other" name="mouthertongue" value="andere"> Nein
+        <form action="https://send.pageclip.co/aQlCB42llkM5b7S4ZBcufO2vszmXLq6E/warum" class="pageclip-form" method="post">
+            <legend><span class="number">1</span> Selbstauskunft</legend>
+            <label for="age">Alter:</label>
+                <input type="text" id="age" name="age" required><br>
+            <div class="custom-sel" style="width: 200px;">
+                <label for="gender">Geschlecht:</label>
+                <select id = "gender" name="gender" required>
+                    <option value="female">weiblich</option>
+                    <option value="male">maennlich</option>
+                    <option value="divers">divers</option>
+                </select>
+            </div>
+            <label for="mouthertongue">Ist Deutsch deine Muttersprache?</label>
+                <input type="checkbox" class="checkbox" id="german" name="mouthertongue" value="deutsch"> Ja
+                <input type="checkbox" class="checkbox" id="other" name="mouthertongue" value="andere"> Nein
    
-        <label for="colourvision">Kannst du ungeingeschraenkt Farben sehen?</label>
-        <input type="checkbox" class="checkbox" id="unlim" name="vision" value="unlim"> Ja
-        <input type="checkbox" class="checkbox" id="lim" name="vision" value="lim"> Nein 
+            <label for="colourvision">Kannst du ungeingeschraenkt Farben sehen?</label>
+                <input type="checkbox" class="checkbox" id="unlim" name="vision" value="unlim"> Ja
+                <input type="checkbox" class="checkbox" id="lim" name="vision" value="lim"> Nein 
     
-        <legend><span class="number">2</span> Einverstaendniserklaerung</legend>
-        <label for="agreement">Stimmst du zu, dass wir deine Angaben anonymisiert auswerten?</label>
-        <input type="checkbox" class="checkbox" id="agree" name="agreement" value="agree"> Ja
-        <input type="checkbox" class="checkbox" id="disagree" name="agreement" value="disagree"> Nein
-        <input type="hidden" id="custId" name="custId">
+            <legend><span class="number">2</span> Einverstaendniserklaerung</legend>
+            <label for="agreement">Stimmst du zu, dass wir deine Angaben anonymisiert auswerten?</label>
+                <input type="checkbox" class="checkbox" id="agree" name="agreement" value="agree"> Ja
+                <input type="checkbox" class="checkbox" id="disagree" name="agreement" value="disagree"> Nein
+                <input type="hidden" id="custId" name="custId">
         
-        <input type="submit" onclick ="retId('custId')" value="Send">
-        
-        <button type="button">Start</button>
+            <input type="submit" onclick ="retId('custId')" value="Start">
+            <!-- <button type="button">Start</button> -->
+            
         
 
-    </form>
+        </form>
     </div>
     
 
-<footer>
-    <p>  H-BRS, Wintersemester 20/21, Visual Computing and Games</p>
-</footer>
+    <footer>
+        <p>  H-BRS, Wintersemester 20/21, Visual Computing and Games</p>
+    </footer>
 
-<script async src="//cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"onload="initFingerprintJS()"></script>
-<script>
-    var id;
-    function changeSite(){
-     window.location.replace("https://greenpepper15.github.io/leseverstaendnis/frage1");
-   }
-   console.log(document.getElementById('agree').value);
+    <script async src="//cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"onload="initFingerprintJS()"></script>
+    <script>
+        var id;
+        function changeSite(){
+        window.location.replace("https://greenpepper15.github.io/leseverstaendnis/frage1");
+        }
+        console.log(document.getElementById('agree').value);
 
-function initFingerprintJS() {
-    FingerprintJS.load().then(fp => {
-      // The FingerprintJS agent is ready.
-      // Get a visitor identifier when you'd like to.
-      fp.get().then(result => {
-        // This is the visitor identifier:
-        const visitorId = result.visitorId;
-        id =  visitorId;
-        console.log(visitorId);
-      });
-    });
-  } 
- function retId(node_id){
-    initFingerprintJS();
-     var inputF = document.getElementById(node_id);
-     inputF.value = String(id);
- }
+        function initFingerprintJS() {
+            FingerprintJS.load().then(fp => {
+            // The FingerprintJS agent is ready.
+            // Get a visitor identifier when you'd like to.
+            fp.get().then(result => {
+            // This is the visitor identifier:
+            const visitorId = result.visitorId;
+            id =  visitorId;
+            console.log(visitorId);
+            });
+        });
+        } 
+        function retId(node_id){
+        initFingerprintJS();
+        var inputF = document.getElementById(node_id);
+        inputF.value = String(id);
+        }
     </script>
-<script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 
 </body>
+
 </html>
