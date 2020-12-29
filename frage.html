@@ -9,7 +9,7 @@
         <h3>Umfage zum Thema Influences on textual parameters, Frage 1/8</h3>
     </header>
     <div class="center">
-        <img src = "MinionPro1.png" alt ="Textbeispiel" id="text" onload="setTimeout(() => removeVisability('text'),3000)"><br>
+        <img alt ="Textbeispiel" id="text"  onload="displayRanImage('text')"   <!-- onload="setTimeout(() => removeVisability('text'),3000)"> --> <br>
         <p class = "question" id="frage" > Platzhalterfrage? </p>
         <form action="https://send.pageclip.co/aQlCB42llkM5b7S4ZBcufO2vszmXLq6E/warum" class="pageclip-form" method="post">
             <!-- <label for="question">Platzhalter frage:</label><br> -->
@@ -50,7 +50,18 @@ function removeVisability(node){
 function giveVisability(node){
     document.getElementById(node).style.visibility = "visible";
 }
-document.getElementById("text").src = "Clarendon.PNG";
+function displayRanImage(node){
+  var ranPage = Math.floor((Math.random() * 3) + 1);
+  if (ranPage == 1){
+    document.getElementById(node).src = "Clarendon.PNG";
+  }
+  if (ranPage == 2){
+    document.getElementById(node).src = "farben1.png";
+  }
+   if (ranPage == 3){
+    document.getElementById(node).src = "MinionPro1.png";
+  }
+}
 </script>    
 <script async src="//cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"onload="initFingerprintJS()"></script>
 </body>
