@@ -53,9 +53,6 @@ function removeVisability(node_hide){
 function giveVisability(node){
     document.getElementById(node).style.visibility = "visible";
 }
-function removeFormVisability(formId){
-    document.getElementById(formId).style.visibility = "hidden";
-}
 
 function displayRanImage(node,listFotos){
   var ranPage = Math.floor((Math.random() * listFotos.length) + 1) - 1;
