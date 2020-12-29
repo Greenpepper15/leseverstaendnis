@@ -10,7 +10,7 @@
     </header>
     <div class="center">
         <img src = "MinionPro1.png" alt ="Textbeispiel" id="text" onload="setTimeout(() => removeVisability('text'),3000)"><br>
-        <p class = "question" id="frage" onload="giveVisability('frage')"  > Platzhalterfrage? </p>
+        <p class = "question" id="frage" > Platzhalterfrage? </p>
         <form action="https://send.pageclip.co/aQlCB42llkM5b7S4ZBcufO2vszmXLq6E/warum" class="pageclip-form" method="post">
             <!-- <label for="question">Platzhalter frage:</label><br> -->
                 <input type="text" id="answer" name="answer"><br>
@@ -45,6 +45,7 @@ var id;
 }
 function removeVisability(node){
     document.getElementById(node).style.visibility = "hidden";
+    giveVisability('frage');
 }
 function giveVisability(node){
     document.getElementById(node).style.visibility = "visible";
