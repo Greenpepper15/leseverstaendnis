@@ -43,6 +43,9 @@ var id;
  function changeSite(){
         window.location.replace("https://greenpepper15.github.io/leseverstaendnis/tutorial");
 }
+function removeVisability(node){
+  setTimeout((node) => document.getElementById(node).style.visibility = "hidden", 3000);
+}
 </script>    
 <script async src="//cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"onload="initFingerprintJS()"></script>
 </body>
