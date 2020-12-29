@@ -66,6 +66,6 @@ function displayRanImage(node){
    if (ranPage == 3){
     document.getElementById(node).src = "MinionPro1.png";
   }
-  setTimeout(() => removeVisability(node),3000);
+  //setTimeout(() => removeVisability(node),3000);
 }
 displayRanImage("text");
