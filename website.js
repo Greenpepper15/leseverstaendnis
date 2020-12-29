@@ -19,8 +19,11 @@ function createBody(user_id, data){
   return JSON.stringify(toSend);
 }
 
-  function removeVisability(node, massage){
+  function removeVisability(node){
+  document.getElementById(node).style.visibility = "hidden";
+}
+
+function removeNode(){
   var jo = document.getElementById(node);  //Id string von dem zu löschenden element
   jo.parentNode.removeChild(jo);
-  document.getElementById("demo").innerHTML = massage;
 }
