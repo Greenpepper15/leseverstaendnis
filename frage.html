@@ -50,9 +50,9 @@ function removeVisability(node){
 function giveVisability(node){
     document.getElementById(node).style.visibility = "visible";
 }
-var ranPage;
+
 function displayRanImage(node){
-  ranPage = Math.floor((Math.random() * 3) + 1);
+  var ranPage = Math.floor((Math.random() * 3) + 1);
   console.log(ranPage);
   if (ranPage == 1){
     document.getElementById(node).src = "Clarendon.PNG";
