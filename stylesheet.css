@@ -132,4 +132,7 @@ footer{
 	.blue{background: blue;} 
 	.purple{background: purple;}
 	.pink{background: rgb(255, 96, 149);}
+	.question{
+		visibility:hidden;
+	}
 
