@@ -14,6 +14,12 @@ function sendEmail(element,Frage) {
   );
 }
 
+function retId(node_id){
+    var inputF = document.getElementById(node_id);
+    inputF.value = String(id);
+    setTimeout(changeSite, 1000);
+ }
+
 function createBody(user_id, data){
   var toSend = {"user" : user_id, "Frage1": data}; // Bezeichner wichtig fuer Programmzuweisung !!
   return JSON.stringify(toSend);
