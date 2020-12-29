@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 
 <html>
+<script async src="//cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"></script>
+<script src="website.js"></script> 
 <head>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
@@ -19,9 +21,10 @@
         </form>
         
     </div>
-    <input class="button2" type="submit" onclick ="retId('custId')" value="Weiter">
+    <input class="button2" type="submit" onclick ="retId('custId','https://greenpepper15.github.io/leseverstaendnis/frage1')" value="Weiter">
     
 <script>
+    /*
 var id; 
  function initFingerprintJS() {
     FingerprintJS.load().then(fp => {
@@ -64,9 +67,9 @@ function displayRanImage(node){
     document.getElementById(node).src = "MinionPro1.png";
   }
 }
-displayRanImage("text")
+displayRanImage("text")*/
 </script>    
-<script async src="//cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"onload="initFingerprintJS()"></script>
+
 </body>
 </html>
 
