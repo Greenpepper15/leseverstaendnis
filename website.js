@@ -47,9 +47,8 @@ function removeNode(){
  function changeSite(link){
         window.location.replace(link);
 }
-function removeVisability(node_hide,node_show){
+function removeVisability(node_hide){
     document.getElementById(node_hide).style.visibility = "hidden";
-    giveVisability(node_show);
 }
 function giveVisability(node){
     document.getElementById(node).style.visibility = "visible";
