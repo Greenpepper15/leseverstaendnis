@@ -59,9 +59,8 @@
     <script>
         var id;
         function changeSite(){
-        window.location.replace("https://greenpepper15.github.io/leseverstaendnis/frage1");
+        window.location.replace("https://greenpepper15.github.io/leseverstaendnis/frage");
         }
-        console.log(document.getElementById('agree').value);
 
         function initFingerprintJS() {
             FingerprintJS.load().then(fp => {
@@ -79,6 +78,7 @@
         initFingerprintJS();
         var inputF = document.getElementById(node_id);
         inputF.value = String(id);
+        changeSite();
         }
     </script>
     <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
