@@ -47,12 +47,15 @@ function removeNode(){
  function changeSite(link){
         window.location.replace(link);
 }
-function removeVisability(node){
-    document.getElementById(node).style.visibility = "hidden";
-    giveVisability('frage');
+function removeVisability(node_hide,node_show){
+    document.getElementById(node_hide).style.visibility = "hidden";
+    giveVisability(node_show);
 }
 function giveVisability(node){
     document.getElementById(node).style.visibility = "visible";
+}
+function removeFormVisability(formId){
+    document.getElementById(formId).style.visibility = "hidden";
 }
 
 function displayRanImage(node,listFotos){
