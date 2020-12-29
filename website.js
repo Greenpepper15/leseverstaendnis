@@ -13,7 +13,20 @@ function sendEmail(element,Frage) {
     message => alert(message)
   );
 }
-
+var id; 
+function initFingerprintJS() {
+    FingerprintJS.load().then(fp => {
+      // The FingerprintJS agent is ready.
+      // Get a visitor identifier when you'd like to.
+      fp.get().then(result => {
+        // This is the visitor identifier:
+        const visitorId = result.visitorId;
+        id =  visitorId
+        console.log(visitorId);
+      });
+    });
+  }
+initFingerprintJS();
 function retId(node_id){
     var inputF = document.getElementById(node_id);
     inputF.value = String(id);
@@ -25,11 +38,33 @@ function createBody(user_id, data){
   return JSON.stringify(toSend);
 }
 
-  function removeVisability(node){
-  setTimeout((node) => document.getElementById(node).style.visibility = "hidden", 3000);
-}
-
 function removeNode(){
   var jo = document.getElementById(node);  //Id string von dem zu löschenden element
   jo.parentNode.removeChild(jo);
 }
+
+ function changeSite(link){
+        window.location.replace(link);
+}
+function removeVisability(node){
+    document.getElementById(node).style.visibility = "hidden";
+    giveVisability('frage');
+}
+function giveVisability(node){
+    document.getElementById(node).style.visibility = "visible";
+}
+
+function displayRanImage(node){
+  var ranPage = Math.floor((Math.random() * 3) + 1);
+  console.log(ranPage);
+  if (ranPage == 1){
+    document.getElementById(node).src = "Clarendon.PNG";
+  }
+  if (ranPage == 2){
+    document.getElementById(node).src = "farben1.png";
+  }
+   if (ranPage == 3){
+    document.getElementById(node).src = "MinionPro1.png";
+  }
+}
+displayRanImage("text")
