@@ -10,7 +10,7 @@
     </header>
     <div class="center">
         <img src = "MinionPro1.png" alt ="Textbeispiel" id="text" onload="setTimeout(() => removeVisability('text'),3000)"><br>
-        <p class = "question" id="frage" onload="removeVisability('frage')"  > Platzhalterfrage? </p>
+        <p class = "question" id="frage" onload="giveVisability('frage')"  > Platzhalterfrage? </p>
         <form action="https://send.pageclip.co/aQlCB42llkM5b7S4ZBcufO2vszmXLq6E/warum" class="pageclip-form" method="post">
             <!-- <label for="question">Platzhalter frage:</label><br> -->
                 <input type="text" id="answer" name="answer"><br>
@@ -44,7 +44,10 @@ var id;
         window.location.replace("https://greenpepper15.github.io/leseverstaendnis/tutorial");
 }
 function removeVisability(node){
- document.getElementById(node).style.visibility = "hidden";
+    document.getElementById(node).style.visibility = "hidden";
+}
+function giveVisability(node){
+    document.getElementById(node).style.visibility = "visible";
 }
 </script>    
 <script async src="//cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"onload="initFingerprintJS()"></script>
