@@ -1,0 +1,141 @@
+h1 {
+    color: #1bb6dd; 
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+h3 {
+	color: #1bb6dd; 
+}
+
+p{
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+footer{
+	position: sticky;
+	position: -webkit-sticky;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(189, 189, 189);
+}
+	.button3 {
+    	background:  #1bb6dd;
+    	color: #fff;
+    	height: 30px;
+		width: 30%;
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+    	border-radius: 4px;
+    	transition-duration: 0.4s;
+	}
+	
+	.center{
+		position: relative;
+  		top: 280px;
+  		width: 100%;
+  		text-align: center;
+  		font-size: 18px;
+	}
+	.center input{
+		width: 80%;
+		position: relative;
+		top: 5px;
+		padding: 10px;
+	}
+	.box{ 
+		width:50px; 
+		height:50px; 
+	} 
+	
+	.question{
+		visibility: hidden;
+    }
+    .color{
+        position: relative;
+        top: 320px;
+    }
+    .choice{
+        width: 100%;
+        position: absolute;
+        text-align: center;
+        padding-top: 30px;
+    }
+    .choice td {
+        height: 80px;
+    }
+
+
+input[type="checkbox"]{
+    opacity: 0;
+}
+    .red{
+        background: red;
+        color: red;
+        border: 3px outset red;
+        padding: 10px;
+    } 
+    .inred:checked + .red {
+        border: 3px inset lightgrey;
+      }
+    .orange{
+        background: orange;
+        color: orange;
+        border: 3px outset orange;
+        padding: 10px;
+    }
+    .inorange:checked + .orange {
+        border: 3px inset lightgrey;
+      }
+    .yellow{
+        background: yellow;
+        color: yellow;
+        border: 3px outset yellow;
+        padding: 10px;
+    }
+    .inyellow:checked + .yellow {
+        border: 3px inset lightgrey;
+      }
+    .green{
+        background: green;
+        color: green;
+        border: 3px outset green;
+        padding: 10px;
+    } 
+    .ingreen:checked + .green {
+        border: 3px inset lightgrey;
+      }
+    .turquoise{
+        background: turquoise;
+        color: turquoise;
+        border: 3px outset turquoise;
+        padding: 10px;
+    } 
+    .inturquoise:checked + .turquoise {
+        border: 3px inset lightgrey;
+      }
+    .blue{
+        background: blue;
+        color: blue;
+        border: 3px outset blue;
+        padding: 10px;
+    } 
+    .inblue:checked + .blue {
+        border: 3px inset lightgrey;
+      }
+    .purple{
+        background: purple;
+        color: purple;
+        border: 3px outset purple;
+        padding: 10px;
+    }.inpurple:checked + .purple {
+        border: 3px inset lightgrey;
+      }
+    .pink{
+        background: rgb(255, 96, 149);
+        color: rgb(255, 96, 149);
+        border: 3px outset rgb(255, 96, 149);
+        padding: 10px;
+    }
+    .inpink:checked + .pink {
+        border: 3px inset lightgrey;
+      }
+    

@@ -96,6 +96,17 @@ footer{
     	background:  #1bb6dd;
     	color: #fff;
     	height: 30px;
+		width: 80%;
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+    	border-radius: 4px;
+    	transition-duration: 0.4s;
+	}
+	.button3 {
+    	background:  #1bb6dd;
+    	color: #fff;
+    	height: 30px;
 		width: 30%;
 		position: absolute;
 		bottom: 10px;
@@ -124,15 +135,7 @@ footer{
 		width:50px; 
 		height:50px; 
 	} 
-	 
-	.red{background: red;} 
-	.orange{background: orange;}
-	.yellow{background: yellow;}
-	.green{background: green;} 
-	.blue{background: blue;} 
-	.purple{background: purple;}
-	.pink{background: rgb(255, 96, 149);}
+	
 	.question{
-	visibility: hidden;
+		visibility: hidden;
 	}
-
