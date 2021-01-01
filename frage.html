@@ -11,12 +11,18 @@
     <div class="center">
                                                                 <!-- Zeit zum ausblenden -->
         <img alt ="Textbeispiel" id="text" onload="setTimeout(() => {removeVisability('text');giveVisability('frage');giveVisability('formText');},3000)"> <!-- im script website.js wird displayRanImage("text") aufgerufen -->  <br>
-        <p class = "question" id="frage" > Platzhalterfrage? </p>
+        <p class = "question" id="frage" > Platzhalterfrage?  + Kennen Sie die Schriftart </p>
         <form id="formText" action="https://send.pageclip.co/aQlCB42llkM5b7S4ZBcufO2vszmXLq6E/warum" class="pageclip-form" method="post">
             <!-- <label for="question">Platzhalter frage:</label><br> -->
                 <input type="text" id="answer" name="answer"><br>
+       
+            <label for="knowFont">Kanntest du die Schriftart ?</label>
+                <input type="checkbox" class="checkbox" id="know" name="knowfont" value="know"> Ja
+                <input type="checkbox" class="checkbox" id="unknown" name="knowfont" value="unknown"> Nein 
+            
                 <input type="hidden" id="custId" name="custId">
                 <input type="hidden" id="frageId" name="frageId">
+                <input type="hidden" id="fontId" name="fontId">
                                                                             <!-- Fragenname, ULR fuer naechste Frage -->
        <input class="button2" type="submit" onclick ="retId('custId','frageId','Frage0','https://greenpepper15.github.io/leseverstaendnis/frage1')" value="Weiter">
         </form>
@@ -29,8 +35,10 @@
 <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 <script>
     // Liste enthaelt datei Namen fuer die verschiendenen fonts
- displayRanImage("text",["Clarendon.PNG","farben1.png","MinionPro1.png"]);
+ var fontList = ["Clarendon.PNG","farben1.png","MinionPro1.png"]
+ var imageNum = displayRanImage("text",fontList);
  removeVisability("formText");
+ writeFormInputValue("fontId", fontList[imageNum]);
  </script>
  
 </body>
