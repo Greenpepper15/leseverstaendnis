@@ -35,12 +35,16 @@
 <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 <script>
     // Liste enthaelt datei Namen fuer die verschiendenen fonts
+ var remaingQuestions = JSON.parse(localStorage.getItem('frageSammlung')).Fragen
+ 
+ 
+ localStorage.setItem("frageSammlung",JSON.stringify(remaingQuestions));
  var fontList = ["Clarendon.PNG","farben1.png","MinionPro1.png"]
  var imageNum = displayRanImage("text",fontList);
  removeVisability("formText");
  writeFormInputValue("fontId", fontList[imageNum]);
- localStorage.setItem('favoriteflavor','vanilla');
- localStorage.removeItem('favoriteflavor');
+ //localStorage.setItem('favoriteflavor','vanilla');
+ //localStorage.removeItem('favoriteflavor');
  </script>
  
 </body>
