@@ -42,7 +42,7 @@
                 <input type="checkbox" class="checkbox" id="disagree" name="agreement" value="disagree"> Nein
                 <input type="hidden" id="custId" name="custId">
         
-            <input type="submit" onclick ="setTimeout(changeSite,3000)" value="Start">
+            <input type="submit" onclick ="retId('custId')" value="Start">
             <!-- <button type="button">Start</button> -->
             
         
@@ -79,13 +79,11 @@
         function retId(node_id) {
             var inputF = document.getElementById(node_id);
             inputF.value = String(id);
+            setTimeout(() => changeSite(nextQuestion), 1000);
         }
         
         var allFragen = {"Fragen": ["Frage1","Frage2","Frage3"]};
         localStorage.setItem("frageSammlung",JSON.stringify(allFragen));
-        //writeFormInputValue('custId',returnId());
-        //setTimeout(() => {} , 1000);
-        //retId("custId");
     </script>
     
 
