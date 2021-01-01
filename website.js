@@ -66,6 +66,6 @@ function writeFormInputValue(input_id, data){
     document.getElementById(input_id).value = data;
 }
 
-function retId(){
+function returnId(){
     return id;
 }
