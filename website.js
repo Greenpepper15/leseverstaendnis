@@ -65,3 +65,7 @@ function displayRanImage(node_im,listFotos){
 function writeFormInputValue(input_id, data){
     document.getElementById(input_id).value = data;
 }
+
+function retId(){
+    return id;
+}
