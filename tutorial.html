@@ -74,10 +74,10 @@
         });
         } 
         function retId(node_id){
-        initFingerprintJS();
         var inputF = document.getElementById(node_id);
         inputF.value = String(id);
         }
+        initFingerprintJS();
         var allFragen = {"Fragen": ["Frage1","Frage2","Frage3"]};
         localStorage.setItem("frageSammlung",JSON.stringify(allFragen));
         retId('custId');
