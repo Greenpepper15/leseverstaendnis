@@ -36,6 +36,9 @@
 <script>
     // Liste enthaelt datei Namen fuer die verschiendenen fonts
  var remaingQuestions = JSON.parse(localStorage.getItem('frageSammlung')).Fragen;
+ if (remaingQuestions.length == 0) {
+    changeSite("https://www.h-brs.de/de/inf");
+ }
  var chosenQuest =  RanNumber(remaingQuestions);
  var prefix = remaingQuestions[chosenQuest];
  remaingQuestions.splice(chosenQuest, 1);
