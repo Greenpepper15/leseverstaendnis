@@ -54,8 +54,12 @@ function giveVisability(node){
     document.getElementById(node).style.visibility = "visible";
 }
 
-function displayRanImage(node,listFotos){
+function displayRanImage(node_im,listFotos){
   var ranPage = Math.floor((Math.random() * listFotos.length) + 1) - 1;
-  console.log(ranPage);
-  document.getElementById(node).src = listFotos[ranPage];
+  document.getElementById(node_im).src = listFotos[ranPage];
+  return ranPage;
+}
+
+function writeFormInputValue(input_id, data){
+    document.getElementById(input_id).value = data;
 }
