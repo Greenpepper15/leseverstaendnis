@@ -53,7 +53,7 @@ function removeVisability(node_hide){
 function giveVisability(node){
     document.getElementById(node).style.visibility = "visible";
 }
-function RandomNumber(list){
+function RanNumber(list){
     return Math.floor((Math.random() * list.length) + 1) - 1;
 }
 function displayRanImage(node_im,listFotos){
