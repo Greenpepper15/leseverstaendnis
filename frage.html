@@ -44,7 +44,7 @@
  remaingQuestions.splice(chosenQuest, 1);
  var jso = {"Fragen" :  remaingQuestions};
  localStorage.setItem("frageSammlung",JSON.stringify(jso));
- var fontList = [prefix + "/" + "Clarendon.PNG", prefix + "/" + "farben1.png", prefix + "/" + "MinionPro1.png"];
+ var fontList = [prefix + "/" + "Clarendon.png", prefix + "/" + "farben1.png", prefix + "/" + "MinionPro1.png"];
  var imageNum = displayRanImage("text",fontList);
  removeVisability("formText");
  writeFormInputValue("fontId", fontList[imageNum]);
