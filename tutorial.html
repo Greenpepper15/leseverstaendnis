@@ -65,7 +65,8 @@
               fp.get().then(result => {
                 // This is the visitor identifier:
                 const visitorId = result.visitorId;
-                id =  visitorId
+                id =  visitorId;
+                document.getElementById("cust_Id") =  visitorId;
                 console.log(visitorId);
               });
             });
@@ -83,8 +84,8 @@
         var allFragen = {"Fragen": ["Frage1","Frage2","Frage3"]};
         localStorage.setItem("frageSammlung",JSON.stringify(allFragen));
         //writeFormInputValue('custId',returnId());
-        setTimeout(() => {} , 1000);
-        retId("custId");
+        //setTimeout(() => {} , 1000);
+        //retId("custId");
     </script>
     
 
