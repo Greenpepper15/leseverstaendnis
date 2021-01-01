@@ -39,7 +39,8 @@
  var chosenQuest =  RanNumber(remaingQuestions);
  var prefix = remaingQuestions[chosenQuest];
  remaingQuestions.splice(chosenQuest, 1);
- localStorage.setItem("frageSammlung",JSON.stringify(remaingQuestions));
+ var jso = {"Fragen" :  remaingQuestions};
+ localStorage.setItem("frageSammlung",JSON.stringify(jso));
  var fontList = [prefix + "/" + "Clarendon.PNG", prefix + "/" + "farben1.png", prefix + "/" + "MinionPro1.png"];
  var imageNum = displayRanImage("text",fontList);
  removeVisability("formText");
