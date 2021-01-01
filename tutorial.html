@@ -4,7 +4,8 @@
 <head>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
-
+<script src="//cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"></script>
+<script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 <body>
     <header>
         <h1>Willkommen zur Umfrage</h1>
@@ -42,7 +43,7 @@
                 <input type="checkbox" class="checkbox" id="disagree" name="agreement" value="disagree"> Nein
                 <input type="hidden" id="custId" name="custId">
         
-            <input type="submit" onclick ="retId('custId')" value="Start">
+            <input type="submit" onclick ="changeSite()" value="Start">
             <!-- <button type="button">Start</button> -->
             
         
@@ -61,8 +62,6 @@
         function changeSite(){
         window.location.replace("https://greenpepper15.github.io/leseverstaendnis/frage");
         }
-        console.log(document.getElementById('agree').value);
-
         function initFingerprintJS() {
             FingerprintJS.load().then(fp => {
             // The FingerprintJS agent is ready.
@@ -82,8 +81,9 @@
         }
         var allFragen = {"Fragen": ["Frage1","Frage2","Frage3"]};
         localStorage.setItem("frageSammlung",JSON.stringify(allFragen));
+        retId('custId');
     </script>
-    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+    
 
 </body>
 
