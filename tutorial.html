@@ -58,8 +58,8 @@
     <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
     <script>
         var id;
-        function changeSite(){
-        window.location.replace("https://greenpepper15.github.io/leseverstaendnis/frage");
+        function changeSite() {
+            window.location.replace("https://greenpepper15.github.io/leseverstaendnis/frage");
         }
         function initFingerprintJS() {
             FingerprintJS.load().then(fp => {
@@ -73,11 +73,12 @@
             });
         });
         } 
-        function retId(node_id){
-        var inputF = document.getElementById(node_id);
-        inputF.value = String(id);
+        function retId(node_id) {
+            var inputF = document.getElementById(node_id);
+            inputF.value = String(id);
         }
         initFingerprintJS();
+        console.log(id);
         var allFragen = {"Fragen": ["Frage1","Frage2","Frage3"]};
         localStorage.setItem("frageSammlung",JSON.stringify(allFragen));
         retId('custId');
