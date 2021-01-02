@@ -6,7 +6,7 @@
 </head>
 <body>
     <header>
-        <h3 id "pageNum">Umfage zum Thema Influences on textual parameters, Farbe 1/5</h3>
+        <h3 id "pageNum"></h3>
     </header>
     <div class="center">
         <img src = "farben1.png" alt ="Farben" id="text" onload="setTimeout(() =>{removeVisability('text');giveVisability('frage');giveVisability('formColour');},3000)"><br>
@@ -60,8 +60,7 @@
  writeFormInputValue("farbeId", farben[ranNum]);
  removeVisability("formColour");
  
- var text = "Umfage zum Thema Influences on textual parameters, Farbe 1/"
- document.getElementById("PageNum").innerHTML = text + fragenNum;
+ document.getElementById("pageNum").innerHTML = "Umfage zum Thema Influences on textual parameters, Farbe " + fragenNum + "/5";
  </script>
  
 </body>
