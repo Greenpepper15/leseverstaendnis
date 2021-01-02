@@ -50,11 +50,11 @@
 <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 <script>
     // Liste enthaelt datei Namen fuer die verschiendenen fonts
- var fragen_anzahl = parseInt(localStorage.getItem('frageSammlung'));
+ var fragen_anzahl = parseInt(localStorage.getItem("farben_num"));
  if (fragen_anzahl >= 3){
     changeSite("https://www.h-brs.de/de/inf");
  }
- localStorage.setItem("frageSammlung", fragen_anzahl.toString());
+ localStorage.setItem("farben_num", fragen_anzahl.toString());
  var farben = ["Clarendon.PNG","farben1.png","MinionPro1.png"]
  var ranNum = displayRanImage("text",farben);
  writeFormInputValue("farbeId", farben[ranNum]);
