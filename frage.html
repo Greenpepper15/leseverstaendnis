@@ -36,36 +36,37 @@
 <script>
     
     // Liste enthaelt datei Namen fuer die verschiendenen fonts
- var remaingQuestions = JSON.parse(localStorage.getItem('frageSammlung')).Fragen;
- if (remaingQuestions.length == 0) {
-    changeSite("https://www.h-brs.de/de/inf");
- }
- var chosenQuest =  RanNumber(remaingQuestions);
- var prefix = remaingQuestions[chosenQuest];
- remaingQuestions.splice(chosenQuest, 1);
- var jso = {"Fragen" :  remaingQuestions};
- localStorage.setItem("frageSammlung",JSON.stringify(jso));
- var fontList = [prefix + "/" + "Clarendon.png", prefix + "/" + "farben1.png", prefix + "/" + "MinionPro1.png"];
- var imageNum = displayRanImage("text",fontList);
- removeVisability("formText");
- writeFormInputValue("fontId", fontList[imageNum]);
- 
-    
-    
- var fragen = {"Frage1":"In Frage1","Frage2": "In Frage2","Frage3": "In Frage3"};  // Weg 2
- 
- var time;   
- fetch("./" + prefix + "/" + prefix + ".json")
-.then(response => {
-   return response.json();
-})
-.then(jsonData => {
- data = jsonData.f1;
- document.getElementById("frage").innerHTML = data;
- time = jsonData.time;
- });
+
  function imageOnload() {
-        setTimeout(() => {removeVisability('text');giveVisability('frage');giveVisability('formText');},time)
+     var remaingQuestions = JSON.parse(localStorage.getItem('frageSammlung')).Fragen;
+     if (remaingQuestions.length == 0) {
+        changeSite("https://www.h-brs.de/de/inf");
+     }
+     var chosenQuest =  RanNumber(remaingQuestions);
+     var prefix = remaingQuestions[chosenQuest];
+     remaingQuestions.splice(chosenQuest, 1);
+     var jso = {"Fragen" :  remaingQuestions};
+     localStorage.setItem("frageSammlung",JSON.stringify(jso));
+     var fontList = [prefix + "/" + "Clarendon.png", prefix + "/" + "farben1.png", prefix + "/" + "MinionPro1.png"];
+     var imageNum = displayRanImage("text",fontList);
+     removeVisability("formText");
+     writeFormInputValue("fontId", fontList[imageNum]);
+
+
+
+     var fragen = {"Frage1":"In Frage1","Frage2": "In Frage2","Frage3": "In Frage3"};  // Weg 2
+
+     var time;   
+     fetch("./" + prefix + "/" + prefix + ".json")
+    .then(response => {
+       return response.json();
+    })
+    .then(jsonData => {
+     data = jsonData.f1;
+     document.getElementById("frage").innerHTML = data;
+     time = jsonData.time;
+     });
+     setTimeout(() => {removeVisability('text');giveVisability('frage');giveVisability('formText');},time)
  }
  </script>
  
