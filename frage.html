@@ -48,6 +48,12 @@
  var imageNum = displayRanImage("text",fontList);
  removeVisability("formText");
  writeFormInputValue("fontId", fontList[imageNum]);
+ 
+ fetch("./" + prefix + "/" + prefix + ".json")
+.then(response => {
+   return response.json();
+})
+.then(data => console.log(data));
  </script>
  
 </body>
