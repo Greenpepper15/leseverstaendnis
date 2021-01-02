@@ -51,7 +51,7 @@
 <script>
     // Liste enthaelt datei Namen fuer die verschiendenen fonts
  var fragenNum = parseInt(localStorage.getItem("farben_num"));
- if (fragen_anzahl >= 3){
+ if (fragenNum >= 3){
     changeSite("https://www.h-brs.de/de/inf");
  }
  localStorage.setItem("farben_num", (fragenNum + 1).toString());
