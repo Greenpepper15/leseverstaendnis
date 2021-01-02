@@ -63,8 +63,9 @@
      data = jsonData.f1;
      document.getElementById("frage").innerHTML = data;
      time = jsonData.time;
+     setTimeout(() => {removeVisability('text');giveVisability('frage');giveVisability('formText');},time);
      });
-     setTimeout(() => {removeVisability('text');giveVisability('frage');giveVisability('formText');},time)
+     
  
  </script>
  
