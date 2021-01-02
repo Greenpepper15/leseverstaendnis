@@ -49,6 +49,10 @@
  removeVisability("formText");
  writeFormInputValue("fontId", fontList[imageNum]);
  
+    
+    
+ var fragen = {"Frage1":"In Frage1","Frage2": "In Frage2","Frage3": "In Frage3"};  // Weg 2
+    
  fetch("./" + prefix + "/" + prefix + ".json")
 .then(response => {
    return response.json();
