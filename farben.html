@@ -6,7 +6,7 @@
 </head>
 <body>
     <header>
-        <h3>Umfage zum Thema Influences on textual parameters, Farbe 1/5</h3>
+        <h3 id "pageNum">Umfage zum Thema Influences on textual parameters, Farbe 1/5</h3>
     </header>
     <div class="center">
         <img src = "farben1.png" alt ="Farben" id="text" onload="setTimeout(() =>{removeVisability('text');giveVisability('frage');giveVisability('formColour');},3000)"><br>
@@ -50,15 +50,18 @@
 <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 <script>
     // Liste enthaelt datei Namen fuer die verschiendenen fonts
- var fragen_anzahl = parseInt(localStorage.getItem("farben_num"));
+ var fragenNum = parseInt(localStorage.getItem("farben_num"));
  if (fragen_anzahl >= 3){
     changeSite("https://www.h-brs.de/de/inf");
  }
- localStorage.setItem("farben_num", (fragen_anzahl + 1).toString());
+ localStorage.setItem("farben_num", (fragenNum + 1).toString());
  var farben = ["Clarendon.PNG","farben1.png","MinionPro1.png"]
  var ranNum = displayRanImage("text",farben);
  writeFormInputValue("farbeId", farben[ranNum]);
  removeVisability("formColour");
+ 
+ var text = "Umfage zum Thema Influences on textual parameters, Farbe 1/"
+ document.getElementById("PageNum").innerHTML = text + fragenNum;
  </script>
  
 </body>
