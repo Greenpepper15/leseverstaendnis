@@ -10,7 +10,7 @@
     </header>
     <div class="center">
                                                                 <!-- Zeit zum ausblenden -->
-        <img alt ="Textbeispiel" id="text" onload="setTimeout(() => {removeVisability('text');giveVisability('frage');giveVisability('formText');},3000)"> <!-- im script website.js wird displayRanImage("text") aufgerufen -->  <br>
+        <img alt ="Textbeispiel" id="text" onload="imageOnload()"> <!-- im script website.js wird displayRanImage("text") aufgerufen -->  <br>
         <p class = "question" id="frage" >  </p>
         <form id="formText" action="https://send.pageclip.co/aQlCB42llkM5b7S4ZBcufO2vszmXLq6E/warum" class="pageclip-form" method="post">
             <!-- <label for="question">Platzhalter frage:</label><br> -->
@@ -34,6 +34,7 @@
 <script src="website.js"></script> 
 <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 <script>
+    
     // Liste enthaelt datei Namen fuer die verschiendenen fonts
  var remaingQuestions = JSON.parse(localStorage.getItem('frageSammlung')).Fragen;
  if (remaingQuestions.length == 0) {
@@ -52,7 +53,8 @@
     
     
  var fragen = {"Frage1":"In Frage1","Frage2": "In Frage2","Frage3": "In Frage3"};  // Weg 2
-    
+ 
+ var time;   
  fetch("./" + prefix + "/" + prefix + ".json")
 .then(response => {
    return response.json();
@@ -60,7 +62,11 @@
 .then(jsonData => {
  data = jsonData.f1;
  document.getElementById("frage").innerHTML = data;
+ time = jsonData.time;
  });
+ function imageOnload() {
+        setTimeout(() => {removeVisability('text');giveVisability('frage');giveVisability('formText');},time)
+ }
  </script>
  
 </body>
