@@ -6,7 +6,7 @@
 </head>
 <body>
     <header>
-       <h3 id="pageNum">Umfage zum Thema Influences on textual parameters, Frage 1/8</h3> 
+       <h3 id="pageNum"> </h3> 
         <!-- <p id="pageNum">Umfage zum Thema Influences on textual parameters, Frage 1/8</p> -->
     </header>
     <div class="center">
@@ -67,10 +67,9 @@
      time = jsonData.time;
      setTimeout(() => {removeVisability('text');giveVisability('frage');giveVisability('formText');},time);
      });
-    
-  var text = "Umfage zum Thema Influences on textual parameters, Frage 1/";
+
   var fragenNum = parseInt(localStorage.getItem("fragenCounter"));
-  document.getElementById("pageNum").innerHTML = text + fragenNum;
+  document.getElementById("pageNum").innerHTML = "Umfage zum Thema Influences on textual parameters, Frage" + fragenNum + "/8";
   localStorage.setItem("fragenCounter", (fragenNum + 1).toString());
  </script>
  
