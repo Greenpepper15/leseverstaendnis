@@ -38,7 +38,7 @@
     // Liste enthaelt datei Namen fuer die verschiendenen fonts
      var remaingQuestions = JSON.parse(localStorage.getItem('frageSammlung')).Fragen;
      if (remaingQuestions.length == 0) {
-        localStorage.setItem("frageSammlung","1");
+        localStorage.setItem("farben_num","1");
         changeSite("https://greenpepper15.github.io/leseverstaendnis/farben");
      }
      var chosenQuest =  RanNumber(remaingQuestions);
