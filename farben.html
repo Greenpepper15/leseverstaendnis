@@ -39,6 +39,7 @@
                 <!-- <label for="question">Platzhalter frage:</label><br> -->
             <input type="hidden" id="custId" name="custId">
             <input type="hidden" id="frageId" name="frageId">
+             <input type="hidden" id="farbeId" name="frageId">
         </form>
     </div>
     <input class="button3" type="submit" onclick ="retId('custId','frageId','Frage0','https://greenpepper15.github.io/leseverstaendnis/frage1')" value="Weiter">
@@ -49,7 +50,9 @@
 <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 <script>
     // Liste enthaelt datei Namen fuer die verschiendenen fonts
- displayRanImage("text",["Clarendon.PNG","farben1.png","MinionPro1.png"]);
+ var farben = ["Clarendon.PNG","farben1.png","MinionPro1.png"]
+ var ranNum = displayRanImage("text",farben);
+ writeFormInputValue("farbeId", farben[ranNum]);
  removeVisability("formColour");
  </script>
  
