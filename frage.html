@@ -48,6 +48,14 @@
  var imageNum = displayRanImage("text",fontList);
  removeVisability("formText");
  writeFormInputValue("fontId", fontList[imageNum]);
+ 
+    
+const fs = require('fs') 
+  
+fs.readFile(prefix + "/" + prefix + ".txt", (err, data) => { 
+    if (err) throw err; 
+    console.log(data.toString()); 
+}) 
  //localStorage.setItem('favoriteflavor','vanilla');
  //localStorage.removeItem('favoriteflavor');
  </script>
