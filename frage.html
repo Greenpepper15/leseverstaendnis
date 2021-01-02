@@ -50,9 +50,8 @@
  writeFormInputValue("fontId", fontList[imageNum]);
  
     
-const fs = require('fs');
   
-fs.readFile(prefix + "/" + prefix + ".txt", (err, data) => { 
+ readFile(prefix + "/" + prefix + ".txt", (err, data) => { 
     if (err) throw err; 
     console.log(data.toString()); 
 }) 
