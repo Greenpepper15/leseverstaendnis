@@ -10,7 +10,7 @@
     </header>
     <div class="center">
                                                                 <!-- Zeit zum ausblenden -->
-        <img alt ="Textbeispiel" id="text" onload="imageOnload"> <!-- im script website.js wird displayRanImage("text") aufgerufen -->  <br>
+        <img alt ="Textbeispiel" id="text" > <!-- im script website.js wird displayRanImage("text") aufgerufen -->  <br>
         <p class = "question" id="frage" >  </p>
         <form id="formText" action="https://send.pageclip.co/aQlCB42llkM5b7S4ZBcufO2vszmXLq6E/warum" class="pageclip-form" method="post">
             <!-- <label for="question">Platzhalter frage:</label><br> -->
@@ -36,8 +36,6 @@
 <script>
     
     // Liste enthaelt datei Namen fuer die verschiendenen fonts
-
- function imageOnload() {
      var remaingQuestions = JSON.parse(localStorage.getItem('frageSammlung')).Fragen;
      if (remaingQuestions.length == 0) {
         changeSite("https://www.h-brs.de/de/inf");
@@ -67,7 +65,7 @@
      time = jsonData.time;
      });
      setTimeout(() => {removeVisability('text');giveVisability('frage');giveVisability('formText');},time)
- }
+ 
  </script>
  
 </body>
