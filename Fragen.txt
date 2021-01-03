@@ -88,7 +88,7 @@ Frage1: Was machen die Länder?
 
 Instuc 19:
 Die Reise zum Mars dauert mit neuen Targo Raketen nur noch 27 Monate, genau so lang wie die alte Expedition von Bonn nach Peking.
-Frage1: Warum dauert die Reise ?
+Frage1: Warum dauert die Reise so lange?
 
 Instruc 20:
 Anlagen die Salzwasser zu Süßwasser umwandeln sind von vielen Ländern nachgefragt, aber sie verbrauchen mehr Strom als Grundwasserpumpen.
@@ -99,5 +99,18 @@ Verpackungen von Lebensmitteln und Spielzeug soll mehr wiederverwendbare Materia
 Frage1: Welche Verpackungen sind betroffen?
 
 Instruc 22:
+Parket Boden ist einfacher zu verlegen, als Stein Boden, wenn die Boden eben ist.
+Frage1: Was ist schwerer zu verlegen? 
 
+Instruc 23:
+Manfred war eben beim Supermarkt seines Vertrauens, um seinem Freund ein gut richendes Parfum zu geben.
+Frage1: Wo war Manfred?
+
+Instuc 24:
+Seine alte Steuererklärung will er nicht dem Gericht vorlegen, weil er sich um alte Rundungsfehler sorgen macht.
+Frage1: Wo soll er es vorlegen?
+
+Instruc 25:
+Auf den Knien versucht der Mechaniker die Achse aus dem Traktor zu entfernen.
+Frage1: Was veruscht er zu entfernen?
 
