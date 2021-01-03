@@ -80,4 +80,4 @@ Frage1: Was bracht man für Häuser?
 
 Instruc 17:
 Die Bank hatte mal wieder große Probleme mit der Computersicherheit, weil die Emma wieder einen USB-Stick gefunden hat.
-Frage1: Wer hat Probleme verursacht?
+Frage1: Warum wurden Probleme verursacht?
