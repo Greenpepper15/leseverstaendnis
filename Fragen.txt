@@ -1,85 +1,85 @@
 Instruc 1:
-Der Mann rechts von der Lehrenbacher Kneipe versucht immernoch seine pinke Brille zu verstecken.
+Der Mann rechts von der Lehrenbacher Kneipe versucht immernoch seine pinke Brille zu verstecken. WC: 14
 8,4
 Frage1: Wo ist der Mann?
 
 Instruc 2:
-Ben und Anna sitzen am frühen Morgen am Strand und betrachten den Sonnenuntergang.
+Ben und Anna sitzen am frühen Morgen am Strand und betrachten den Sonnenuntergang. WC: 13
 7,8
 Frage1: Wann sind Anna und Ben dort?
 
 Instruc 3:
-Die Kirchturmuhr schlug gerade sechzehn Uhr, da startet Hans seine Fahrradtour.
+Die Kirchturmuhr schlug gerade sechzehn Uhr, da startet Hans seine Fahrradtour.  WC: 11
 6,6
 Frage1: Wann startete er seine Fahrradtour?
 
 Instruc 4:
-Auf dem dritten Absatz erzählt der Lehrer, vom Versuch der Affen ein Haus ohne Mauern zu bauen.
+Auf dem dritten Absatz erzählt der Lehrer, vom Versuch der Affen ein Haus ohne Mauern zu bauen. WC: 17
 10,2
 Frage1: Wer erzählt?
 
 Instruc 5:
-Lisa besucht am Wochenende die Schokoladenmanufaktur, um etwas über das Kochen zu erfahren. 
+Lisa besucht am Wochenende die Schokoladenmanufaktur, um etwas über das Kochen zu erfahren. WC: 13
 7,8
 Frage1: Wann besucht sie es?
 
 Instruc 6:
-Niemals wieder geht der Krämer von Lichtenfeld in Richtung des verweisten Bahnhofs.
+Niemals wieder geht der Krämer von Lichtenfeld in Richtung des verweisten Bahnhofs.  	WC: 12
 7,2
 Frage1: Woher kommt der Krämer?
 
 Instruc 7:
-Am Anfang waren Sie häufig am Bergwerk, aber seit seinem Geburtstag kommt er nicht mehr.
+Am Anfang waren Sie häufig am Bergwerk, aber seit seinem Geburtstag kommt er nicht mehr.    WC: 15
 9
 Frage1: Wo waren Sie [oft]?
 
 Instruc 8:
-Wohlwollend steigt der richtige König aus der Kutsche um einem seiner kleingewachsenen Kinder eine Lektion zu erteilen. 
+Wohlwollend steigt der richtige König aus der Kutsche, um einem seiner kleingewachsenen Kinder eine Lektion zu erteilen.  WC: 17
 10,2
 Frage1: Was macht der König ? --> Wohlwollend aus der Kutsche steigen
 
 Instruc 9:
-Albrecht besucht das Konzert einer Band von der er noch nie zuvor etwas gehört hatte und doch konnte er das zweite Lied mitsingen.
+Albrecht besucht das Konzert einer Band von der er noch nie zuvor etwas gehört hatte und doch konnte er das zweite Lied mitsingen. WC: 23
 13,8
-Frage1: Welches Veranstaltung besucht er?
+Frage1: Welche Veranstaltung besucht er?
 
 Instruc 10:
-Der thematische Grund- und Aufbauwortschatz für Englisch ist viel besser als bei jeder anderen, auf Latein basierenden Sprache.
+Der thematische Grund- und Aufbauwortschatz für Englisch ist viel besser als bei jeder anderen, auf Latein basierenden Sprache. WC: 18
 10,8
 Frage1: Welcher ist besser?
 
 Instruc 11:
-Morgens isst Amy am liebesten einen Vollmilchschokoladen Nikolaus, bevor sie aufsteht. 
+Morgens isst Amy am liebesten einen Vollmilchschokoladen Nikolaus, bevor sie aufsteht.  WC: 11
 7,2
 Frage1: Was isst Sie?
 
 Instruc 12:
-Das Regal hält das Wissen ganzer Generationen über landwirtschaftliche Neuerungen. 
+Das Regal hält das Wissen ganzer Generationen über landwirtschaftliche Neuerungen. WC: 10
 6
 Frage1: Was wird in dem Regal gelagert? --> Wissen ganzer Generationen über landwirtschaftliche Neuerungen
 
 Instruc 13:
-Der Schrank ist voller Bordeauxroter Kleidung, doch seit dem Unfall ihres Bruders trägt sie diese kaum. 
+Der Schrank ist voller Bordeauxroter Kleidung, doch seit dem Unfall ihres Bruders trägt sie diese kaum.   WC: 16
 9,6
 Frage1: Seit wann trägt sie es nicht mehr?
 
 Instruc 14:
-Der Vertrag läuft normalerweise nur für einen Monat, aber der nette Verkäufer hat ihn um zwei Monate verlängert.
+Der Vertrag läuft normalerweise nur für einen Monat, aber der nette Verkäufer hat ihn um zwei Monate verlängert. WC: 18
 10,8
 Frage1: Wie ist die Vertragslaufzeit?
 
 Instruc 15:
-Das Paket ist nur noch wenige Zustellungsstops entfernt und alle warten geduldig. 
+Das Paket ist nur noch wenige Zustellungsstops entfernt und alle warten geduldig. WC: 12
 7.2
 Frage1: Was tuen sie? 
 
 Instruc 16:
-Papier kommt aus Bäumen und gerade diese werden benötigt um Häuser zu bauen.
+Papier kommt aus Bäumen und gerade diese werden benötigt, um Häuser zu bauen.  WC: 13
 7,8
 Frage1: Was bracht man für Häuser?
 
 Instruc 17:
-Die Bank hatte mal wieder große Probleme mit der Computersicherheit, weil die Emma wieder einen USB-Stick gefunden hat.
+Die Bank hatte mal wieder große Probleme mit der Computersicherheit, weil die Emma wieder einen USB-Stick gefunden hat. WC: 18
 Frage1: Warum wurden Probleme verursacht?
 
 Instuc 18:
@@ -113,4 +113,5 @@ Frage1: Wo soll er es vorlegen?
 Instruc 25:
 Auf den Knien versucht der Mechaniker die Achse aus dem Traktor zu entfernen.
 Frage1: Was veruscht er zu entfernen?
+
 
