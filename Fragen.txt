@@ -81,3 +81,23 @@ Frage1: Was bracht man für Häuser?
 Instruc 17:
 Die Bank hatte mal wieder große Probleme mit der Computersicherheit, weil die Emma wieder einen USB-Stick gefunden hat.
 Frage1: Warum wurden Probleme verursacht?
+
+Instuc 18:
+Europäische Länder siedeln gerne südlich vom Äquator, damit sie über Weihnachten keinen Schnee haben.
+Frage1: Was machen die Länder?
+
+Instuc 19:
+Die Reise zum Mars dauert mit neuen Targo Raketen nur noch 27 Monate, genau so lang wie die alte Expedition von Bonn nach Peking.
+Frage1: Warum dauert die Reise ?
+
+Instruc 20:
+Anlagen die Salzwasser zu Süßwasser umwandeln sind von vielen Ländern nachgefragt, aber sie verbrauchen mehr Strom als Grundwasserpumpen.
+Frage1: Was verbraucht weniger Strom als die Anlagen?
+
+Instuc 21:
+Verpackungen von Lebensmitteln und Spielzeug soll mehr wiederverwendbare Materialien verwenden.
+Frage1: Welche Verpackungen sind betroffen?
+
+Instruc 22:
+
+
