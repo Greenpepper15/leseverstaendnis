@@ -10,10 +10,14 @@
         <!-- <p id="pageNum">Umfage zum Thema Influences on textual parameters, Frage 1/8</p> -->
     </header>
     <div class="center">
-                                                                <!-- Zeit zum ausblenden -->
-        <img alt ="Textbeispiel" id="text" > <!-- im script website.js wird displayRanImage("text") aufgerufen -->  <br>
+        <form id="readSpeed" >
+                <input type="checkbox" class="checkbox" id="ad" name="k" > Ja
+                <input type="checkbox" class="checkbox" id="noz" name="n"  onclick="jo()" > Nein 
+            </form>
+                                                               
+        <img alt ="Textbeispiel" id="text" ><br>
         <p class = "question" id="frage" >  </p>
-        <form id="formText" action="https://send.pageclip.co/aQlCB42llkM5b7S4ZBcufO2vszmXLq6E/warum" class="pageclip-form" method="post">
+        
             <!-- <label for="question">Platzhalter frage:</label><br> -->
                 <input type="text" id="answer" name="answer"><br>
         
@@ -35,7 +39,9 @@
 <script src="website.js"></script> 
 <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 <script>
-    
+    function jo(){
+        console.log("was geht");
+    }
     // Liste enthaelt datei Namen fuer die verschiendenen fonts
      var remaingQuestions = JSON.parse(localStorage.getItem('frageSammlung')).Fragen;
      if (remaingQuestions.length == 9) {
