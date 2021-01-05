@@ -1,42 +1,37 @@
 <html>
-<head> </head>
-<body id="p1"> 
-  <script src="website.js"></script>
-  <textarea id="myText">
-    Lorem ipsum...
-</textarea>
-  <p id="demo"></p>
-  <img id="image" src="Clarendon.PNG" alt="FOTO"  <!--onload="removeImage('image')" --> >
-<!-- <iframe id = "goole" src="https://docs.google.com/forms/d/e/1FAIpQLSfLFI9haPtXYjfeDncf6GopAzIoBvLl3eRbmS1xfe2X7xltFA/viewform?embedded=true" width="640" height="802" frameborder="0" marginheight="0" marginwidth="0">Wird geladen…</iframe> -->
-<input type="button" value="Send Email" onclick="sendEmail(document.getElementById('myText').value,'Frage1')">
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
- 
-<script>
-var id; 
-var timer_id = setInterval(() => {removeVisability("image","jetz_arbeiten");
-                                 clearInterval(timer_id);}, 10000);
+<head> 
+  <h3 id="pageNum"> </h3> </head>
+<img id="image1" alt="FOTO" >
+<img id="image2" alt="FOTO" >
+<img id="image3" alt="FOTO" >
+<img id="image4" alt="FOTO" >
+<img id="image5" alt="FOTO" >
+  <p id="frage" >  </p>
 
-function changePageRandom(){
-  var ranPage = Math.floor((Math.random() * 10) + 1);
-  if (ranPage == 1){
-    window.location.replace("https://greenpepper15.github.io/leseverstaendnis.io/");
-  }
-}
- function initFingerprintJS() {
-    FingerprintJS.load().then(fp => {
-      // The FingerprintJS agent is ready.
-      // Get a visitor identifier when you'd like to.
-      fp.get().then(result => {
-        // This is the visitor identifier:
-        const visitorId = result.visitorId;
-        id =  visitorId
-        console.log(visitorId);
-      });
-    });
-  }
+<script src="website.js"></script>   
+<script>
+   var fragenNum = parseInt(localStorage.getItem("fragenCounter"));
+   document.getElementById("pageNum").innerHTML =  fragenNum + "/17";
+   var fragen =["Frage1","Frage2","Frage3","Frage4","Frage5","Frage6","Frage7","Frage8","Frage9","Frage10","Frage11","Frage12","Frage13","Frage14","Frage15","Frage16","Frage17"];
+   var prefix = fragen[fragenNum];
+   document.getElementById("image1").src = prefix+"/"+ "Clarendon.png";
+   document.getElementById("image2").src =  prefix+"/"+ "Amador.png";
+   document.getElementById("image3").src = prefix+"/"+ "CaflischScript.png";
+   document.getElementById("image4").src = prefix+"/" + "MinionPro.png";
+   document.getElementById("image5").src =  prefix+"/" +"Protipo.png";
+    
+  fetch("./" + prefix + "/" + prefix + ".json")
+    .then(response => {
+       return response.json();
+    })
+    .then(jsonData => {
+     data = jsonData;
+     document.getElementById("frage").innerHTML = JSON.stringify(data);
+     });
+
 </script>
- <script async src="//cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"onload="initFingerprintJS()"></script>
-  <a href="./frage1.html"> Weiter </a>
+
+  <a href="./tutorial.html"> Weiter </a>
  </body>
 
   
