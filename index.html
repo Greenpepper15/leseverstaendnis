@@ -11,6 +11,7 @@
 <script src="website.js"></script>   
 <script>
    var fragenNum = parseInt(localStorage.getItem("fragenCounter"));
+    localStorage.setItem("fragenCounter", (fragenNum + 1).toString());
    document.getElementById("pageNum").innerHTML =  fragenNum + "/17";
    var fragen =["Frage1","Frage2","Frage3","Frage4","Frage5","Frage6","Frage7","Frage8","Frage9","Frage10","Frage11","Frage12","Frage13","Frage14","Frage15","Frage16","Frage17"];
    var prefix = fragen[fragenNum];
