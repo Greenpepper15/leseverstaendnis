@@ -27,10 +27,9 @@ function initFingerprintJS() {
     });
   }
 initFingerprintJS();
-function retId(node_id, question_id, question_nr, nextQuestion){
+function retId(node_id, nextQuestion){
     var inputF = document.getElementById(node_id);
     inputF.value = String(id);
-    document.getElementById(question_id).value = question_nr;
     setTimeout(() => changeSite(nextQuestion), 1000);
  }
 
