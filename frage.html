@@ -10,11 +10,11 @@
         <!-- <p id="pageNum">Umfage zum Thema Influences on textual parameters, Frage 1/8</p> -->
     </header>
     <div class="center">
-        <form id="readSpeed" class="pageclip-form" >   Welche Geschwindigkeit bevorzogen Sie? <br/>
+      <!--  <form id="readSpeed"  >   Welche Geschwindigkeit bevorzogen Sie? <br/>
                 <input type="checkbox" class="checkbox" id="ad" name="k" onclick="setSpeed('fast')"     /> schnell<br/>
                 <input type="checkbox" class="checkbox" id="no" name="n" onclick="setSpeed('middle')"   /> mittel<br/>
                 <input type="checkbox" class="checkbox" id="no" name="n" onclick="setSpeed('slow')"     /> langsam<br/>
-            </form>
+            </form> -->
                                                                
         <img alt ="Textbeispiel" id="text" ><br>
         <p class = "question" id="frage" >  </p>
@@ -41,7 +41,7 @@
 <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 <script>
     function setSpeed(readSpeed){
-        localStorage.setItem(readspeed);
+        localStorage.setItem("readspeed", readspeed);
     }
     // Liste enthaelt datei Namen fuer die verschiendenen fonts
      var remaingQuestions = JSON.parse(localStorage.getItem('frageSammlung')).Fragen;
