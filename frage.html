@@ -10,9 +10,10 @@
         <!-- <p id="pageNum">Umfage zum Thema Influences on textual parameters, Frage 1/8</p> -->
     </header>
     <div class="center">
-        <form id="readSpeed" >
-                <input type="checkbox" class="checkbox" id="ad" name="k" > Ja
-                <input type="checkbox" class="checkbox" id="noz" name="n"  onclick="jo()" > Nein 
+        <form id="readSpeed" >   Welche Geschwindigkeit bevorzogen Sie? <br/>
+                <input type="checkbox" class="checkbox" id="ad" name="k" onclick="setSpeed('fast')" /> schnell<br/>
+                <input type="checkbox" class="checkbox" id="noz" name="n"  onclick="setSpeed('middle')" /> mittel<br/>
+                <input type="checkbox" class="checkbox" id="noz" name="n"  onclick="setSpeed('slow')" /> langsam<br/>
             </form>
                                                                
         <img alt ="Textbeispiel" id="text" ><br>
@@ -22,7 +23,7 @@
                 <input type="text" id="answer" name="answer"><br>
         
             <label for="knowFont">Kanntest du die Schriftart ?</label>
-                <input type="checkbox" class="checkbox" id="know" name="knowfont" value="know"> Ja
+                <input type="checkbox" class="checkbox" id="know" name="knowfont" value="know"> Ja 
                 <input type="checkbox" class="checkbox" id="unknown" name="knowfont" value="unknown"> Nein 
             
                 <input type="hidden" id="custId" name="custId">
@@ -39,8 +40,8 @@
 <script src="website.js"></script> 
 <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 <script>
-    function jo(){
-        console.log("was geht");
+    function setSpeed(readSpeed){
+        console.log(readSpeed);
     }
     // Liste enthaelt datei Namen fuer die verschiendenen fonts
      var remaingQuestions = JSON.parse(localStorage.getItem('frageSammlung')).Fragen;
