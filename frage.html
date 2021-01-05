@@ -22,7 +22,6 @@
                 <input type="checkbox" class="checkbox" id="unknown" name="knowfont" value="unknown"> Nein 
             
                 <input type="hidden" id="custId" name="custId">
-                <input type="hidden" id="frageId" name="frageId">
                 <input type="hidden" id="fontId" name="fontId">
                 <input type="hidden" id="reihenfolgeId" name="reihenfolgeId">
           </div>                                                                 
@@ -54,9 +53,6 @@
      writeFormInputValue("fontId", fontList[imageNum]);
 
 
-
-     var fragen = {"Frage1":"In Frage1","Frage2": "In Frage2","Frage3": "In Frage3"};  // Weg 2
-
      var time;   
      fetch("./" + prefix + "/" + prefix + ".json")
     .then(response => {
@@ -69,10 +65,10 @@
      setTimeout(() => {removeVisability('text');giveVisability('frage');giveVisability('formText');},time);
      });
 
-  var fragenNum = parseInt(localStorage.getItem("fragenCounter"));
-  writeFormInputValue("reihenfolgeId", fragenNum);
-  document.getElementById("pageNum").innerHTML = "Umfage zum Thema Influences on textual parameters, Frage " + fragenNum + "/8";
-  localStorage.setItem("fragenCounter", (fragenNum + 1).toString());
+      var fragenNum = parseInt(localStorage.getItem("fragenCounter"));
+      writeFormInputValue("reihenfolgeId", fragenNum);
+      document.getElementById("pageNum").innerHTML = "Umfage zum Thema Influences on textual parameters, Frage " + fragenNum + "/8";
+      localStorage.setItem("fragenCounter", (fragenNum + 1).toString());
  </script>
  
 </body>
