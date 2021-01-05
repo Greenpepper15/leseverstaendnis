@@ -66,7 +66,7 @@ Frage1: Seit wann trägt sie es nicht mehr?
 Instruc 14:
 Der Vertrag läuft normalerweise nur für einen Monat, aber der nette Verkäufer hat ihn um zwei Monate verlängert. WC: 18
 10,8
-Frage1: Wie ist die Vertragslaufzeit?
+Frage1: Wie lange ist die Vertragslaufzeit?
 
 Instruc 15:
 Das Paket ist nur noch wenige Zustellungsstops entfernt und alle warten geduldig. WC: 12
