@@ -27,7 +27,7 @@
                 <input type="hidden" id="fontId" name="fontId">
                 <input type="hidden" id="reihenfolgeId" name="reihenfolgeId">
     </div> 
-    <div class="right">
+    <div id="rightid" class="right">
         <form id="readSpeed" class="readspeed" >   Welche Geschwindigkeit bevorzugen Sie? 
             <input type="checkbox" class="checkbox" id="ad" name="k" onclick="setSpeed('fast')"     /> schnell
             <input type="checkbox" class="checkbox" id="no" name="n" onclick="setSpeed('middle')"   /> mittel
@@ -49,6 +49,7 @@
     }
     // Liste enthaelt datei Namen fuer die verschiendenen fonts
     removeVisability('weiterid');
+    removeVisability("rightid");
      var remaingQuestions = JSON.parse(localStorage.getItem('frageSammlung')).Fragen;
      if (remaingQuestions.length == 9) {
         localStorage.setItem("farben_num","1");
