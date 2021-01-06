@@ -44,6 +44,7 @@
         localStorage.setItem("readspeed", readspeed);
     }
     // Liste enthaelt datei Namen fuer die verschiendenen fonts
+    removeVisability('weiterid');
      var remaingQuestions = JSON.parse(localStorage.getItem('frageSammlung')).Fragen;
      if (remaingQuestions.length == 9) {
         localStorage.setItem("farben_num","1");
@@ -69,7 +70,7 @@
      data = jsonData.f1;
      document.getElementById("frage").innerHTML = data;
      time = jsonData.time;
-     setTimeout(() => {removeVisability('text');giveVisability('frage');giveVisability('formText');removeVisability('weiterid');},time);
+     setTimeout(() => {removeVisability('text');giveVisability('frage');giveVisability('formText');},time);
      });
 
       var fragenNum = parseInt(localStorage.getItem("fragenCounter"));
