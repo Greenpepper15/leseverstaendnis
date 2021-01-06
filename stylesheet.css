@@ -133,6 +133,7 @@ footer{
 	}
 	.center .checkbox{
 		width: auto;
+		
 	}
 	.box{ 
 		width:50px; 
@@ -146,4 +147,9 @@ footer{
 		visibility: hidden;
 		position: absolute;
 		top: 100px;
+	}
+	.right{
+		position: fixed;
+		right: 5px;
+		bottom: 50px
 	}
