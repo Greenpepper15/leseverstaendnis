@@ -17,6 +17,10 @@ footer{
     width: 100%;
     background-color: rgb(189, 189, 189);
 }
+img{
+	width: 90%;
+	height:auto;
+}
 	.formstyle{
 		max-width: auto;
 		padding: 10px 20px;
