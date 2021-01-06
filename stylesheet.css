@@ -149,6 +149,10 @@ img{
 		visibility: hidden;
 		position: absolute;
 		right: 5px;
-		bottom: 50px
+		bottom: 50px;
+		font-size: larger;
+	}
+	.knowFont{
+		padding-top: 10px;
 	}
 	
