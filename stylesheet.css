@@ -143,13 +143,10 @@ footer{
 	.question{
 		visibility: hidden;
 	}
-	.readspeed{
-		visibility: hidden;
-		position: absolute;
-		top: 100px;
-	}
 	.right{
+		visibility: hidden;
 		position: fixed;
 		right: 5px;
 		bottom: 50px
 	}
+	
