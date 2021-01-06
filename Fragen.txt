@@ -114,4 +114,8 @@ Instruc 25:
 Auf den Knien versucht der Mechaniker die Achse aus dem Traktor zu entfernen.
 Frage1: Was veruscht er zu entfernen?
 
+Instruc 26:
+Das Kielwasser hinter dem Boot erzählte von der Vergangenheit, während das offene Meer für das Leben in der unbekannten Zukunft erzählte.
+Frage1: Welches Kielwasser?
+
 
