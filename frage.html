@@ -67,7 +67,7 @@
        return response.json();
     })
     .then(jsonData => {
-     if (localStorage.getItem("readspeed") == NaN){
+     if (localStorage.getItem("readspeed") == null){
         console.log(localStorage.getItem("readspeed"));
      }
      data = jsonData.f1;
