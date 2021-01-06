@@ -20,8 +20,8 @@
                 <input type="text" id="answer" name="answer"><br>
         
             <label for="knowFont">Kanntest du die Schriftart ?</label><br>
-                <input type="checkbox" class="checkbox" id="know" name="knowfont" value="know" onclick="checkVisa()" /> Ja <br/>
-                <input type="checkbox" class="checkbox" id="unknown" name="knowfont" value="unknown" onclick="giveVisability('weiterid')" /> Nein <br/>
+                <input type="checkbox" class="checkbox" id="know" name="knowfont" value="know" onclick="checkVisibility()" /> Ja <br/>
+                <input type="checkbox" class="checkbox" id="unknown" name="knowfont" value="unknown" onclick="checkVisibility()" /> Nein <br/>
             
                 <input type="hidden" id="custId" name="custId">
                 <input type="hidden" id="fontId" name="fontId">
@@ -48,12 +48,10 @@
         localStorage.setItem("readspeed", readSpeed);
         giveVisability('weiterid');
     }
-    function checkVisa(){
+    function checkVisibility(){
         if (document.getElementById('rightid').style.visibility == 'hidden') {
             giveVisability('weiterid');
-        } else {
-            
-        }
+        } 
     }
  
     // Liste enthaelt datei Namen fuer die verschiendenen fonts
