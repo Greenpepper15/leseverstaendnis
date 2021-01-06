@@ -20,7 +20,7 @@
                 <input type="text" id="answer" name="answer"><br>
         
             <label for="knowFont">Kanntest du die Schriftart ?</label><br>
-                <input type="checkbox" class="checkbox" id="know" name="knowfont" value="know" onclick="giveVisability('weiterid')" /> Ja <br/>
+                <input type="checkbox" class="checkbox" id="know" name="knowfont" value="know" onclick="()=>{document.getElementById('rightid').style.visibility == 'hidden' ? giveVisability('weiterid') : }giveVisability('weiterid')" /> Ja <br/>
                 <input type="checkbox" class="checkbox" id="unknown" name="knowfont" value="unknown" onclick="giveVisability('weiterid')" /> Nein <br/>
             
                 <input type="hidden" id="custId" name="custId">
@@ -31,7 +31,7 @@
         <form id="readSpeed" class="readspeed" >   Welche Geschwindigkeit bevorzugen Sie? 
             <input type="checkbox" class="checkbox" id="ad" name="k" onclick="setSpeed('fast')"     /> schnell
             <input type="checkbox" class="checkbox" id="no" name="n" onclick="setSpeed('middle')"   /> mittel
-            <input type="checkbox" class="checkbox" id="no" name="n" onclick="setSpeed('slow')"     /> langsam
+            <input type="checkbox" class="checkbox" id="no" name="n" onclick="()=>{setSpeed('slow');giveVisability('weiterid');}"     /> langsam
         </form>  
     </div>                                                                 
        <input class="button2" type="submit" onclick ="retId('custId','https://greenpepper15.github.io/leseverstaendnis/frage')" id="weiterid" value="Weiter">
