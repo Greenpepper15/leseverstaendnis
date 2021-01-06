@@ -16,24 +16,24 @@
         <form id="formColour" action="https://send.pageclip.co/aQlCB42llkM5b7S4ZBcufO2vszmXLq6E/Farben" class="pageclip-form" method="post">
             <table class="choice">
                 <tr>
-                    <td><input type="checkbox" id="color1" name="red" value="red" class="inred">
+                    <td><input type="checkbox" id="color1" name="red" value="red" class="inred" onclick="giveVisability('weiterid')">
                         <label for="color1" class ="red"> box </label></td>
-                    <td><input type="checkbox" id="color2" name="orange" value="orange" class="inorange">
+                    <td><input type="checkbox" id="color2" name="orange" value="orange" class="inorange" onclick="giveVisability('weiterid')">
                         <label for="color2" class ="orange"> box </label></td>
-                    <td><input type="checkbox" id="color3" name="yellow" value="yellow" class="inyellow">
+                    <td><input type="checkbox" id="color3" name="yellow" value="yellow" class="inyellow" onclick="giveVisability('weiterid')">
                         <label for="color3" class ="yellow"> box </label></td>
-                    <td><input type="checkbox" id="color4" name="green" value="green" class="ingreen">
+                    <td><input type="checkbox" id="color4" name="green" value="green" class="ingreen" onclick="giveVisability('weiterid')">
                         <label for="color4" class ="green"> box </label></td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox" id="color5" name="turquoise" value="turquoise" class="inturquoise">
-                        <label for="color5" class ="turquoise"> box </label></td>
-                    <td><input type="checkbox" id="color6" name="blue" value="blue" class="inblue">
-                        <label for="color6" class ="blue"> box </label></td>
-                    <td><input type="checkbox" id="color7" name="purple" value="purple" class="inpurple">
-                        <label for="color7" class ="purple"> box </label></td>
-                    <td><input type="checkbox" id="color8" name="pink" value="pink" class="inpink">  
-                        <label for="color8" class ="pink"> box </label></td>
+                    <td><input type="checkbox" id="color5" name="turquoise" value="turquoise" class="inturquoise" onclick="giveVisability('weiterid')">
+                        <label for="color5" class ="turquoise" > box </label></td>
+                    <td><input type="checkbox" id="color6" name="blue" value="blue" class="inblue" onclick="giveVisability('weiterid')">
+                        <label for="color6" class ="blue" > box </label></td>
+                    <td><input type="checkbox" id="color7" name="purple" value="purple" class="inpurple" onclick="giveVisability('weiterid')">
+                        <label for="color7" class ="purple" > box </label></td>
+                    <td><input type="checkbox" id="color8" name="pink" value="pink" class="inpink" onclick="giveVisability('weiterid')">  
+                        <label for="color8" class ="pink" > box </label></td>
                 </tr>
             </table>
                 <!-- <label for="question">Platzhalter frage:</label><br> -->
@@ -43,7 +43,7 @@
             <input type="hidden" id="reihenfolgeId" name="reihenfolgeId">
            </div>
         
-           <input class="button3" type="submit" onclick ="retId('custId','frageId','Frage0','https://greenpepper15.github.io/leseverstaendnis/farben')" value="Weiter">
+           <input id="weiterid" class="button3" type="submit" onclick ="retId('custId','frageId','Frage0','https://greenpepper15.github.io/leseverstaendnis/farben')" value="Weiter">
         </form>
 
 <script src="//cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"></script>
@@ -51,6 +51,7 @@
 <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 <script>
     // Liste enthaelt datei Namen fuer die verschiendenen fonts
+  removeVisability("weiterid");
  var fragenNum = parseInt(localStorage.getItem("farben_num"));
  if (fragenNum >= 5){
     changeSite("https://www.h-brs.de/de/inf");
