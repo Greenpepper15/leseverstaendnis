@@ -60,7 +60,7 @@
      removeVisability("formText");
      writeFormInputValue("fontId", fontList[imageNum]);
 
-
+     var fragenNum = parseInt(localStorage.getItem("fragenCounter"));
      var time;   
      fetch("./" + prefix + "/" + prefix + ".json")
     .then(response => {
@@ -70,13 +70,20 @@
      data = jsonData.f1;
      document.getElementById("frage").innerHTML = data;
      time = jsonData.time;
-     setTimeout(() => {removeVisability('text');giveVisability('frage');giveVisability('formText');},time);
+     if (fragenNum == 3) {
+        setTimeout(() => {removeVisability('text');giveVisability('frage');giveVisability('formText'); giveVisability('readSpeed');},time);
+      } else {
+        setTimeout(() => {removeVisability('text');giveVisability('frage');giveVisability('formText');},time);
+      }
      });
 
-      var fragenNum = parseInt(localStorage.getItem("fragenCounter"));
+     
       writeFormInputValue("reihenfolgeId", fragenNum);
       document.getElementById("pageNum").innerHTML = "Umfage zum Thema Influences on textual parameters, Frage " + fragenNum + "/8";
       localStorage.setItem("fragenCounter", (fragenNum + 1).toString());
+      if (fragenNum == 3) {
+      
+      }
       
  </script>
  
