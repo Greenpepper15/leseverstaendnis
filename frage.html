@@ -67,6 +67,9 @@
        return response.json();
     })
     .then(jsonData => {
+     if (localStorage.getItem("readspeed") == NaN){
+        console.log(localStorage.getItem("readspeed"));
+     }
      data = jsonData.f1;
      document.getElementById("frage").innerHTML = data;
      time = jsonData.time;
