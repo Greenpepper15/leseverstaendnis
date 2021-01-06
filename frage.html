@@ -20,14 +20,14 @@
                 <input type="text" id="answer" name="answer"><br>
         
             <label for="knowFont">Kanntest du die Schriftart ?</label><br>
-                <input type="checkbox" class="checkbox" id="know" name="knowfont" value="know" onclick="checkVisibility()" /> Ja <br/>
-                <input type="checkbox" class="checkbox" id="unknown" name="knowfont" value="unknown" onclick="checkVisibility()" /> Nein <br/>
+                <input type="checkbox" class="checkbox" id="know" name="knowfont" value="know" onclick="giveVisability('weiterid')" /> Ja <br/>
+                <input type="checkbox" class="checkbox" id="unknown" name="knowfont" value="unknown" onclick="giveVisability('weiterid')" /> Nein <br/>
             
                 <input type="hidden" id="custId" name="custId">
                 <input type="hidden" id="fontId" name="fontId">
                 <input type="hidden" id="reihenfolgeId" name="reihenfolgeId">
     </div> 
-    <div id="rightid" class="right">
+    <div class="right">
         <form id="readSpeed" class="readspeed" >   Welche Geschwindigkeit bevorzugen Sie? 
             <input type="checkbox" class="checkbox" id="ad" name="k" onclick="setSpeed('fast')"     /> schnell
             <input type="checkbox" class="checkbox" id="no" name="n" onclick="setSpeed('middle')"   /> mittel
@@ -45,18 +45,10 @@
 <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 <script>
     function setSpeed(readSpeed){
-        localStorage.setItem("readspeed", readSpeed);
-        giveVisability('weiterid');
+        localStorage.setItem("readspeed", readspeed);
     }
-    function checkVisibility(){
-        if (document.getElementById('rightid').style.visibility == 'hidden') {
-            giveVisability('weiterid');
-        } 
-    }
- 
     // Liste enthaelt datei Namen fuer die verschiendenen fonts
     removeVisability('weiterid');
-    removeVisability("rightid");
      var remaingQuestions = JSON.parse(localStorage.getItem('frageSammlung')).Fragen;
      if (remaingQuestions.length == 9) {
         localStorage.setItem("farben_num","1");
@@ -80,7 +72,7 @@
     })
     .then(jsonData => {
      var readSpeed; 
-     if (localStorage.getItem("readspeed") == null) {
+     if (localStorage.getItem("readspeed") == null){
          readSpeed = "time";
      } else {
         readSpeed = localStorage.getItem("readspeed");
@@ -89,7 +81,7 @@
      document.getElementById("frage").innerHTML = data;
      time = jsonData[readSpeed];
      if (fragenNum == 3) {
-        setTimeout(() => {removeVisability('text');giveVisability('frage');giveVisability('formText'); giveVisability("rightid");},time);
+        setTimeout(() => {removeVisability('text');giveVisability('frage');giveVisability('formText'); giveVisability('readSpeed');},time);
       } else {
         setTimeout(() => {removeVisability('text');giveVisability('frage');giveVisability('formText');},time);
       }
