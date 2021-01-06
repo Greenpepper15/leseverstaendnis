@@ -9,12 +9,13 @@
        <h3 id="pageNum"> </h3> 
         <!-- <p id="pageNum">Umfage zum Thema Influences on textual parameters, Frage 1/8</p> -->
     </header>
+    <form id="readSpeed" class="readspeed" >   Welche Geschwindigkeit bevorzugen Sie? <br/>
+        <input type="checkbox" class="checkbox" id="ad" name="k" onclick="setSpeed('fast')"     /> schnell<br/>
+        <input type="checkbox" class="checkbox" id="no" name="n" onclick="setSpeed('middle')"   /> mittel<br/>
+        <input type="checkbox" class="checkbox" id="no" name="n" onclick="setSpeed('slow')"     /> langsam<br/>
+    </form>     
     <div class="center">
-       <form id="readSpeed" class="question" >   Welche Geschwindigkeit bevorzogen Sie? <br/>
-                <input type="checkbox" class="checkbox" id="ad" name="k" onclick="setSpeed('fast')"     /> schnell<br/>
-                <input type="checkbox" class="checkbox" id="no" name="n" onclick="setSpeed('middle')"   /> mittel<br/>
-                <input type="checkbox" class="checkbox" id="no" name="n" onclick="setSpeed('slow')"     /> langsam<br/>
-            </form> 
+       
                                                                
         <img alt ="Textbeispiel" id="text" ><br>
         <p class = "question" id="frage" >  </p>
@@ -22,14 +23,14 @@
             <!-- <label for="question">Platzhalter frage:</label><br> -->
                 <input type="text" id="answer" name="answer"><br>
         
-            <label for="knowFont">Kanntest du die Schriftart ?</label>
+            <label for="knowFont">Kanntest du die Schriftart ?</label><br>
                 <input type="checkbox" class="checkbox" id="know" name="knowfont" value="know" onclick="giveVisability('weiterid')" /> Ja <br/>
                 <input type="checkbox" class="checkbox" id="unknown" name="knowfont" value="unknown" onclick="giveVisability('weiterid')" /> Nein <br/>
             
                 <input type="hidden" id="custId" name="custId">
                 <input type="hidden" id="fontId" name="fontId">
                 <input type="hidden" id="reihenfolgeId" name="reihenfolgeId">
-          </div>                                                                 
+    </div>                                                                 
        <input class="button2" type="submit" onclick ="retId('custId','https://greenpepper15.github.io/leseverstaendnis/frage')" id="weiterid" value="Weiter">
         </form>
    
