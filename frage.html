@@ -30,7 +30,7 @@
                 <input type="hidden" id="fontId" name="fontId">
                 <input type="hidden" id="reihenfolgeId" name="reihenfolgeId">
           </div>                                                                 
-       <input class="button2" type="submit" onclick ="retId('custId','https://greenpepper15.github.io/leseverstaendnis/frage')" value="Weiter">
+       <input class="button2" type="submit" onclick ="retId('custId','https://greenpepper15.github.io/leseverstaendnis/frage')" id="weiterid" value="Weiter">
         </form>
    
     
@@ -69,13 +69,14 @@
      data = jsonData.f1;
      document.getElementById("frage").innerHTML = data;
      time = jsonData.time;
-     setTimeout(() => {removeVisability('text');giveVisability('frage');giveVisability('formText');},time);
+     setTimeout(() => {removeVisability('text');giveVisability('frage');giveVisability('formText');removeVisability('weiterid');},time);
      });
 
       var fragenNum = parseInt(localStorage.getItem("fragenCounter"));
       writeFormInputValue("reihenfolgeId", fragenNum);
       document.getElementById("pageNum").innerHTML = "Umfage zum Thema Influences on textual parameters, Frage " + fragenNum + "/8";
       localStorage.setItem("fragenCounter", (fragenNum + 1).toString());
+      
  </script>
  
 </body>
