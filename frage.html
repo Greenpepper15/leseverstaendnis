@@ -20,8 +20,8 @@
                 <input type="text" id="answer" name="answer"><br>
         
             <br><label for="knowFont" class ="knowFont">Sehen Sie die Schriftart regelmäßig?</label><br>
-                <input type="checkbox" class="checkbox" id="know" name="knowfont" value="know" onclick="giveVisability('weiterid')" /> Ja <br/>
-                <input type="checkbox" class="checkbox" id="unknown" name="knowfont" value="unknown" onclick="giveVisability('weiterid')" /> Nein <br/>
+                <input type="checkbox" class="checkbox" id="know" name="knowfont" value="know" onclick="checkVisibility()" /> Ja <br/>
+                <input type="checkbox" class="checkbox" id="unknown" name="knowfont" value="unknown" onclick="checkVisibility()" /> Nein <br/>
             
                 <input type="hidden" id="custId" name="custId">
                 <input type="hidden" id="fontId" name="fontId">
@@ -44,11 +44,18 @@
 <script src="website.js"></script> 
 <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 <script>
-    function setSpeed(readSpeed){
-        localStorage.setItem("readspeed", readspeed);
+   function setSpeed(readSpeed){
+        localStorage.setItem("readspeed", readSpeed);
+        giveVisability('weiterid');
     }
-    // Liste enthaelt datei Namen fuer die verschiendenen fonts
-    removeVisability('rightid');
+    function checkVisibility(){
+        if (document.getElementById('rightid').style.visibility == 'hidden') {
+            giveVisability('weiterid');
+        } 
+    }
+    removeVisability('weiterid');
+    removeVisability("rightid");
+    
      var remaingQuestions = JSON.parse(localStorage.getItem('frageSammlung')).Fragen;
      if (remaingQuestions.length == 9) {
         localStorage.setItem("farben_num","1");
