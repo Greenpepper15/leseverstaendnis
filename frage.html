@@ -79,11 +79,15 @@
     })
     .then(jsonData => {
      var readSpeed; 
-     if (localStorage.getItem("readspeed") == null){
-         readSpeed = "time";
+     if (fragenNum == 1){
+         readSpeed = "slow";
+     } else if (fragenNum == 2){
+        readSpeed = "middle";
+     } else if (fragenNum == 3){
+        readSpeed = "fast";
      } else {
         readSpeed = localStorage.getItem("readspeed");
-     }             
+     }      
      data = jsonData.f1;
      document.getElementById("frage").innerHTML = data;
      time = jsonData[readSpeed];
