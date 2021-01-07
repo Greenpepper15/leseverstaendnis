@@ -88,7 +88,7 @@
      document.getElementById("frage").innerHTML = data;
      time = jsonData[readSpeed];
      if (fragenNum == 3) {
-        setTimeout(() => {removeVisability('text');giveVisability('frage');giveVisability('formText'); giveVisability('readSpeed');},time);
+        setTimeout(() => {removeVisability('text');giveVisability('frage');giveVisability('formText'); giveVisability("rightid");},time);
       } else {
         setTimeout(() => {removeVisability('text');giveVisability('frage');giveVisability('formText');},time);
       }
