@@ -9,7 +9,7 @@
         <h3 id="pageNum"></h3>
     </header>
     <div class="center">
-        <img src = "farben1.png" alt ="Farben" id="text" onload="setTimeout(() =>{removeVisability('text');giveVisability('frage');giveVisability('formColour');},3000)"><br>
+        <img src = "farben1.png" alt ="Farben" id="text" onload="imOnload()"><br>
         <p class = "question" id="frage"> Wähle die zuvor gezeigten Wörter: </p>   
     </div>
     <div class="color">
@@ -64,6 +64,19 @@
  
  writeFormInputValue("reihenfolgeId", fragenNum);
  document.getElementById("pageNum").innerHTML = "Umfage zum Thema Influences on textual parameters, Farbe " + fragenNum + "/5";
+ 
+function imOnload(){
+    var readSpeed = localStorage.getItem("readspeed");
+    var time;
+    if (readSpeed == "fast"){
+        time = 6000;
+    } else if (readSpeed == "middle"){
+        time = 4000;
+    } else {
+        time = 3000;
+    }
+    setTimeout(() =>{removeVisability('text');giveVisability('frage');giveVisability('formColour');}, time);
+}
  </script>
  
 </body>
