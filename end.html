@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+  <div class="center"> 
+        <p  > a) </p>
+        <img src="Frage1/Amador.png" alt ="Textbeispiel" id="text1" ><br>
+         <p  > b) </p>
+        <img src="Frage1/CaflischScript.png" alt ="Textbeispiel" id="text2" ><br>
+         <p  > c) </p>
+        <img src="Frage1/Clarendon.png" alt ="Textbeispiel" id="text3" ><br>
+         <p  > d) </p>
+        <img src="Frage1/MinionPro.png" alt ="Textbeispiel" id="text4" ><br>
+         <p  > e) </p>
+        <img src="Frage1/Protipo.png" alt ="Textbeispiel" id="text5" ><br>
+        
+        
+        <p class = "question" id="frage" >  </p>
+        <form id="formText" action="https://send.pageclip.co/aQlCB42llkM5b7S4ZBcufO2vszmXLq6E/warum" class="pageclip-form" method="post">
+            <!-- <label for="question">Platzhalter frage:</label><br> -->
+                <input type="text" id="answer" name="answer"><br>
+        
+            <br><label for="knowFont" class ="knowFont">Welche der Schriftarten fandest du am schwersten zu lesen ?</label><br>
+                <input type="checkbox" class="checkbox" id="know" name="knowfont" value="know" onclick="checkVisibility()" /> Ja <br/>
+                <input type="checkbox" class="checkbox" id="unknown" name="knowfont" value="unknown" onclick="checkVisibility()" /> Nein <br/>
+            
+            <br><label for="knowFont" class ="knowFont">Welche der Schriftarten fandest du am kuriosesten?</label><br>
+                <input type="checkbox" class="checkbox" id="know" name="knowfont" value="know" onclick="checkVisibility()" /> Ja <br/>
+                <input type="checkbox" class="checkbox" id="unknown" name="knowfont" value="unknown" onclick="checkVisibility()" /> Nein <br/>
+                
+                
+                <input type="hidden" id="custId" name="custId">
+            
+         <input class="button2" type="submit" onclick ="retId('custId','https://greenpepper15.github.io/leseverstaendnis/frage')" id="weiterid" value="Weiter">
+        </form>
+    </div> 
+
+<script src="//cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"></script>
+<script src="website.js"></script> 
+<script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>         
+
+ 
+</body>
+</html>
