@@ -3,6 +3,9 @@
 <head>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
+        <header>
+        <h1>Letzte Fragen zur Nachbereitung</h1>
+    </header>
 <body>
 
   <div class="center"> 
@@ -22,7 +25,7 @@
             <label for="answer"> Anmerkungen :</label><br> 
                 <input type="text" id="answer" name="answer"><br>
         
-            <br><label for="hardest" class ="knowFont">Welche der Schriftarten fandest du am schwersten zu lesen ?</label><br>
+            <br><label for="hardest" class ="knowFont">Welche der Schriftarten fandest du am schwersten zu lesen?</label><br>
                 <input type="checkbox" class="checkbox" id="know" name="hardest" value="a" /> a <br/>
                 <input type="checkbox" class="checkbox" id="unknown" name="hardest" value="b"  /> b <br/>
                 <input type="checkbox" class="checkbox" id="unknown" name="hardest" value="c"  /> c <br/>
@@ -36,10 +39,14 @@
                 <input type="checkbox" class="checkbox" id="unknown" name="kuri" value="d"  /> d <br/>
                 <input type="checkbox" class="checkbox" id="unknown" name="kuri" value="e"  /> e <br/>
                 
-                <input type="hidden" id="custId" name="custId">
+             <br> <label for="answer"> Anmerkungen/Verbesserungsvorschöäge die Sie uns Mitteilen wollen? </label><br> 
+                <input type="text" id="answer" name="answer"><br>
+                
+            <input type="hidden" id="custId" name="custId">
             
-         <input class="button2" type="submit" onclick ="retId('custId','https://greenpepper15.github.io/leseverstaendnis/frage')" id="weiterid" value="Weiter">
+         <input class="button2" type="submit" onclick ="retId('custId','https://greenpepper15.github.io/leseverstaendnis/end')" id="weiterid" value="Weiter">
         </form>
+       <h3> Danke, dass du dir die Zeit genommen hast um an der Umfrage teilzunehmen!</h3>
     </div> 
 
 <script src="//cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"></script>
