@@ -22,8 +22,6 @@
         
         
         <form id="formText" action="https://send.pageclip.co/aQlCB42llkM5b7S4ZBcufO2vszmXLq6E/umfrage" class="pageclip-form" method="post">
-            <label for="answer"> Anmerkungen :</label>
-                <input type="text" id="answer" name="answer">
         
             <label for="hardest" class ="knowFont">Welche der Schriftarten fandest du am schwersten zu lesen?</label>
                 <input type="checkbox" class="checkbox" id="know" name="hardest" value="a" /> a <br/>
@@ -32,21 +30,22 @@
                 <input type="checkbox" class="checkbox" id="unknown" name="hardest" value="d"  /> d <br/>
                 <input type="checkbox" class="checkbox" id="unknown" name="hardest" value="e"  /> e <br/>
             
-            <label for="kuri" class ="knowFont">Welche der Schriftarten fandest du am kuriosesten?</label>
-                <input type="checkbox" class="checkbox" id="know" name="kuri" value="a" /> a 
-                <input type="checkbox" class="checkbox" id="unknown" name="kuri" value="b"  /> b 
-                <input type="checkbox" class="checkbox" id="unknown" name="kuri" value="c"  /> c 
-                <input type="checkbox" class="checkbox" id="unknown" name="kuri" value="d"  /> d 
-                <input type="checkbox" class="checkbox" id="unknown" name="kuri" value="e"  /> e 
+         <br/>   <label for="kuri" class ="knowFont">Welche der Schriftarten fandest du am kuriosesten?</label><br/>
+                <input type="checkbox" class="checkbox" id="know" name="kuri" value="a" /> a <br/>
+                <input type="checkbox" class="checkbox" id="unknown" name="kuri" value="b"  /> b <br/>
+                <input type="checkbox" class="checkbox" id="unknown" name="kuri" value="c"  /> c <br/>
+                <input type="checkbox" class="checkbox" id="unknown" name="kuri" value="d"  /> d <br/>
+                <input type="checkbox" class="checkbox" id="unknown" name="kuri" value="e"  /> e <br/>
                 
              <label for="answer"> Anmerkungen/Verbesserungsvorschläge die Sie uns Mitteilen wollen? </label>
                 <input type="text" id="answer" name="answer">
             <input type="hidden" id="custId" name="custId">
-            
-         <input class="button2" type="submit" onclick ="retId('custId','https://greenpepper15.github.io/leseverstaendnis/end')" id="weiterid" value="Umfrage Beenden">
-        </form>
+
        <h3> Danke, dass du dir die Zeit genommen hast um an der Umfrage teilzunehmen!</h3>
     </div> 
+      
+      <input class="button2" type="submit" onclick ="retId('custId','https://greenpepper15.github.io/leseverstaendnis/end')" id="weiterid" value="Umfrage Beenden">
+        </form>
 
 <script src="//cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"></script>
 <script src="website.js"></script> 
