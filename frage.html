@@ -9,7 +9,8 @@
        <h3 id="pageNum"> </h3> 
         <!-- <p id="pageNum">Umfage zum Thema Influences on textual parameters, Frage 1/8</p> -->
     </header>
-      
+      <p id="showSpeed" >  </p>
+    
     <div class="center">
        
                                                                
@@ -112,6 +113,14 @@
             }   
             },time);}
       writeFormInputValue("readSpeed", readSpeed);
+      if (fragenNum == "slow"){
+          document.getElementById("showSpeed").innerHTML = "Lesegeschwindigkeit ist langsam";
+     } else if (fragenNum == "middle"){
+        document.getElementById("showSpeed").innerHTML = "Lesegeschwindigkeit ist mittel";
+     } else {
+        document.getElementById("showSpeed").innerHTML = "Lesegeschwindigkeit ist schnell";
+     }
+         
      });
       writeFormInputValue("reihenfolgeId", fragenNum);
       document.getElementById("pageNum").innerHTML = "Umfage zum Thema Influences on textual parameters, Frage " + fragenNum + "/8";
