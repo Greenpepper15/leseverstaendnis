@@ -61,6 +61,7 @@
     }
     removeVisability('weiterid');
     removeVisability("rightid");
+    removeVisability('changeSpeed');
 
      var remaingQuestions = JSON.parse(localStorage.getItem('frageSammlung')).Fragen;
      if (remaingQuestions.length == 9) {
@@ -100,8 +101,14 @@
      if (fragenNum == 3) {
         setTimeout(() => {removeVisability('text');giveVisability('frage');giveVisability('formText'); giveVisability("rightid");},time);
       } else {
-        setTimeout(() => {removeVisability('text');giveVisability('frage');giveVisability('formText');},time);
-      }
+        setTimeout(() => {
+            removeVisability('text');
+            giveVisability('frage');
+            giveVisability('formText'); 
+            if (fragenNum < 4){
+             giveVisability('changeSpeed');
+            }   
+            },time);}
       writeFormInputValue("readSpeed", readSpeed);
      });
       writeFormInputValue("reihenfolgeId", fragenNum);
