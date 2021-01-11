@@ -30,7 +30,7 @@
                 <input type="hidden" id="fontId" name="fontId">
                 <input type="hidden" id="reihenfolgeId" name="reihenfolgeId">
                 <input type="hidden" id="readSpeed" name="readSpeed">
-                <button onclick="alert('Learn HTML')" > Wollen Sie die Geschwindigeit anpassen? </button>
+                <button id="changeSpeed" onclick="alert('Learn HTML')" > Wollen Sie die Geschwindigeit anpassen? </button>
     </div> 
     <div id="rightid" class="right">
            <input class="button2" type="submit" onclick ="retId('custId','https://greenpepper15.github.io/leseverstaendnis/frage')" id="weiterid" value="Weiter">
@@ -43,8 +43,6 @@
             <input type="radio" class="checkbox" id="no" name="n" onclick="setSpeed('slow')"     /> langsam
         </form>  
     </div>                                                                 
-       
-    <button onclick="alert('Learn HTML')" > Wollen Sie die Geschwindigeit anpassen? </button>
 
     
 <script src="//cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"></script>
@@ -62,7 +60,7 @@
     }
     removeVisability('weiterid');
     removeVisability("rightid");
-    
+
      var remaingQuestions = JSON.parse(localStorage.getItem('frageSammlung')).Fragen;
      if (remaingQuestions.length == 9) {
         localStorage.setItem("farben_num","1");
@@ -108,6 +106,9 @@
       writeFormInputValue("reihenfolgeId", fragenNum);
       document.getElementById("pageNum").innerHTML = "Umfage zum Thema Influences on textual parameters, Frage " + fragenNum + "/8";
       localStorage.setItem("fragenCounter", (fragenNum + 1).toString());  
+    if (fragenNum < 4){
+        removeVisability('changeSpeed');
+    }
  </script>
  
 </body>
