@@ -105,7 +105,7 @@
             removeVisability('text');
             giveVisability('frage');
             giveVisability('formText'); 
-            if (fragenNum < 4){
+            if (fragenNum > 3){
              giveVisability('changeSpeed');
             }   
             },time);}
@@ -114,9 +114,6 @@
       writeFormInputValue("reihenfolgeId", fragenNum);
       document.getElementById("pageNum").innerHTML = "Umfage zum Thema Influences on textual parameters, Frage " + fragenNum + "/8";
       localStorage.setItem("fragenCounter", (fragenNum + 1).toString());  
-    if (fragenNum < 4){
-        removeVisability('changeSpeed');
-    }
  </script>
  
 </body>
