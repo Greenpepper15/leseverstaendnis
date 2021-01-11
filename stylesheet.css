@@ -42,7 +42,6 @@ img{
 		display: block;
 		margin-bottom: 8px;
 	}
-	.formstyle input[type="text"],
 	.formstyle textarea,
 	.formstyle select {
 		font-family: Georgia, "Times New Roman", Times, serif;
