@@ -29,23 +29,21 @@
                 </select>
             </div>
             <label for="mouthertongue">Ist Deutsch deine Muttersprache?</label>
-                <input type="checkbox" class="checkbox" id="german" name="mouthertongue" value="deutsch"> Ja
-                <input type="checkbox" class="checkbox" id="other" name="mouthertongue" value="andere"> Nein
+                <input type="radio" class="checkbox" id="german" name="mouthertongue" value="deutsch"> Ja
+                <input type="radio" class="checkbox" id="other" name="mouthertongue" value="andere"> Nein
    
             <label for="colourvision">Kannst du ungeingeschraenkt Farben sehen?</label>
-                <input type="checkbox" class="checkbox" id="unlim" name="vision" value="unlim"> Ja
-                <input type="checkbox" class="checkbox" id="lim" name="vision" value="lim"> Nein 
+                <input type="radio" class="checkbox" id="unlim" name="vision" value="unlim"> Ja
+                <input type="radio" class="checkbox" id="lim" name="vision" value="lim"> Nein 
     
             <legend><span class="number">2</span> Einverstaendniserklaerung</legend>
             <label for="agreement">Stimmst du zu, dass wir deine Angaben anonymisiert auswerten?</label>
-                <input type="checkbox" class="checkbox" id="agree" name="agreement" value="agree"> Ja
-                <input type="checkbox" class="checkbox" id="disagree" name="agreement" value="disagree"> Nein
+                <input type="radio" class="checkbox" id="agree" name="agreement" value="agree"> Ja
+                <input type="radio" class="checkbox" id="disagree" name="agreement" value="disagree"> Nein
                 <input type="hidden" id="custId" name="custId">
         
             <input type="submit" onclick ="retId('custId')" value="Start">
             <!-- <button type="button">Start</button> -->
-            
-        
 
         </form>
     </div>
