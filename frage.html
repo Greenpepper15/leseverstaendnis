@@ -115,14 +115,15 @@
             //if (fragenNum > 3){giveVisability('changeSpeed');}   
             },time);}
       writeFormInputValue("readSpeed", readSpeed);
-      if (readSpeed == "slow"){
-          document.getElementById("showSpeed").innerHTML = "ausblende Geschwindigkeit ist langsam";
-     } else if (readSpeed == "middle"){
-        document.getElementById("showSpeed").innerHTML = "ausblende Geschwindigkeit ist mittel";
-     } else {
-        document.getElementById("showSpeed").innerHTML = "ausblende Geschwindigkeit ist schnell";
-     }
-         
+      if (fragenNum < 4){
+          if (readSpeed == "slow"){
+              document.getElementById("showSpeed").innerHTML = "ausblende Geschwindigkeit ist langsam";
+         } else if (readSpeed == "middle"){
+            document.getElementById("showSpeed").innerHTML = "ausblende Geschwindigkeit ist mittel";
+         } else {
+            document.getElementById("showSpeed").innerHTML = "ausblende Geschwindigkeit ist schnell";
+         }
+       }   
      });
       writeFormInputValue("reihenfolgeId", fragenNum);
       document.getElementById("pageNum").innerHTML = "Umfage zum Thema Influences on textual parameters, Frage " + fragenNum + "/8";
