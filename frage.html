@@ -19,7 +19,7 @@
             <!-- <label for="question">Platzhalter frage:</label><br> -->
                 <input type="text" id="answer" name="answer"><br>
 
-                <div class="custom-sel2" style="width: 200px;">
+                <div class="custom-sel2" >
                     <label for="knowFont" class="knowFont">Wie oft sehen Sie die Schriftart?</label>
                     <select id = "know" name="knowfont" onchange="checkVisibility()">
                         <option value="" selected disabled hidden>Bitte auswaehlen</option>
@@ -30,7 +30,7 @@
                         <option value="never" >Noch nie</option>
                     </select>
                 </div>
-                
+
                 <input type="hidden" id="custId" name="custId">
                 <input type="hidden" id="fontId" name="fontId">
                 <input type="hidden" id="reihenfolgeId" name="reihenfolgeId">
@@ -127,7 +127,7 @@
        }   
      });
       writeFormInputValue("reihenfolgeId", fragenNum);
-      document.getElementById("pageNum").innerHTML = "Umfage zum Thema Influences on textual parameters, Frage " + fragenNum + "/8";
+      document.getElementById("pageNum").innerHTML = "Umfage im Rahmen des Projektseminars Visual Computing and Games, Frage " + fragenNum + "/8";
       localStorage.setItem("fragenCounter", (fragenNum + 1).toString());  
  </script>
  
