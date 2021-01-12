@@ -100,10 +100,11 @@ img{
     	background:  #1bb6dd;
     	color: #fff;
     	height: 30px;
-		width: 80%;
-		position: fixed;
-		bottom: 10px;
-		right: 10px;
+	width: 80%;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	-webkit-transform: translateZ(0);
     	border-radius: 4px;
     	transition-duration: 0.4s;
 	}
