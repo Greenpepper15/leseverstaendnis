@@ -20,6 +20,10 @@ img{
 	width: 80%;
 	height:auto;
 }
+video{
+	width: 100%;
+  	height: auto;
+}
 	.formstyle{
 		max-width: auto;
 		padding: 10px 20px;
@@ -99,7 +103,7 @@ img{
     	background:  #1bb6dd;
     	color: #fff;
     	height: 30px;
-		width: 80%;
+		width: 30%;
 		position: fixed;
 		bottom: 10px;
 		right: 10px;
