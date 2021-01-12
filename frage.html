@@ -23,11 +23,11 @@
                 <div class="custom-sel2" style="width: 200px;">
                     <label for="knowFont" class="knowFont">Wie oft sehen Sie die Schriftart?</label>
                     <select id = "know" name="knowfont" required>
-                        <option value="veryOften">Sehr Oft</option>
-                        <option value="often">Oft</option>
-                        <option value="middle">Gelegentlich</option>
-                        <option value="rare">Selten</option>
-                        <option value="never">Noch nie</option>
+                        <option value="veryOften" onclick="checkVisibility()">Sehr Oft</option>
+                        <option value="often" onclick="checkVisibility()">Oft</option>
+                        <option value="middle" onclick="checkVisibility()">Gelegentlich</option>
+                        <option value="rare" onclick="checkVisibility()">Selten</option>
+                        <option value="never" onclick="checkVisibility()">Noch nie</option>
                     </select>
                 </div>
             
@@ -40,7 +40,7 @@
     <div id="rightid" class="right">
            <input class="button2" type="submit" onclick ="retId('custId','https://greenpepper15.github.io/leseverstaendnis/frage')" id="weiterid" value="Weiter">
         </form>
-        <button id="changeSpeed" onclick="giveVisability('rightid');removeVisability('weiterid')" >Ist die ausblende Geschwindigkeit zu schnell oder langsam? <br> (Dann mich bitte anklicken)</button><br>
+       <!-- <button id="changeSpeed" onclick="giveVisability('rightid');removeVisability('weiterid')" >Ist die ausblende Geschwindigkeit zu schnell oder langsam? <br> (Dann mich bitte anklicken)</button><br> -->
         
        <br> <form id="readSpeed" class="readspeed" > Bitte Geschwindigkeit so wählen, dass Sie den Satz gerade so zu Ende lesen können. <br/> 
                                                                                                                                     <br/>
@@ -67,7 +67,7 @@
     }
     removeVisability('weiterid');
     removeVisability("rightid");
-    removeVisability('changeSpeed');
+    //removeVisability('changeSpeed');
 
      var remaingQuestions = JSON.parse(localStorage.getItem('frageSammlung')).Fragen;
      if (remaingQuestions.length == 9) {
@@ -111,9 +111,7 @@
             removeVisability('text');
             giveVisability('frage');
             giveVisability('formText'); 
-            if (fragenNum > 3){
-             giveVisability('changeSpeed');
-            }   
+            //if (fragenNum > 3){giveVisability('changeSpeed');}   
             },time);}
       writeFormInputValue("readSpeed", readSpeed);
       if (readSpeed == "slow"){
