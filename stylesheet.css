@@ -135,8 +135,8 @@ img{
 		padding: 10px;
 	}
 	.custom-sel2 {
-		width: 100%;
-  		text-align: center;
+		margin: auto;
+		padding-top: 10px;
 	}
 	.center .checkbox{
 		width: auto;	
