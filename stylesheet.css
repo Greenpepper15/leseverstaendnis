@@ -129,12 +129,14 @@ img{
   		text-align: center;
   		font-size: 18px;
 	}
-	.center input,
-	.center option{
+	.center input{
 		width: 80%;
 		position: relative;
 		top: 5px;
 		padding: 10px;
+	}
+	.center option {
+		z-index: +1;
 	}
 	.center .checkbox{
 		width: auto;	
