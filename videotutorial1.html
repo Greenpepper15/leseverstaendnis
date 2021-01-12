@@ -23,11 +23,11 @@
 <script>
     removeVisability("weiter");
     var myVideo = document.getElementById("video");
-    var videoList = ["Videos/Farben.mp4","Fragen_2.mp4"];
+    var videoList = ["Videos/Farben.mp4","Videos/Fragen_2.mp4"];
     var vidNum = 0;
     function nextVideo(path){
         var video = document.getElementById("video");
-        video.scr = videoList[vidNum];
+        video.src = videoList[vidNum];
         vidNum = vidNum + 1;
         video.load();
     }
