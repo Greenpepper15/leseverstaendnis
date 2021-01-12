@@ -15,9 +15,12 @@
       Your browser does not support the video tag.
       </video>
      <button  onclick="nextVideo('Fragen_2.mp4')"> Nächstes Video </button>
-      <button class="button2" onclick="chageSite()"> Umfrage starten </button>
+      <button id="weiter" class="button2" onclick="chageSite()"> Umfrage starten </button>
 </body>
-     <script>
+<script src="website.js"></script> 
+  
+<script>
+    removeVisability("weiter");
     var myVideo = document.getElementById("video");
     var videoList = ["Fragen_2.mp4"];
     var vidNum = 0;
