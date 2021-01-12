@@ -11,33 +11,31 @@
     </header>
       <p id="showSpeed" >  </p>
     
-    <div class="center">
-       
-                                                               
+    <div class="center">                                                       
         <img alt ="Textbeispiel" id="text" ><br>
         
         <p class = "question" id="frage" >  </p>
         <form id="formText" action="https://send.pageclip.co/aQlCB42llkM5b7S4ZBcufO2vszmXLq6E/warum" class="pageclip-form" method="post">
             <!-- <label for="question">Platzhalter frage:</label><br> -->
                 <input type="text" id="answer" name="answer"><br>
-                <div class="custom-sel2" style="width: 200px;">
-                    <label for="knowFont" class="knowFont">Wie oft sehen Sie die Schriftart?</label>
-                    <select id = "know" name="knowfont" onchange="checkVisibility()">
-                        <option value="" selected disabled hidden>Bitte auswaehlen</option>
-                        <option value="veryOften" >Sehr Oft</option>
-                        <option value="often" >Oft</option>
-                        <option value="middle" >Gelegentlich</option>
-                        <option value="rare" >Selten</option>
-                        <option value="never" >Noch nie</option>
-                    </select>
-                </div>
-            
                 <input type="hidden" id="custId" name="custId">
                 <input type="hidden" id="fontId" name="fontId">
                 <input type="hidden" id="reihenfolgeId" name="reihenfolgeId">
                 <input type="hidden" id="readSpeed" name="readSpeed">
                 
+                
     </div> 
+    <div class="custom-sel2" style="width: 200px;">
+        <label for="knowFont" class="knowFont">Wie oft sehen Sie die Schriftart?</label>
+        <select id = "know" name="knowfont" onchange="checkVisibility()">
+            <option value="" selected disabled hidden>Bitte auswaehlen</option>
+            <option value="veryOften" >Sehr Oft</option>
+            <option value="often" >Oft</option>
+            <option value="middle" >Gelegentlich</option>
+            <option value="rare" >Selten</option>
+            <option value="never" >Noch nie</option>
+        </select>
+    </div>
     <div id="rightid" class="right">
            <input class="button2" type="submit" onclick ="retId('custId','https://greenpepper15.github.io/leseverstaendnis/frage')" id="weiterid" value="Weiter">
         </form>
