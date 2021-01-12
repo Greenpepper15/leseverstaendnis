@@ -11,7 +11,7 @@
          <!-- <p id="pageNum">Umfage zum Thema Influences on textual parameters, Frage 1/8</p> -->
      </header>
     <video id="video" controls>
-        <source type="video/mp4" >
+        <source type="video/mp4" src="Videos/Farben.mp4">
       Your browser does not support the video tag.
       </video>
      <button  onclick="nextVideo('Fragen_2.mp4')"> Nächstes Video </button>
@@ -23,7 +23,7 @@
 <script>
     removeVisability("weiter");
     var myVideo = document.getElementById("video");
-    var videoList = ["Videos/Farben.mp4","Videos/Fragen_2.mp4"];
+    var videoList = ["Videos/Fragen_2.mp4"];
     var vidNum = 0;
     function nextVideo(path){
         var video = document.getElementById("video");
