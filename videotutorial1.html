@@ -27,6 +27,7 @@
     function nextVideo(path){
         var video = document.getElementById("video");
         video.scr = path;
+        video.load();
     }
     function changeSite() {
            window.location.replace("https://greenpepper15.github.io/leseverstaendnis/frage");
