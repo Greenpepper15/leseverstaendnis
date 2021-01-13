@@ -8,18 +8,19 @@
 <body>
     <header>
         <h3 id="pageNum"> </h3> 
-        <h4> Starten Sie das Video indem Sie auf den Videoplayer klicken </h4>
+        <h4> Starten Sie das Video indem Sie auf den Videoplayer klicken <br> Wenn Sie beim vierten Video angelangt sind können Sie die Umfrage starten </h4>
          <!-- <p id="pageNum">Umfage zum Thema Influences on textual parameters, Frage 1/8</p> -->
      </header>
     <div style="text-align:center"> 
   <button onclick="playPause()">Play/Pause</button> 
+  <button  id="next" onclick="nextVideo('Fragen_2.mp4')"> Nächstes Video </button>
   <br><br>
   </div> 
     <video id="video"  width="420" controls autoplay>
         <source type="video/mp4" src="Videos/Frage_1short.mp4">
       Your browser does not support the video tag. In diesem Fall klicke bitte 4 mal auf den Botton "Nächstes Video" um Umfrage zu beginnen.
       </video>
-     <button  id="next" class="button2" onclick="nextVideo('Fragen_2.mp4')"> Nächstes Video </button>
+     <!--<button  id="next" class="button2" onclick="nextVideo('Fragen_2.mp4')"> Nächstes Video </button> -->
       <button id="weiter" class="button2" onclick="changeSite()"> Umfrage starten </button>
 </body>
 <script src="//cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"></script>
