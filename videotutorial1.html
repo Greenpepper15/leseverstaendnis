@@ -18,7 +18,7 @@
   <button onclick="makeNormal()">Normal</button>
   <br><br>
         
-    <video id="video" controls autoplay>
+    <video id="video"  width="420" controls autoplay>
         <source type="video/mp4" src="Videos/Frage_1short.mp4">
       Your browser does not support the video tag. In diesem Fall klicke bitte 4 mal auf den Botton "Nächstes Video" um Umfrage zu beginnen.
       </video>
@@ -55,8 +55,9 @@
     
     
     
-    var myVideo = document.getElementById("video"); 
-
+var myVideo = document.getElementById("video"); 
+var width = 420;
+    
 function playPause() { 
   if (myVideo.paused) 
     myVideo.play(); 
@@ -65,15 +66,18 @@ function playPause() {
 } 
 
 function makeBig() { 
-    myVideo.width = 560; 
+    width = 420 + 10;
+    myVideo.width = width; 
 } 
 
 function makeSmall() { 
-    myVideo.width = 320; 
+    width = 420 - 10;
+    myVideo.width = width; 
 } 
 
 function makeNormal() { 
-    myVideo.width = 420; 
+    width = 420;
+    myVideo.width = width; 
 } 
      </script>
 </html>
