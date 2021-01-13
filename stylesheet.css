@@ -122,6 +122,10 @@ video{
     	border-radius: 4px;
     	transition-duration: 0.4s;
 	}
+	.button4{
+	background:  #1bb6dd;
+    	color: #fff;
+	}
 	.checkbox{
 		margin: 10px 0px 10px 0px;
 	}
