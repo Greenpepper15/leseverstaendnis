@@ -24,13 +24,13 @@
     removeVisability("weiter");
     var videoList = ["Frage_2short.mp4","Frage_3short.mp4","Frag_4short.mp4"];
     var vidNum = 0;
-    document.getElementById("pageNum") = "Kurzes Videotutorial zur Vorbereitung auf die Befragung" + (vidNum + 1) + "/4";
+    document.getElementById("pageNum").innerHTML = "Kurzes Videotutorial zur Vorbereitung auf die Befragung" + (vidNum + 1) + "/4";
     function nextVideo(path){
         var video = document.getElementById("video");
         if (vidNum < videoList.length){
             video.src = "Videos/" + videoList[vidNum];
             vidNum = vidNum + 1;
-             document.getElementById("pageNum") = "Kurzes Videotutorial zur Vorbereitung auf die Befragung" + (vidNum + 1) + "/4";
+             document.getElementById("pageNum").innerHTML = "Kurzes Videotutorial zur Vorbereitung auf die Befragung" + (vidNum + 1) + "/4";
             video.load();
         } else {
             removeVisability("next");
