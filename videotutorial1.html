@@ -33,6 +33,10 @@
              document.getElementById("pageNum").innerHTML = "Kurzes Videotutorial zur Vorbereitung auf die Befragung, Video" + (vidNum + 1) + " /4";
             video.load();
         } else {
+             removeVisability("next");
+            giveVisability("weiter");
+        }
+        if (vidNum == 2) {
             removeVisability("next");
             giveVisability("weiter");
         }
