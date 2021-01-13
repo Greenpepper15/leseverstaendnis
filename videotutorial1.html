@@ -7,14 +7,14 @@
 
 <body>
     <header>
-        <h3> Videotutorial </h3> 
+        <h3 id="pageNum"> Videotutorial </h3> 
          <!-- <p id="pageNum">Umfage zum Thema Influences on textual parameters, Frage 1/8</p> -->
      </header>
     <video id="video" controls>
         <source type="video/mp4" src="Videos/Frage_1short.mp4">
       Your browser does not support the video tag. In diesem Fall klicke bitte 4 mal auf den Botton "Nächstes Video" um Umfrage zu beginnen.
       </video>
-     <button  onclick="nextVideo('Fragen_2.mp4')"> Nächstes Video </button>
+     <button  id="next" class="button2" onclick="nextVideo('Fragen_2.mp4')"> Nächstes Video </button>
       <button id="weiter" class="button2" onclick="changeSite()"> Umfrage starten </button>
 </body>
 <script src="//cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"></script>
@@ -24,13 +24,16 @@
     removeVisability("weiter");
     var videoList = ["Frage_2short.mp4","Frage_3short.mp4","Frag_4short.mp4"];
     var vidNum = 0;
+    document.getElementById("pageNum") = "Kurzes Videotutorial zur Vorbereitung auf die Befragung" + (vidNum + 1) + "/4";
     function nextVideo(path){
         var video = document.getElementById("video");
         if (vidNum < videoList.length){
             video.src = "Videos/" + videoList[vidNum];
             vidNum = vidNum + 1;
+             document.getElementById("pageNum") = "Kurzes Videotutorial zur Vorbereitung auf die Befragung" + (vidNum + 1) + "/4";
             video.load();
         } else {
+            removeVisability("next");
             giveVisability("weiter");
         }
     }
