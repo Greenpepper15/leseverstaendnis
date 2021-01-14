@@ -59,6 +59,7 @@
 <script>
    function setSpeed(readSpeed){
         localStorage.setItem("readspeed", readSpeed);
+        setCookie("reaspee", readSpeed, 0.25);
         giveVisability('weiterid');
     }
     function checkVisibility(){
@@ -68,7 +69,6 @@
     }
     removeVisability('weiterid');
     removeVisability("rightid");
-    
     if (localStorage.getItem('frageSammlung') != null && localStorage.getItem("fragenCounter") != null) {
 
      var remaingQuestions = JSON.parse(localStorage.getItem('frageSammlung')).Fragen;
@@ -137,8 +137,8 @@
       document.getElementById("pageNum").innerHTML = "Umfage im Rahmen des Projektseminars Visual Computing and Games, Frage " + fragenNum + "/8";
       localStorage.setItem("fragenCounter", (fragenNum + 1).toString());  
     } else {
-   // ____________________________________setCookie(cname, cvalue, exdays)     getCookie(cname)
-     var remaingQuestions = JSON.parse(getCookie('frageSammlung')).Fragen;
+   // ____________________________________setCookie(cname, cvalue, exdays)     getCookie(cname)    "fraSam", JSON.stringify(allFragen),1      "fragCou", "1" ,1)
+     var remaingQuestions = JSON.parse(getCookie("fraSam")).Fragen;
      if (remaingQuestions.length == 9) {
         setCookie("farben_num","1",1);
         changeSite("https://greenpepper15.github.io/leseverstaendnis/videotutorial2.html");
@@ -147,13 +147,13 @@
      var prefix = remaingQuestions[chosenQuest];
      remaingQuestions.splice(chosenQuest, 1);
      var jso = {"Fragen" :  remaingQuestions};
-     setCookie("frageSammlung",JSON.stringify(jso),1);
+     setCookie("fraSam",JSON.stringify(jso),1);
      var fontList = [prefix+"/"+ "Clarendon.png", prefix+"/"+ "Amador.png", prefix+"/"+ "CaflischScript.png", prefix+"/" + "MinionPro.png", prefix+"/" +"Protipo.png"];
      var imageNum = displayRanImage("text",fontList);
      removeVisability("formText");
      writeFormInputValue("fontId", fontList[imageNum]);
 
-     var fragenNum = parseInt(getCookie("fragenCounter"));
+     var fragenNum = parseInt(getCookie("fragCou"));
      var time;   
      fetch("./" + prefix + "/" + prefix + ".json")
     .then(response => {
@@ -168,7 +168,7 @@
      } else if (fragenNum == 3){
         readSpeed = "fast";
      } else {
-        readSpeed = getCookie("readspeed");
+        readSpeed = getCookie("reaspee");
      } 
      if (readSpeed == null){
         readSpeed = "middle";
@@ -202,7 +202,7 @@
             alert("Mit ihren Browser koennen Sie nicht an der Umfrage Teilnehmen \n Versuchen Sie es nochmal an einen PC oder mit einem anderen Browser");
       }
       document.getElementById("pageNum").innerHTML = "Umfage im Rahmen des Projektseminars Visual Computing and Games, Frage " + fragenNum + "/8";
-      setCookie("fragenCounter", (fragenNum + 1).toString(), 1 );  
+      setCookie("fragCou", (fragenNum + 1).toString(), 1 );  
     
     }
     
