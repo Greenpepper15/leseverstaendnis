@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <header>
+       <h3 id="pageNum"> </h3> 
+        <!-- <p id="pageNum">Umfage zum Thema Influences on textual parameters, Frage 1/8</p> -->
+    </header>
+      <p id="showSpeed" >  </p>
+    
+    <div class="center">                                                       
+        <img alt ="Textbeispiel" id="text" ><br>
+        
+        <p class = "question" id="frage" >  </p>
+        <form id="formText" action="https://send.pageclip.co/aQlCB42llkM5b7S4ZBcufO2vszmXLq6E/warum" class="pageclip-form" method="post">
+            <!-- <label for="question">Platzhalter frage:</label><br> -->
+                <input type="text" id="answer" name="answer"><br>
+
+                <div class="custom-sel2" >
+                    <label for="knowFont" class="knowFont">Wie oft sehen Sie die Schriftart?</label>
+                    <select id = "know" name="knowfont" onchange="checkVisibility()">
+                        <option value="" selected disabled hidden>Bitte auswaehlen</option>
+                        <option value="veryOften" >Sehr Oft</option>
+                        <option value="often" >Oft</option>
+                        <option value="middle" >Gelegentlich</option>
+                        <option value="rare" >Selten</option>
+                        <option value="never" >Noch nie</option>
+                    </select>
+                </div>
+
+                <input type="hidden" id="custId" name="custId">
+                <input type="hidden" id="fontId" name="fontId">
+                <input type="hidden" id="reihenfolgeId" name="reihenfolgeId">
+                <input type="hidden" id="readSpeed" name="readSpeed">
+                
+                
+    </div> 
+    
+    <div id="rightid" class="right">
+           <input class="button2" type="submit" onclick ="retId('custId','https://greenpepper15.github.io/leseverstaendnis/frage')" id="weiterid" value="Weiter">
+        </form>
+       <!-- <button id="changeSpeed" onclick="giveVisability('rightid');removeVisability('weiterid')" >Ist die ausblende Geschwindigkeit zu schnell oder langsam? <br> (Dann mich bitte anklicken)</button><br> -->
+        
+       <br> <form id="readSpeed" class="readspeed" > Bitte Geschwindigkeit so wählen, dass Sie den Satz gerade so zu Ende lesen können. <br/> 
+                                                     Welche Geschwindigkeit bevorzugen Sie? 
+            <input type="radio" class="checkbox" id="ad" name="speed" onclick="setSpeed('fast')"     /> schnell
+            <input type="radio" class="checkbox" id="no" name="speed" onclick="setSpeed('middle')"   /> mittel
+            <input type="radio" class="checkbox" id="no" name="speed" onclick="setSpeed('slow')"     /> langsam
+        </form>  
+    </div>                                                                 
+
+    
+<script src="//cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"></script>
+<script src="website.js"></script> 
+<script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
+<script>
+   function setSpeed(readSpeed){
+        localStorage.setItem("readspeed", readSpeed);
+        giveVisability('weiterid');
+    }
+    function checkVisibility(){
+        if (document.getElementById('rightid').style.visibility == 'hidden') {
+            giveVisability('weiterid');
+        } 
+    }
+    removeVisability('weiterid');
+    removeVisability("rightid");
+    //removeVisability('changeSpeed');
+
+     var remaingQuestions = JSON.parse(localStorage.getItem('frageSammlung')).Fragen;
+     if (remaingQuestions.length == 9) {
+        localStorage.setItem("farben_num","1");
+        changeSite("https://greenpepper15.github.io/leseverstaendnis/videotutorial2.html");
+     }
+     var chosenQuest =  RanNumber(remaingQuestions);
+     var prefix = remaingQuestions[chosenQuest];
+     remaingQuestions.splice(chosenQuest, 1);
+     var jso = {"Fragen" :  remaingQuestions};
+     localStorage.setItem("frageSammlung",JSON.stringify(jso));
+     var fontList = [prefix+"/"+ "Clarendon.png", prefix+"/"+ "Amador.png", prefix+"/"+ "CaflischScript.png", prefix+"/" + "MinionPro.png", prefix+"/" +"Protipo.png"];
+     var imageNum = displayRanImage("text",fontList);
+     removeVisability("formText");
+     writeFormInputValue("fontId", fontList[imageNum]);
+
+     var fragenNum = parseInt(localStorage.getItem("fragenCounter"));
+     var time;   
+     fetch("./" + prefix + "/" + prefix + ".json")
+    .then(response => {
+       return response.json();
+    })
+    .then(jsonData => {
+     var readSpeed; 
+     if (fragenNum == 1){
+         readSpeed = "slow";
+     } else if (fragenNum == 2){
+        readSpeed = "middle";
+     } else if (fragenNum == 3){
+        readSpeed = "fast";
+     } else {
+        readSpeed = localStorage.getItem("readspeed");
+     } 
+     if (readSpeed == null){
+        readSpeed = "middle";
+        alert("Bei ihnen scheint ein Fehler aufgetreten zu sein, bitte wechseln Sie den Browser \n Sie koennen auch fortfahren nur wird jedes mal diese Fehlermeldung auftauchen");
+     }
+     data = jsonData.f1;
+     document.getElementById("frage").innerHTML = data;
+     time = jsonData[readSpeed];
+     if (fragenNum == 3) {
+        setTimeout(() => {removeVisability('text');giveVisability('frage');giveVisability('formText'); giveVisability("rightid");},time);
+      } else {
+        setTimeout(() => {
+            removeVisability('text');
+            giveVisability('frage');
+            giveVisability('formText'); 
+            //if (fragenNum > 3){giveVisability('changeSpeed');}   
+            },time);}
+      writeFormInputValue("readSpeed", readSpeed);
+      if (fragenNum < 4){
+          if (readSpeed == "slow"){
+              document.getElementById("showSpeed").innerHTML = "ausblende Geschwindigkeit ist langsam";
+         } else if (readSpeed == "middle"){
+            document.getElementById("showSpeed").innerHTML = "ausblende Geschwindigkeit ist mittel";
+         } else {
+            document.getElementById("showSpeed").innerHTML = "ausblende Geschwindigkeit ist schnell";
+         }
+       }   
+     });
+      writeFormInputValue("reihenfolgeId", fragenNum);
+      if (fragenNum == null){
+            alert("Mit ihren Browser koennen Sie nicht an der Umfrage Teilnehmen \n Versuchen Sie es nochmal an einen PC oder mit einem anderen Browser");
+      }
+      document.getElementById("pageNum").innerHTML = "Umfage im Rahmen des Projektseminars Visual Computing and Games, Frage " + fragenNum + "/8";
+      localStorage.setItem("fragenCounter", (fragenNum + 1).toString());  
+ </script>
+ 
+</body>
+</html>
