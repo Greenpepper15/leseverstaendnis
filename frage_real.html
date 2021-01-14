@@ -58,83 +58,76 @@
 <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 <script>
    function setSpeed(readSpeed){
-        localStorage.setItem("readspeed", readSpeed);
-        giveVisability('weiterid');
+        readV = readSpeed;
     }
     function checkVisibility(){
         if (document.getElementById('rightid').style.visibility == 'hidden') {
             giveVisability('weiterid');
         } 
     }
-    removeVisability('weiterid');
-    removeVisability("rightid");
-    //removeVisability('changeSpeed');
-
-     var remaingQuestions = JSON.parse(localStorage.getItem('frageSammlung')).Fragen;
-     if (remaingQuestions.length == 9) {
-        localStorage.setItem("farben_num","1");
-        changeSite("https://greenpepper15.github.io/leseverstaendnis/videotutorial2.html");
-     }
-     var chosenQuest =  RanNumber(remaingQuestions);
-     var prefix = remaingQuestions[chosenQuest];
-     remaingQuestions.splice(chosenQuest, 1);
-     var jso = {"Fragen" :  remaingQuestions};
-     localStorage.setItem("frageSammlung",JSON.stringify(jso));
-     var fontList = [prefix+"/"+ "Clarendon.png", prefix+"/"+ "Amador.png", prefix+"/"+ "CaflischScript.png", prefix+"/" + "MinionPro.png", prefix+"/" +"Protipo.png"];
-     var imageNum = displayRanImage("text",fontList);
-     removeVisability("formText");
-     writeFormInputValue("fontId", fontList[imageNum]);
-
-     var fragenNum = parseInt(localStorage.getItem("fragenCounter"));
-     var time;   
-     fetch("./" + prefix + "/" + prefix + ".json")
-    .then(response => {
-       return response.json();
-    })
-    .then(jsonData => {
-     var readSpeed; 
-     if (fragenNum == 1){
-         readSpeed = "slow";
-     } else if (fragenNum == 2){
-        readSpeed = "middle";
-     } else if (fragenNum == 3){
-        readSpeed = "fast";
-     } else {
-        readSpeed = localStorage.getItem("readspeed");
-     } 
-     if (readSpeed == null){
-        readSpeed = "middle";
-        alert("Bei ihnen scheint ein Fehler aufgetreten zu sein, bitte wechseln Sie den Browser \n Sie koennen auch fortfahren nur wird jedes mal diese Fehlermeldung auftauchen");
-     }
-     data = jsonData.f1;
-     document.getElementById("frage").innerHTML = data;
-     time = jsonData[readSpeed];
-     if (fragenNum == 3) {
-        setTimeout(() => {removeVisability('text');giveVisability('frage');giveVisability('formText'); giveVisability("rightid");},time);
-      } else {
-        setTimeout(() => {
-            removeVisability('text');
-            giveVisability('frage');
-            giveVisability('formText'); 
-            //if (fragenNum > 3){giveVisability('changeSpeed');}   
-            },time);}
-      writeFormInputValue("readSpeed", readSpeed);
-      if (fragenNum < 4){
-          if (readSpeed == "slow"){
-              document.getElementById("showSpeed").innerHTML = "ausblende Geschwindigkeit ist langsam";
-         } else if (readSpeed == "middle"){
-            document.getElementById("showSpeed").innerHTML = "ausblende Geschwindigkeit ist mittel";
-         } else {
-            document.getElementById("showSpeed").innerHTML = "ausblende Geschwindigkeit ist schnell";
+    var allFragen = ["Frage1","Frage2","Frage3","Frage4","Frage5","Frage6","Frage7","Frage8","Frage9","Frage10","Frage11","Frage12","Frage13","Frage14","Frage15","Frage16","Frage17"];
+    var pageNum = 1;
+    var readV = "slow";
+    
+    function reload() {
+        removeVisability('weiterid');
+        removeVisability("rightid");
+         var remaingQuestions = allFragen;
+         if (remaingQuestions.length == 9) {
+            localStorage.setItem("farben_num","1");
+            changeSite("https://greenpepper15.github.io/leseverstaendnis/videotutorial2.html");
          }
-       }   
-     });
-      writeFormInputValue("reihenfolgeId", fragenNum);
-      if (fragenNum == null){
-            alert("Mit ihren Browser koennen Sie nicht an der Umfrage Teilnehmen \n Versuchen Sie es nochmal an einen PC oder mit einem anderen Browser");
-      }
-      document.getElementById("pageNum").innerHTML = "Umfage im Rahmen des Projektseminars Visual Computing and Games, Frage " + fragenNum + "/8";
-      localStorage.setItem("fragenCounter", (fragenNum + 1).toString());  
+         var chosenQuest =  RanNumber(remaingQuestions);
+         var prefix = remaingQuestions[chosenQuest];
+         remaingQuestions.splice(chosenQuest, 1);
+         allFragen = remaingQuestions;
+         var fontList = [prefix+"/"+ "Clarendon.png", prefix+"/"+ "Amador.png", prefix+"/"+ "CaflischScript.png", prefix+"/" + "MinionPro.png", prefix+"/" +"Protipo.png"];
+         var imageNum = displayRanImage("text",fontList);
+         removeVisability("formText");
+         writeFormInputValue("fontId", fontList[imageNum]);
+         var fragenNum = pageNum;
+         var time;   
+         fetch("./" + prefix + "/" + prefix + ".json")
+        .then(response => {
+           return response.json();
+        })
+        .then(jsonData => {
+         var readSpeed; 
+         if (fragenNum == 1){
+             readSpeed = "slow";
+         } else if (fragenNum == 2){
+            readSpeed = "middle";
+         } else if (fragenNum == 3){
+            readSpeed = "fast";
+         } else {
+            readSpeed = readV;
+         } 
+         data = jsonData.f1;
+         document.getElementById("frage").innerHTML = data;
+         time = jsonData[readSpeed];
+         if (fragenNum == 3) {
+            setTimeout(() => {removeVisability('text');giveVisability('frage');giveVisability('formText'); giveVisability("rightid");},time);
+          } else {
+            setTimeout(() => {
+                removeVisability('text');
+                giveVisability('frage');
+                giveVisability('formText'); 
+                },time);}
+          writeFormInputValue("readSpeed", readSpeed);
+          if (fragenNum < 4){
+              if (readSpeed == "slow"){
+                  document.getElementById("showSpeed").innerHTML = "ausblende Geschwindigkeit ist langsam";
+             } else if (readSpeed == "middle"){
+                document.getElementById("showSpeed").innerHTML = "ausblende Geschwindigkeit ist mittel";
+             } else {
+                document.getElementById("showSpeed").innerHTML = "ausblende Geschwindigkeit ist schnell";
+             }
+           }   
+         });
+          writeFormInputValue("reihenfolgeId", fragenNum);
+          document.getElementById("pageNum").innerHTML = "Umfage im Rahmen des Projektseminars Visual Computing and Games, Frage " + fragenNum + "/8";
+          pageNum = fragenNum + 1;  
+    }
  </script>
  
 </body>
