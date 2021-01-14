@@ -101,7 +101,11 @@
         readSpeed = "fast";
      } else {
         readSpeed = localStorage.getItem("readspeed");
-     }      
+     } 
+     if (readSpeed == null){
+        readSpeed = "middle";
+        alert("Bei ihnen scheint ein Fehler aufgetreten zu sein, bitte wechseln Sie den Browser \n Sie koennen auch fortfahren nur wird jedes mal diese Fehlermeldung auftauchen");
+     }
      data = jsonData.f1;
      document.getElementById("frage").innerHTML = data;
      time = jsonData[readSpeed];
