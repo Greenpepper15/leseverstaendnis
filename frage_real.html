@@ -15,7 +15,7 @@
         <img alt ="Textbeispiel" id="text" ><br>
         
         <p class = "question" id="frage" >  </p>
-        <form id="formText" action="https://send.pageclip.co/aQlCB42llkM5b7S4ZBcufO2vszmXLq6E/warum" class="pageclip-form" method="post">
+        <form id="formText" action="https://send.pageclip.co/aQlCB42llkM5b7S4ZBcufO2vszmXLq6E/warum" class="pageclip-form" method="post" oninput="">
             <!-- <label for="question">Platzhalter frage:</label><br> -->
                 <input type="text" id="answer" name="answer"><br>
 
@@ -35,7 +35,7 @@
                 <input type="hidden" id="fontId" name="fontId">
                 <input type="hidden" id="reihenfolgeId" name="reihenfolgeId">
                 <input type="hidden" id="readSpeed" name="readSpeed">
-                
+               <!-- <output form ="myGeeks" name = "sumresult"> </output> -->
                 
     </div> 
     
@@ -126,7 +126,9 @@
              } else {
                 document.getElementById("showSpeed").innerHTML = "ausblende Geschwindigkeit ist schnell";
              }
-           }   
+           } else {
+                removeVisability("showSpeed");
+           }
          });
           writeFormInputValue("reihenfolgeId", fragenNum);
           document.getElementById("pageNum").innerHTML = "Umfage im Rahmen des Projektseminars Visual Computing and Games, Frage " + fragenNum + "/8";
