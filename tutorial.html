@@ -93,7 +93,7 @@
         localStorage.setItem("fragenCounter", "1");
         setCookie("fraSam", JSON.stringify(allFragen),1);
         setCookie("fragCou", "1" ,1);
-        if(getCookie("fragCou") == "" &&  localStorage.getItem("frageSammlung") == null && false){
+        if(getCookie("fragCou") != "" &&  localStorage.getItem("frageSammlung") != null){
              alert("Sie muessen Lokale Cookies erlauben sonst funktioniert die Umfrage nicht \n Oder wechseln Sie den Browser oder das Gerät");
         }
         
