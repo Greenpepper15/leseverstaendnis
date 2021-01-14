@@ -88,8 +88,30 @@
         var allFragen = {"Fragen": ["Frage1","Frage2","Frage3","Frage4","Frage5","Frage6","Frage7","Frage8","Frage9","Frage10","Frage11","Frage12","Frage13","Frage14","Frage15","Frage16","Frage17"]};
         localStorage.setItem("frageSammlung",JSON.stringify(allFragen));
         localStorage.setItem("fragenCounter", "1");
-        document.cookie = "fraSam=" + JSON.stringify(allFragen) + "path=/;";
-        document.cookie = "fraCou=1;path=/;"
+        setCookie("fraSam", JSON.stringify(allFragen),1);
+        setCookie("fragCou", "1" ,1);
+        
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  var expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
     </script>
     
 
