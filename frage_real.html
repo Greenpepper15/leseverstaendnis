@@ -73,7 +73,9 @@
     function reload() {
         removeVisability('weiterid');
         removeVisability("rightid");
-        giveVisability('text')
+        removeVisability("frage");
+        giveVisability('text');
+        
          var remaingQuestions = allFragen;
          if (remaingQuestions.length == 9) {
             localStorage.setItem("farben_num","1");
