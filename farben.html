@@ -69,11 +69,11 @@ function imOnload(){
     var readSpeed = localStorage.getItem("readspeed");
     var time;
     if (readSpeed == "fast"){
-        time = 6000;
+        time = 3000;
     } else if (readSpeed == "middle"){
         time = 4000;
     } else {
-        time = 3000;
+        time = 6000;
     }
     setTimeout(() =>{removeVisability('text');giveVisability('frage');giveVisability('formColour');}, time);
 }
