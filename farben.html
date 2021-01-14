@@ -52,21 +52,46 @@
 <script>
     // Liste enthaelt datei Namen fuer die verschiendenen fonts
   removeVisability("weiterid");
- var fragenNum = parseInt(localStorage.getItem("farben_num"));
- if (fragenNum > 5){
-    changeSite("https://greenpepper15.github.io/leseverstaendnis/end");
+    
+ if (localStorage.getItem('frageSammlung') != null && localStorage.getItem("fragenCounter") != null && false) { 
+     var fragenNum = parseInt(localStorage.getItem("farben_num"));
+     if (fragenNum > 5){
+        changeSite("https://greenpepper15.github.io/leseverstaendnis/end");
+     }
+     localStorage.setItem("farben_num", (fragenNum + 1).toString());
+     var farben = ["farben0.png","farben1.png","farben2.png","farben3.png","farben4.png","farben5.png"];
+     var ranNum = displayRanImage("text",farben);
+     writeFormInputValue("farbeId", farben[ranNum]);
+     removeVisability("formColour");
+
+     writeFormInputValue("reihenfolgeId", fragenNum);
+     document.getElementById("pageNum").innerHTML = "Umfage im Rahmen des Projektseminars Visual Computing and Games, Farbe " + fragenNum + "/5";
+
+ } else {
+      // ____________________________________setCookie(cname, cvalue, exdays)     getCookie(cname)    "fraSam", JSON.stringify(allFragen),1      "fragCou", "1" ,1) "farbNum"
+     var fragenNum = parseInt(getCookie("farbNum"));
+     if (fragenNum > 5){
+        changeSite("https://greenpepper15.github.io/leseverstaendnis/end");
+     }
+     setCookie("farbNum", (fragenNum + 1).toString(), 0.25);
+     var farben = ["farben0.png","farben1.png","farben2.png","farben3.png","farben4.png","farben5.png"];
+     var ranNum = displayRanImage("text",farben);
+     writeFormInputValue("farbeId", farben[ranNum]);
+     removeVisability("formColour");
+
+     writeFormInputValue("reihenfolgeId", fragenNum);
+     document.getElementById("pageNum").innerHTML = "Umfage im Rahmen des Projektseminars Visual Computing and Games, Farbe " + fragenNum + "/5";
+
  }
- localStorage.setItem("farben_num", (fragenNum + 1).toString());
- var farben = ["farben0.png","farben1.png","farben2.png","farben3.png","farben4.png","farben5.png"];
- var ranNum = displayRanImage("text",farben);
- writeFormInputValue("farbeId", farben[ranNum]);
- removeVisability("formColour");
+    
+    
  
- writeFormInputValue("reihenfolgeId", fragenNum);
- document.getElementById("pageNum").innerHTML = "Umfage im Rahmen des Projektseminars Visual Computing and Games, Farbe " + fragenNum + "/5";
- 
+    
 function imOnload(){
     var readSpeed = localStorage.getItem("readspeed");
+    if (localStorage.getItem("readspeed") == null){
+        readSpeed = getCookie("reaspee");
+    }
     var time;
     if (readSpeed == "fast"){
         time = 3000;
@@ -76,6 +101,29 @@ function imOnload(){
         time = 6000;
     }
     setTimeout(() =>{removeVisability('text');giveVisability('frage');giveVisability('formColour');}, time);
+}
+     
+
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  var expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
 }
  </script>
  
