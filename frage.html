@@ -126,6 +126,9 @@
        }   
      });
       writeFormInputValue("reihenfolgeId", fragenNum);
+      if (fragenNum == null){
+            alert("Mit ihren Browser koennen Sie nicht an der Umfrage Teilnehmen \n Versuchen Sie es nochmal an einen PC oder mit einem anderen Browser");
+      }
       document.getElementById("pageNum").innerHTML = "Umfage im Rahmen des Projektseminars Visual Computing and Games, Frage " + fragenNum + "/8";
       localStorage.setItem("fragenCounter", (fragenNum + 1).toString());  
  </script>
