@@ -56,7 +56,7 @@
                 <input type="radio" class="checkbox" id="cookieA" name="cookies" value="agree" onclick="changeLink('https://greenpepper15.github.io/leseverstaendnis/videotutorial2.html')"> mit Cookies
                 <input type="radio" class="checkbox" id="cookieD" name="cookies" value="disagree" onclick="changeLink('https://greenpepper15.github.io/leseverstaendnis/videotutorial2_ohne_cookies.html')"> ohne Cookies
         
-            <input type="submit" onclick ="retId('custId')" value="Weiter zum Umfragen Tutorial + Cookies Akzeptieren">
+            <input type="submit" onclick ="retId('custId')" value="Weiter zum Umfragen Tutorial">
             <!-- <button type="button">Start</button> -->
 
         </form>
@@ -86,9 +86,6 @@
         initFingerprintJS();
         
         function changeLink(newLink){
-             document.getElementById("cookieId").style.visibility = "hidden";
-             document.getElementById("cookieA").style.visibility = "hidden";
-             document.getElementById("cookieD").style.visibility = "hidden";
              link = newLink;
         }
        
@@ -107,9 +104,11 @@
         setCookie("fraSam", JSON.stringify(allFragen),1);
         setCookie("fragCou", "1" ,1);
         if(getCookie("fragCou") == "" &&  localStorage.getItem("frageSammlung") == null){
-             //alert("Bitte waehlen Sie gleich die Umfrage ohne Cookies \n Sonst wird ein Fehler auftrtee");
             link = "https://greenpepper15.github.io/leseverstaendnis/videotutorial2_ohne_cookies.html";
-            document.getElementById("cookieId").style.visibility = "hidden";
+             document.getElementById("cookieId").style.visibility = "hidden";
+             document.getElementById("cookieA").style.visibility = "hidden";
+             document.getElementById("cookieD").style.visibility = "hidden";
+             alert("Fuer Sie wurde automatisch die Umfrage ohne Cookies gewaehlt \n Dies hat fuer Sie keine weitere Bedeutung");
         }
         
 function setCookie(cname, cvalue, exdays) {
