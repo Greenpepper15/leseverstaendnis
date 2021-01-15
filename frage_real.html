@@ -128,8 +128,12 @@
            } else {
                 removeVisability("showSpeed");
            }
-        if (pageNum != 1){
-           document.getElementsByClassName("pageclip-form__success")[0].click();
+        if (document.getElementsByClassName("pageclip-form__success").length != 0){
+            var len = document.getElementsByClassName("pageclip-form__success").length;
+            var i;
+            for (i = 0; i < len; i++){
+                document.getElementsByClassName("pageclip-form__success")[i].click();
+            }
         }
          });
           writeFormInputValue("reihenfolgeId", fragenNum);
