@@ -51,6 +51,10 @@
                 <input type="radio" class="checkbox" id="agree" name="agreement" value="agree"> Ja
                 <input type="radio" class="checkbox" id="disagree" name="agreement" value="disagree"> Nein
                 <input type="hidden" id="custId" name="custId">
+            
+            <label id="cookieId" for="cookies">Wollen Sie an der Umfragen Version mit oder ohne Cookies teilnehmen? </label>
+                <input type="radio" class="checkbox" id="agree" name="cookies" value="agree" onclick="changeLink(https://greenpepper15.github.io/leseverstaendnis/videotutorial2.html)"> mit Cookies
+                <input type="radio" class="checkbox" id="disagree" name="cookies" value="disagree" onclick="changeLink(https://greenpepper15.github.io/leseverstaendnis/videotutorial2_ohne_cookies.html)"> ohne Cookies
         
             <input type="submit" onclick ="retId('custId')" value="Weiter zum Umfragen Tutorial + Cookies Akzeptieren">
             <!-- <button type="button">Start</button> -->
@@ -66,6 +70,7 @@
     <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
     <script>
       var id; 
+      var link = "https://greenpepper15.github.io/leseverstaendnis/videotutorial1";
       function initFingerprintJS() {
             FingerprintJS.load().then(fp => {
               // The FingerprintJS agent is ready.
@@ -79,6 +84,11 @@
             });
           }
         initFingerprintJS();
+        
+        function changeLink(newLink){
+             document.getElementById("cookieId").style.visibility = "hidden";
+             link = newLink;
+        }
        
         function changeSite() {
            window.location.replace("https://greenpepper15.github.io/leseverstaendnis/videotutorial1");
@@ -95,7 +105,9 @@
         setCookie("fraSam", JSON.stringify(allFragen),1);
         setCookie("fragCou", "1" ,1);
         if(getCookie("fragCou") == "" &&  localStorage.getItem("frageSammlung") == null){
-             alert("Sie muessen Lokale Cookies erlauben sonst funktioniert die Umfrage nicht \n Oder wechseln Sie den Browser oder das Gerät");
+             //alert("Bitte waehlen Sie gleich die Umfrage ohne Cookies \n Sonst wird ein Fehler auftrtee");
+            link = "https://greenpepper15.github.io/leseverstaendnis/videotutorial2_ohne_cookies.html";
+            document.getElementById("cookieId").style.visibility = "hidden";
         }
         
 function setCookie(cname, cvalue, exdays) {
