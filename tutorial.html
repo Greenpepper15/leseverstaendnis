@@ -53,8 +53,8 @@
                 <input type="hidden" id="custId" name="custId">
             
             <label id="cookieId" for="cookies">Wollen Sie an der Umfragen Version mit oder ohne Cookies teilnehmen? </label>
-                <input type="radio" class="checkbox" id="agree" name="cookies" value="agree" onclick="changeLink('https://greenpepper15.github.io/leseverstaendnis/videotutorial2.html')"> mit Cookies
-                <input type="radio" class="checkbox" id="disagree" name="cookies" value="disagree" onclick="changeLink('https://greenpepper15.github.io/leseverstaendnis/videotutorial2_ohne_cookies.html')"> ohne Cookies
+                <input type="radio" class="checkbox" id="cookieA" name="cookies" value="agree" onclick="changeLink('https://greenpepper15.github.io/leseverstaendnis/videotutorial2.html')"> mit Cookies
+                <input type="radio" class="checkbox" id="cookieD" name="cookies" value="disagree" onclick="changeLink('https://greenpepper15.github.io/leseverstaendnis/videotutorial2_ohne_cookies.html')"> ohne Cookies
         
             <input type="submit" onclick ="retId('custId')" value="Weiter zum Umfragen Tutorial + Cookies Akzeptieren">
             <!-- <button type="button">Start</button> -->
@@ -87,6 +87,8 @@
         
         function changeLink(newLink){
              document.getElementById("cookieId").style.visibility = "hidden";
+             document.getElementById("cookieA").style.visibility = "hidden";
+             document.getElementById("cookieB").style.visibility = "hidden";
              link = newLink;
         }
        
