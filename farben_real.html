@@ -71,7 +71,7 @@
      removeVisability('frage');
      removeVisability('formColour');
      var fragenNum = pageNum;
-     if (fragenNum > 5){
+     if (fragenNum > 4){
         changeSite("https://greenpepper15.github.io/leseverstaendnis/end");
      }
      pageNum = fragenNum + 1;
@@ -90,12 +90,20 @@
         time = 6000;
     }
     setTimeout(() =>{removeVisability('text');giveVisability('frage');giveVisability('formColour');}, time);
-
+    if (document.getElementsByClassName("pageclip-form__success").length != 0){
+            var len = document.getElementsByClassName("pageclip-form__success").length;
+            var i;
+            for (i = 0; i < len; i++){
+                document.getElementsByClassName("pageclip-form__success")[i].click();
+            }
+    }
+ 
  } 
+    
  function setSpeed(readSpeed){
         readV = readSpeed;
         //giveVisability("front");
-        //removeVisability("rightid");
+        removeVisability("rightid");
         reload();
   }   
 
