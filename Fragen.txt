@@ -2,7 +2,7 @@ Instruc 1:
 Der Mann rechts von der Lehrenbacher Kneipe versucht immernoch seine pinke Brille zu verstecken. WC: 14
 8,4
 Frage1: Wo ist der Mann?
-Frage1 = ["rechts von der Lehrenbacher Kneipe", "von der Lehrenbacher Kneipe", "vor der Kneipe" , ["Kneipe"]]
+Frage1 = ["rechts von der Lehrenbacher Kneipe", "von der Lehrenbacher Kneipe", "vor der Kneipe" , "Kneipe"]
 
 Instruc 2:
 Ben und Anna sitzen am frühen Morgen am Strand und betrachten den Sonnenuntergang. WC: 13
