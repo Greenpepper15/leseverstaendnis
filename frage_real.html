@@ -108,7 +108,7 @@
          data = jsonData.f1;
          document.getElementById("frage").innerHTML = data;
          time = jsonData[readSpeed];
-         if (fragenNum == 3) {
+         if (fragenNum == 2) {
             setTimeout(() => {removeVisability('text');giveVisability('frage');giveVisability('formText'); giveVisability("rightid");},time);
           } else {
             setTimeout(() => {
@@ -117,7 +117,7 @@
                 giveVisability('formText'); 
                 },time);}
           writeFormInputValue("readSpeed", readSpeed);
-          if (fragenNum < 4){
+          if (fragenNum < 3){
               if (readSpeed == "slow"){
                   document.getElementById("showSpeed").innerHTML = "ausblende Geschwindigkeit ist langsam";
              } else if (readSpeed == "middle"){
