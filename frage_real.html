@@ -73,6 +73,9 @@
     var readV = "slow";
     reload();
     function reload() {
+        if (pageNum != 0){
+            document.getElementsByClassName("pageclip-form__success")[0].click();
+        }
         removeVisability('weiterid');
         removeVisability("rightid");
         removeVisability("frage");
