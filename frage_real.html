@@ -69,9 +69,7 @@
     var readV = "slow";
     reload();
     function reload() {
-        if (pageNum > 2){
-            document.getElementsByClassName("pageclip-form__success")[0].click();
-        }
+        
         removeVisability('weiterid');
         removeVisability("rightid");
         removeVisability("frage");
@@ -130,6 +128,9 @@
            } else {
                 removeVisability("showSpeed");
            }
+        if (pageNum != 1){
+           document.getElementsByClassName("pageclip-form__success")[0].click();
+        }
          });
           writeFormInputValue("reihenfolgeId", fragenNum);
           document.getElementById("pageNum").innerHTML = "Umfage im Rahmen des Projektseminars Visual Computing and Games, Frage " + (fragenNum + 1) + "/8";
