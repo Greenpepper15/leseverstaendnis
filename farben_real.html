@@ -45,7 +45,13 @@
         
            <input id="weiterid" class="button3" type="submit" onclick ="retId('custId','https://greenpepper15.github.io/leseverstaendnis/farben')" value="Weiter">
         </form>
-
+<div id="rightid" class="right">    
+    <form id="readSpeed" class="readspeed" > Bitte wählen Sie die vorher gewaehlte Geschwindigkeit.
+            <input type="radio" class="checkbox" id="ad" name="speed" onclick="setSpeed('fast')"     /> schnell
+            <input type="radio" class="checkbox" id="no" name="speed" onclick="setSpeed('middle')"   /> mittel
+            <input type="radio" class="checkbox" id="no" name="speed" onclick="setSpeed('slow')"     /> langsam
+        </form>  
+ </div>        
 <script src="//cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"></script>
 <script src="website.js"></script> 
 <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
