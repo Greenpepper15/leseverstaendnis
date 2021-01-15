@@ -32,6 +32,10 @@ function retId(node_id, nextQuestion){
     inputF.value = String(id);
     setTimeout(() => changeSite(nextQuestion), 1000);
  }
+function retriveId(node_id){
+    var inputF = document.getElementById(node_id);
+    inputF.value = String(id);
+ }
 
 function createBody(user_id, data){
   var toSend = {"user" : user_id, "Frage1": data}; // Bezeichner wichtig fuer Programmzuweisung !!
