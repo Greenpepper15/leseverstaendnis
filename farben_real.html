@@ -9,10 +9,10 @@
         <h3 id="pageNum"></h3>
     </header>
     <div class="center">
-        <img  alt ="Farben" id="text"><br>  <!-- src = "farben1.png" onload="imOnload()" -->
+        <img  alt ="Farben" id="text" > <br>  <!-- src = "farben1.png" onload="imOnload()" -->
         <p class = "question" id="frage"> Klicke die zuvor in Worten beschriebenen Farben an : </p>   
     </div>
-    <div id="front" class="color">
+    <div class="color">
         <form id="formColour" action="https://send.pageclip.co/aQlCB42llkM5b7S4ZBcufO2vszmXLq6E/Farben" class="pageclip-form" method="post">
             <table class="choice">
                 <tr>
@@ -61,10 +61,15 @@
   var pageNum = 0;
   var farben = ["farben0.png","farben1.png","farben2.png","farben3.png","farben4.png","farben5.png"];
   removeVisability("weiterid");
-  removeVisability("front");
+  removeVisability("text");
+  removeVisability('frage');
+  removeVisability('formColour');
     
  function reload(){ 
      removeVisability("weiterid");
+     giveVisability("text");
+     removeVisability('frage');
+     removeVisability('formColour');
      var fragenNum = pageNum;
      if (fragenNum > 5){
         changeSite("https://greenpepper15.github.io/leseverstaendnis/end");
@@ -75,7 +80,7 @@
      farben.splice(ranNum, 1);
      removeVisability("formColour");
      writeFormInputValue("reihenfolgeId", fragenNum);
-     document.getElementById("pageNum").innerHTML = "Umfage im Rahmen des Projektseminars Visual Computing and Games, Farbe " + fragenNum + "/5";
+     document.getElementById("pageNum").innerHTML = "Umfage im Rahmen des Projektseminars Visual Computing and Games, Farbe " + (fragenNum + 1) + "/5";
     var time;
     if (readV == "fast"){
         time = 3000;
@@ -89,8 +94,8 @@
  } 
  function setSpeed(readSpeed){
         readV = readSpeed;
-        giveVisability("front");
-        removeVisability("rightid");
+        //giveVisability("front");
+        //removeVisability("rightid");
         reload();
   }   
 
