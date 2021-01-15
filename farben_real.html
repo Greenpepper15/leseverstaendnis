@@ -12,7 +12,7 @@
         <img src = "farben1.png" alt ="Farben" id="text" onload="imOnload()"><br>
         <p class = "question" id="frage"> Klicke die zuvor in Worten beschriebenen Farben an : </p>   
     </div>
-    <div class="color">
+    <div id="front" class="color">
         <form id="formColour" action="https://send.pageclip.co/aQlCB42llkM5b7S4ZBcufO2vszmXLq6E/Farben" class="pageclip-form" method="post">
             <table class="choice">
                 <tr>
@@ -57,8 +57,9 @@
 <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 <script>
     // Liste enthaelt datei Namen fuer die verschiendenen fonts
+  var readSpeed = "middle";
   removeVisability("weiterid");
-    
+   removeVisability("front");
  function reload(){ 
      removeVisability("weiterid");
      var fragenNum = parseInt(localStorage.getItem("farben_num"));
@@ -75,10 +76,12 @@
      document.getElementById("pageNum").innerHTML = "Umfage im Rahmen des Projektseminars Visual Computing and Games, Farbe " + fragenNum + "/5";
 
  } 
-    
-    
- 
-    
+ function setSpeed(readSpeed){
+        readV = readSpeed;
+        giveVisability('weiterid');
+        removeVisability("rightid");
+  }   
+
 function imOnload(){
     var readSpeed = localStorage.getItem("readspeed");
     if (localStorage.getItem("readspeed") == null){
