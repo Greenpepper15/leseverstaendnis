@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+    <header>
+        <h3 > Kurzes Videotutorial zur Vorbereitung auf den zweiten Teil der Befragung, 1/1 </h3> 
+         <h4> Starten Sie das Video indem Sie auf den Videoplayer klicken </h4>
+         <!-- <p id="pageNum">Umfage zum Thema Influences on textual parameters, Frage 1/8</p> -->
+     </header>
+     <div style="text-align:center"> 
+  <button onclick="playPause()">Play/Pause</button> 
+  <button id="weiter"  class="button4" onclick="changeSite()"> Umfrage starten </button>
+  <br><br>
+  </div> 
+    <video controls>
+        <source type="video/mp4" src="Videos/Farben.mp4">
+      Your browser does not support the video tag.
+      </video>
+      <!--<button class="button2" onclick="changeSite()"> Umfrage fortführen </button> -->
+</body>
+     <script>
+    function changeSite() {
+           window.location.replace("https://greenpepper15.github.io/leseverstaendnis/farben_real");
+        }
+      function playPause() { 
+      var myVideo = document.getElementById("video");    
+      if (myVideo.paused) 
+        myVideo.play(); 
+      else 
+        myVideo.pause(); 
+    } 
+     </script>
+</html>
