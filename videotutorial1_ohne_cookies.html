@@ -1,1 +1,64 @@
+<!DOCTYPE html>
 
+<html>
+<head>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+    <header>
+        <h3 id="pageNum"> </h3> 
+        <h4> Starten Sie das Video indem Sie auf das Feld Videoplayer klicken. <br> Damit die erhobenen Daten repräsentativ bleiben, sind Saetze und Fragen im Video verschwommen. </h4>
+         <!-- <p id="pageNum">Umfage zum Thema Influences on textual parameters, Frage 1/8</p> -->
+     </header>
+    <div style="text-align:center"> 
+  <button onclick="playPause()">Play/Pause</button> 
+  <!-- <button  id="next" onclick="nextVideo()"> Nächstes Video </button> -->
+  <button id="weiter"  class="button4" onclick="changeSite()"> Umfrage starten </button>
+  <br><br>
+  </div> 
+    <video width="320" height="240" id="video"  controls autoplay>
+        <source type="video/mp4" src="Videos/Fragen.mp4">
+      Your browser does not support the video tag. In diesem Fall klicke bitte 4 mal auf den Botton "Nächstes Video" um Umfrage zu beginnen.
+      </video>
+     <!--<button  id="next" class="button2" onclick="nextVideo('Fragen_2.mp4')"> Nächstes Video </button> 
+      <button id="weiter" class="button2" onclick="changeSite()"> Umfrage starten </button> --> 
+</body>
+<script src="//cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"></script>
+<script src="website.js"></script> 
+  
+<script>
+    //removeVisability("weiter");
+    var videoList = ["Frage_2short.mp4","Frage_3short.mp4","Frag_4short.mp4"];
+    var vidNum = 0;
+    document.getElementById("pageNum").innerHTML = "Kurzes Videotutorial zur Vorbereitung auf die Befragung " + (vidNum + 1) + " /1";
+    function nextVideo(path){
+        var video = document.getElementById("video");
+        if (vidNum < videoList.length){
+            video.src = "Videos/" + videoList[vidNum];
+            vidNum = vidNum + 1;
+             document.getElementById("pageNum").innerHTML = "Kurzes Videotutorial zur Vorbereitung auf die Befragung, Video " + (vidNum + 1) + " /4";
+            video.load();
+        } else {
+             removeVisability("next");
+            giveVisability("weiter");
+        }
+        if (vidNum == 3) {
+            removeVisability("next");
+            giveVisability("weiter");
+        }
+    }
+    function changeSite() {
+           window.location.replace("https://greenpepper15.github.io/leseverstaendnis/frage_real.html");
+    }
+
+    function playPause() { 
+      var myVideo = document.getElementById("video");    
+      if (myVideo.paused) 
+        myVideo.play(); 
+      else 
+        myVideo.pause(); 
+    } 
+
+     </script>
+</html>
