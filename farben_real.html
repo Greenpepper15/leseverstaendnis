@@ -9,7 +9,7 @@
         <h3 id="pageNum"></h3>
     </header>
     <div class="center">
-        <img src = "farben1.png" alt ="Farben" id="text" onload="imOnload()"><br>
+        <img  alt ="Farben" id="text"><br>  <!-- src = "farben1.png" onload="imOnload()" -->
         <p class = "question" id="frage"> Klicke die zuvor in Worten beschriebenen Farben an : </p>   
     </div>
     <div id="front" class="color">
@@ -43,7 +43,7 @@
             <input type="hidden" id="reihenfolgeId" name="reihenfolgeId">
            </div>
         
-           <input id="weiterid" class="button3" type="submit" onclick ="retId('custId','https://greenpepper15.github.io/leseverstaendnis/farben')" value="Weiter">
+           <input id="weiterid" class="button3" type="submit" onclick ="reload()" value="Weiter">
         </form>
 <div id="rightid" class="right">    
     <form id="readSpeed" class="readspeed" > Bitte wählen Sie die vorher gewaehlte Geschwindigkeit.
@@ -57,36 +57,45 @@
 <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 <script>
     // Liste enthaelt datei Namen fuer die verschiendenen fonts
-  var readSpeed = "middle";
+  var readV= "middle";
+  var pageNum = 0;
+  var farben = ["farben0.png","farben1.png","farben2.png","farben3.png","farben4.png","farben5.png"];
   removeVisability("weiterid");
-   removeVisability("front");
+  removeVisability("front");
+    
  function reload(){ 
      removeVisability("weiterid");
-     var fragenNum = parseInt(localStorage.getItem("farben_num"));
+     var fragenNum = pageNum;
      if (fragenNum > 5){
         changeSite("https://greenpepper15.github.io/leseverstaendnis/end");
      }
-     localStorage.setItem("farben_num", (fragenNum + 1).toString());
-     var farben = ["farben0.png","farben1.png","farben2.png","farben3.png","farben4.png","farben5.png"];
+     pageNum = fragenNum + 1;
      var ranNum = displayRanImage("text",farben);
      writeFormInputValue("farbeId", farben[ranNum]);
+     farben.splice(ranNum, 1);
      removeVisability("formColour");
-
      writeFormInputValue("reihenfolgeId", fragenNum);
      document.getElementById("pageNum").innerHTML = "Umfage im Rahmen des Projektseminars Visual Computing and Games, Farbe " + fragenNum + "/5";
+    var time;
+    if (readV == "fast"){
+        time = 3000;
+    } else if (readV == "middle"){
+        time = 4000;
+    } else {
+        time = 6000;
+    }
+    setTimeout(() =>{removeVisability('text');giveVisability('frage');giveVisability('formColour');}, time);
 
  } 
  function setSpeed(readSpeed){
         readV = readSpeed;
-        giveVisability('weiterid');
+        giveVisability("front");
         removeVisability("rightid");
+        reload();
   }   
 
 function imOnload(){
-    var readSpeed = localStorage.getItem("readspeed");
-    if (localStorage.getItem("readspeed") == null){
-        readSpeed = getCookie("reaspee");
-    }
+    readSpeed = readV;
     var time;
     if (readSpeed == "fast"){
         time = 3000;
@@ -99,27 +108,7 @@ function imOnload(){
 }
      
 
-function setCookie(cname, cvalue, exdays) {
-  var d = new Date();
-  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-  var expires = "expires="+d.toUTCString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
 
-function getCookie(cname) {
-  var name = cname + "=";
-  var ca = document.cookie.split(';');
-  for(var i = 0; i < ca.length; i++) {
-    var c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
-}
  </script>
  
 </body>
