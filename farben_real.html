@@ -53,7 +53,8 @@
     // Liste enthaelt datei Namen fuer die verschiendenen fonts
   removeVisability("weiterid");
     
- if ( localStorage.getItem("farben_num") != null) { 
+ function reload(){ 
+     removeVisability("weiterid");
      var fragenNum = parseInt(localStorage.getItem("farben_num"));
      if (fragenNum > 5){
         changeSite("https://greenpepper15.github.io/leseverstaendnis/end");
@@ -67,22 +68,7 @@
      writeFormInputValue("reihenfolgeId", fragenNum);
      document.getElementById("pageNum").innerHTML = "Umfage im Rahmen des Projektseminars Visual Computing and Games, Farbe " + fragenNum + "/5";
 
- } else {
-      // ____________________________________setCookie(cname, cvalue, exdays)     getCookie(cname)    "fraSam", JSON.stringify(allFragen),1      "fragCou", "1" ,1) "farbNum"
-     var fragenNum = parseInt(getCookie("farbNum"));
-     if (fragenNum > 5){
-        changeSite("https://greenpepper15.github.io/leseverstaendnis/end");
-     }
-     setCookie("farbNum", (fragenNum + 1).toString(), 0.25);
-     var farben = ["farben0.png","farben1.png","farben2.png","farben3.png","farben4.png","farben5.png"];
-     var ranNum = displayRanImage("text",farben);
-     writeFormInputValue("farbeId", farben[ranNum]);
-     removeVisability("formColour");
-
-     writeFormInputValue("reihenfolgeId", fragenNum);
-     document.getElementById("pageNum").innerHTML = "Umfage im Rahmen des Projektseminars Visual Computing and Games, Farbe " + fragenNum + "/5";
-
- }
+ } 
     
     
  
