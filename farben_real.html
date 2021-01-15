@@ -60,6 +60,8 @@
   var readV= "middle";
   var pageNum = 0;
   var farben = ["farben0.png","farben1.png","farben2.png","farben3.png","farben4.png","farben5.png"];
+  var id; 
+  initFingerprintJS();
   removeVisability("weiterid");
   removeVisability("text");
   removeVisability('frage');
@@ -70,6 +72,7 @@
      giveVisability("text");
      removeVisability('frage');
      removeVisability('formColour');
+     writeFormInputValue("custId", id);
      var fragenNum = pageNum;
      if (fragenNum > 4){
         changeSite("https://greenpepper15.github.io/leseverstaendnis/end");
@@ -119,9 +122,19 @@ function imOnload(){
     }
     setTimeout(() =>{removeVisability('text');giveVisability('frage');giveVisability('formColour');}, time);
 }
-     
 
-
+function initFingerprintJS() {
+    FingerprintJS.load().then(fp => {
+      // The FingerprintJS agent is ready.
+      // Get a visitor identifier when you'd like to.
+      fp.get().then(result => {
+        // This is the visitor identifier:
+        const visitorId = result.visitorId;
+        id =  visitorId
+        console.log(visitorId);
+      });
+    });
+  }
  </script>
  
 </body>
