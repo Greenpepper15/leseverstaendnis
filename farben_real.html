@@ -16,23 +16,23 @@
         <form id="formColour" action="https://send.pageclip.co/aQlCB42llkM5b7S4ZBcufO2vszmXLq6E/Farben" class="pageclip-form" method="post">
             <table class="choice">
                 <tr>
-                    <td><input type="checkbox" id="color1" name="red" value="red" class="inred" onclick="giveVisability('weiterid')">
+                    <td><input type="checkbox" id="color1" name="red" value="red" class="inred" onclick="giveVisability('weiterid');input()">
                         <label for="color1" class ="red"> box </label></td>
-                    <td><input type="checkbox" id="color2" name="orange" value="orange" class="inorange" onclick="giveVisability('weiterid')">
+                    <td><input type="checkbox" id="color2" name="orange" value="orange" class="inorange" onclick="giveVisability('weiterid');input()">
                         <label for="color2" class ="orange"> box </label></td>
-                    <td><input type="checkbox" id="color3" name="yellow" value="yellow" class="inyellow" onclick="giveVisability('weiterid')">
+                    <td><input type="checkbox" id="color3" name="yellow" value="yellow" class="inyellow" onclick="giveVisability('weiterid');input()">
                         <label for="color3" class ="yellow"> box </label></td>
-                    <td><input type="checkbox" id="color4" name="green" value="green" class="ingreen" onclick="giveVisability('weiterid')">
+                    <td><input type="checkbox" id="color4" name="green" value="green" class="ingreen" onclick="giveVisability('weiterid');input()">
                         <label for="color4" class ="green"> box </label></td>
                 </tr>
                 <tr>
-                    <td><input type="checkbox" id="color5" name="turquoise" value="turquoise" class="inturquoise" onclick="giveVisability('weiterid')">
+                    <td><input type="checkbox" id="color5" name="turquoise" value="turquoise" class="inturquoise" onclick="giveVisability('weiterid');input()">
                         <label for="color5" class ="turquoise" > box </label></td>
-                    <td><input type="checkbox" id="color6" name="blue" value="blue" class="inblue" onclick="giveVisability('weiterid')">
+                    <td><input type="checkbox" id="color6" name="blue" value="blue" class="inblue" onclick="giveVisability('weiterid');input()">
                         <label for="color6" class ="blue" > box </label></td>
-                    <td><input type="checkbox" id="color7" name="purple" value="purple" class="inpurple" onclick="giveVisability('weiterid')">
+                    <td><input type="checkbox" id="color7" name="purple" value="purple" class="inpurple" onclick="giveVisability('weiterid');input()">
                         <label for="color7" class ="purple" > box </label></td>
-                    <td><input type="checkbox" id="color8" name="pink" value="pink" class="inpink" onclick="giveVisability('weiterid')">  
+                    <td><input type="checkbox" id="color8" name="pink" value="pink" class="inpink" onclick="giveVisability('weiterid');input()">  
                         <label for="color8" class ="pink" > box </label></td>
                 </tr>
             </table>
@@ -61,11 +61,15 @@
   var pageNum = 0;
   var farben = ["farben0.png","farben1.png","farben2.png","farben3.png","farben4.png","farben5.png"];
   var id; 
+  var ranNum;
   initFingerprintJS();
   removeVisability("weiterid");
   removeVisability("text");
   removeVisability('frage');
   removeVisability('formColour');
+ function input(){
+    writeFormInputValue("farbeId", farben[ranNum]);
+ }
     
  function reload(){ 
      removeVisability("weiterid");
@@ -79,7 +83,7 @@
      }
      pageNum = fragenNum + 1;
      var ranNum = displayRanImage("text",farben);
-     writeFormInputValue("farbeId", farben[ranNum]);
+    // writeFormInputValue("farbeId", farben[ranNum]);
      farben.splice(ranNum, 1);
      removeVisability("formColour");
      writeFormInputValue("reihenfolgeId", fragenNum);
