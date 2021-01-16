@@ -58,17 +58,26 @@
    function setSpeed(readSpeed){
         readV = readSpeed;
        giveVisability('weiterid');
+       writeFormInputValue("fontId", fontList[imageNum]);
+       writeFormInputValue("readSpeed", readV);
     }
     function checkVisibility(){
         if (document.getElementById('rightid').style.visibility == 'hidden') {
             giveVisability('weiterid');
         } 
+        writeFormInputValue("fontId", fontList[imageNum]);
+        writeFormInputValue("readSpeed", readV);
+        
     }
     var allFragen = ["Frage1","Frage2","Frage3","Frage4","Frage5","Frage6","Frage7","Frage8","Frage9","Frage10","Frage11","Frage12","Frage13","Frage14","Frage15","Frage16","Frage17"];
     var pageNum = 0;
     var readV = "slow";
     var id;
+    var fontList;
+    var imageNum;
+    
     reload();
+  
     function reload() {
         
         removeVisability('weiterid');
@@ -85,10 +94,10 @@
          var prefix = remaingQuestions[chosenQuest];
          remaingQuestions.splice(chosenQuest, 1);
          allFragen = remaingQuestions;
-         var fontList = [prefix+"/"+ "Clarendon.png", prefix+"/"+ "Amador.png", prefix+"/"+ "CaflischScript.png", prefix+"/" + "MinionPro.png", prefix+"/" +"Protipo.png"];
-         var imageNum = displayRanImage("text",fontList);
+         fontList = [prefix+"/"+ "Clarendon.png", prefix+"/"+ "Amador.png", prefix+"/"+ "CaflischScript.png", prefix+"/" + "MinionPro.png", prefix+"/" +"Protipo.png"];
+         imageNum = displayRanImage("text",fontList);
          removeVisability("formText");
-         writeFormInputValue("fontId", fontList[imageNum]);
+         //writeFormInputValue("fontId", fontList[imageNum]);
          var fragenNum = pageNum;
          var time;   
          fetch("./" + prefix + "/" + prefix + ".json")
@@ -117,7 +126,7 @@
                 giveVisability('frage');
                 giveVisability('formText'); 
                 },time);}
-          writeFormInputValue("readSpeed", readSpeed);
+          //writeFormInputValue("readSpeed", readSpeed);
           if (fragenNum < 3){
               if (readSpeed == "slow"){
                   document.getElementById("showSpeed").innerHTML = "ausblende Geschwindigkeit ist langsam";
