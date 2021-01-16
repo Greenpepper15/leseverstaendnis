@@ -60,6 +60,7 @@
   var readV= "middle";
   var pageNum = 0;
   var farben = ["farben0.png","farben1.png","farben2.png","farben3.png","farben4.png","farben5.png"];
+  var farb;
   var id; 
   var ranNum;
   initFingerprintJS();
@@ -68,7 +69,7 @@
   removeVisability('frage');
   removeVisability('formColour');
  function input(){
-    writeFormInputValue("farbeId", farben[ranNum]);
+    writeFormInputValue("farbeId", farbe);
  }
     
  function reload(){ 
@@ -84,7 +85,7 @@
      pageNum = fragenNum + 1;
      ranNum = displayRanImage("text",farben);
     // writeFormInputValue("farbeId", farben[ranNum]);
-     //farben.splice(ranNum, 1);
+     farbe = farben.splice(ranNum, 1);
      removeVisability("formColour");
      writeFormInputValue("reihenfolgeId", fragenNum);
      document.getElementById("pageNum").innerHTML = "Umfage im Rahmen des Projektseminars Visual Computing and Games, Farbe " + (fragenNum + 1) + "/5";
