@@ -80,7 +80,7 @@ Instruc 14:
 Der Vertrag läuft normalerweise nur für einen Monat, aber der nette Verkäufer hat ihn um zwei Monate verlängert. WC: 18
 10,8
 Frage1: Wie lange ist die Vertragslaufzeit?
-Frage14 = ["einen Monat", "1 Monat", "1", "ein"]
+Frage14 = ["drei","3"]
 
 Instruc 15:
 Das Paket ist nur noch wenige Zustellungsstops entfernt und alle warten geduldig. WC: 12
