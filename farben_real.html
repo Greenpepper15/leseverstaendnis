@@ -85,7 +85,8 @@
      pageNum = fragenNum + 1;
      ranNum = displayRanImage("text",farben);
     // writeFormInputValue("farbeId", farben[ranNum]);
-     farbe = farben.splice(ranNum, 1);
+     farbe = farben[ranNum];
+     farben.splice(ranNum, 1);
      removeVisability("formColour");
      writeFormInputValue("reihenfolgeId", fragenNum);
      document.getElementById("pageNum").innerHTML = "Umfage im Rahmen des Projektseminars Visual Computing and Games, Farbe " + (fragenNum + 1) + "/5";
